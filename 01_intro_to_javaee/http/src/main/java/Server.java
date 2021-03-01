@@ -17,7 +17,8 @@ class Handler extends Thread {
         } catch (Exception e) {
             try {
                 this.socket.close();
-            } catch (IOException ioe) {
+            } catch (IOException ioException) {
+                ioException.printStackTrace();
             }
             System.out.println("client disconnected");
         }
@@ -26,7 +27,6 @@ class Handler extends Thread {
     private void handle(InputStream input, OutputStream output) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(input));
         BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(output));
-        // 读取HTTP请求:
         boolean requestOk = false;
         String first = reader.readLine();
         if (first.startsWith("GET / HTTP/1.")) {
@@ -42,15 +42,15 @@ class Handler extends Thread {
         System.out.println(requestOk ? "Response OK" : "Response Error");
         if (!requestOk) {
             // error
-            writer.write("HTTP/1.0 404 Not Found\r\n");
+            writer.write("HTTP/1.1 404 Not Found\r\n");
             writer.write("Content-Length: 0\r\n");
             writer.write("\r\n");
             writer.flush();
         } else {
             // success
-            String data = "<html><body><h1>Hello, world!</h1></body></html>";
+            String data = "<html><body><h1>Hello world for a simple http server!</h1></body></html>";
             int length = data.getBytes().length;
-            writer.write("HTTP/1.0 200 OK\r\n");
+            writer.write("HTTP/1.1 200 OK\r\n");
             writer.write("Connection: close\r\n");
             writer.write("Content-Type: text/html\r\n");
             writer.write("Content-Length: " + length + "\r\n");

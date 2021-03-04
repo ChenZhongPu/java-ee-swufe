@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>Select Beer Form</title>
+</head>
+<body>
+<h1>Hello, world!</h1>
+
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col col-lg-4">
+            <form action="SelectBeerServlet" method="get">
+                <div class="mb-3">
+                    <label for="exampleAmount1" class="form-label">Amount</label>
+                    <input type="text" class="form-control" name="amount" id="exampleAmount1">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleBody1" class="form-label">Body</label>
+                    <select class="form-control form-select" name="body" id="exampleBody1">
+                        <option selected>Select Beer Body</option>
+                        <option value="large">Large</option>
+                        <option value="medium">Medium</option>
+                        <option value="small">Small</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="12oz" id="check1-1" name="sizes">
+                        <label class="form-check-label" for="check1-1">
+                            12 oz.
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="16oz" id="check1-2" name="sizes">
+                        <label class="form-check-label" for="check1-2">
+                            16 oz.
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="22oz" id="check1-3" name="sizes">
+                        <label class="form-check-label" for="check1-3">
+                            22 oz.
+                        </label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Get Submit</button>
+            </form>
+        </div>
+        <div class="col col-lg-2">
+            <img src="image/beer.jpeg" class="img-fluid">
+        </div>
+        <div class="col col-lg-4">
+            <form action="SelectBeerServlet" method="post">
+                <div class="mb-3">
+                    <label for="exampleAmount2" class="form-label">Amount</label>
+                    <input type="text" class="form-control" name="amount" id="exampleAmount2">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleBody2" class="form-label">Body</label>
+                    <select class="form-control form-select" name="body" id="exampleBody2">
+                        <option selected>Select Beer Body</option>
+                        <option value="large">Large</option>
+                        <option value="medium">Medium</option>
+                        <option value="small">Small</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="12oz" id="check2-1" name="sizes">
+                        <label class="form-check-label" for="check2-1">
+                            12 oz.
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="16oz" id="check2-2" name="sizes">
+                        <label class="form-check-label" for="check2-2">
+                            16 oz.
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="22oz" id="check2-3" name="sizes">
+                        <label class="form-check-label" for="check2-3">
+                            22 oz.
+                        </label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Post Submit</button>
+            </form>
+        </div>
+
+    </div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>

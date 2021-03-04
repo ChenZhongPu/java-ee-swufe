@@ -2,7 +2,7 @@ Architecturally, JSP may be viewed as a high-level abstraction of Java servlets.
 
 Clearly, it can be troublesome to write HTML code in servlet, so traditional MVC would regard `jsp` as views, plain old java code as models, and servlets as controllers. 
 
-# Optional exercise of this week
+# Exercise of this week
 For the `BeerExpert`, we recommend a list of `Beer` objects, instead of a list of `String`, and display the details of recommended `Beer` in JSP.
 
 An example outline of `Beer`:

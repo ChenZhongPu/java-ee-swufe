@@ -3,6 +3,7 @@ Architecturally, JSP may be viewed as a high-level abstraction of Java servlets.
 Clearly, it can be troublesome to write HTML code in servlet, so traditional MVC would regard `jsp` as views, plain old java code as models, and servlets as controllers. 
 
 # Exercise of this week
+## Exercise 1
 For the `BeerExpert`, we recommend a list of `Beer` objects, instead of a list of `String`, and display the details of recommended `Beer` in JSP.
 
 An example outline of `Beer`:
@@ -14,3 +15,7 @@ class Beer {
     // ...
 }
 ```
+## Exercise 2
+- Deploy your web application into `war`, and then put it under `tomcat` manually.
+- Deploy your web application using IntelliJ IDEA directly by setting `Run-Edit Configurations`.
+

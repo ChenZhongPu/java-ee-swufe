@@ -9,11 +9,6 @@
 </h1>
 <br/>
 <a href="hello-servlet">Hello Servlet</a>
-
-<p>Today is <%= new java.util.Date() %></p>
-
-<br/>
-
-<a href="hello2">Hello2 by DD</a>
+<a href="url-rewrite">URL Rewrite</a>
 </body>
 </html>

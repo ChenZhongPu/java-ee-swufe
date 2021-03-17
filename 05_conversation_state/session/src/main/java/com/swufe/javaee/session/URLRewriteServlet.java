@@ -1,0 +1,25 @@
+package com.swufe.javaee.session;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.servlet.annotation.*;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+@WebServlet(name = "URLRewriteServlet", value = "/url-rewrite")
+public class URLRewriteServlet extends HttpServlet {
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+        HttpSession session = request.getSession();
+
+        out.println("<html><body>");
+        out.println("<a href=\"" + response.encodeURL(""));
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    }
+}

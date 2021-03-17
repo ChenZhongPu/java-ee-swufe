@@ -7,4 +7,4 @@ The Servlet 4.0 API can be found at [Tomcat Doc](https://tomcat.apache.org/tomca
 # Exercise of this week
 - Output an avatar dynamically in a `doGet()` method. You may use a third-party lib, such as [avatar-generator](https://github.com/gabrie-allaigre/avatar-generator).
 - Add non-empty and number value checking for `selectbeer.html`.
-- What happened if the client makes a `get` request while `servlet` did not implement `doGet()` method?
+- Implement `image upload` in a servlet.

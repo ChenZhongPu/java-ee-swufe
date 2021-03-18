@@ -16,6 +16,4 @@ class Beer {
 }
 ```
 ## Exercise 2
-- Deploy your web application into `war`, and then put it under `tomcat` manually.
-- Deploy your web application using IntelliJ IDEA directly by setting `Run-Edit Configurations`.
-
+Deploy your web application into `war`, and then put it under `tomcat` manually.

@@ -9,6 +9,9 @@
 </h1>
 <br/>
 <a href="hello-servlet">Hello Servlet</a>
+<br/>
 <a href="url-rewrite">URL Rewrite</a>
+<br/>
+<a href="index">Home page</a>
 </body>
 </html>

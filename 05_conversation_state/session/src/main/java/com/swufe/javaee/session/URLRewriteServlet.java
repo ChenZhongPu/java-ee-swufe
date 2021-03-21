@@ -13,13 +13,8 @@ public class URLRewriteServlet extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         HttpSession session = request.getSession();
-
         out.println("<html><body>");
-        out.println("<a href=\"" + response.encodeURL(""));
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        out.println("<a href=\"" + response.encodeURL("/hello-servlet") + "\">click me</a>");
+        out.println("</body></html>");
     }
 }

@@ -21,5 +21,7 @@
 <a href="image/beer.jpeg">Image URL</a>
 <br/>
 <a href="redirect">Redirect</a>
+<br/>
+<a href="DispatchServlet">Dispatch</a>
 </body>
 </html>

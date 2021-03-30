@@ -37,7 +37,7 @@ public class BeerSelectServlet extends HttpServlet {
         //List<String> result = expert.getBrands(c);
         List<Beer> result2 = expert.getBeers(c);
         request.setAttribute("styles", result2);
-        RequestDispatcher view = request.getRequestDispatcher("result.jsp");
+        RequestDispatcher view = request.getRequestDispatcher("/result.jsp");
         view.forward(request, response);
     }
 

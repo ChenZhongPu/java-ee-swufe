@@ -13,13 +13,13 @@
 <%
     // if accessed from '/test', s will be bar
     // if accessed from '/' directly, s will be null.
-    // config is the implicit variable for ServletConfig
+    // `config` is the implicit variable for ServletConfig
     String s = config.getInitParameter("foo");
     out.println(s);
 %>
 <br/>
 <%
-    // application the the implicit variable for ServletContext
+    // `application` the the implicit variable for ServletContext
     String email = application.getInitParameter("adminEmail");
     out.println(email);
 %>

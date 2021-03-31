@@ -22,9 +22,27 @@
             <param-value>bar</param-value>
         </init-param>
     </servlet>
+    <servlet>
+        <servlet-name>ZhihuServlet</servlet-name>
+        <servlet-class>com.swufe.javaee.attributes_listeners.ZhihuServlet</servlet-class>
+        <init-param>
+            <param-name>adEmail</param-name>
+            <param-value>ad@zhihu.com</param-value>
+        </init-param>
+        <init-param>
+            <param-name>marketEmail</param-name>
+            <param-value>bd@zhihu.com</param-value>
+        </init-param>
+    </servlet>
     <servlet-mapping>
         <servlet-name>test</servlet-name>
         <url-pattern>/test</url-pattern>
+        <url-pattern>/good</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ZhihuServlet</servlet-name>
+        <url-pattern>/zhihu</url-pattern>
     </servlet-mapping>
 
 </web-app>

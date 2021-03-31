@@ -18,7 +18,7 @@ public class Dog implements HttpSessionBindingListener {
 
     @Override
     public void valueBound(HttpSessionBindingEvent event) {
-        // when the `request.getSession().setAttribute("dog", dog)` is called, this callback is also called.
+        // when the `request.getSession().setAttribute("dog", dog)` is called, this callback is also executed.
         System.out.println("----- The dog object is added into a session -----");
     }
 

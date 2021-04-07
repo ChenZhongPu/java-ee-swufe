@@ -4,11 +4,10 @@ An `HttpSession` object can hold conversational state across multiple requests f
 
 
 # Exercise of this week
-- After accessing `/hello-servlet` more than once, `Welcome back` shall be displayed. Try to delete the cookies of `localhost` in your browser, see what happens while visiting `/hello-servlet` again.
+- Cookie 1: After accessing `/hello-servlet` more than once, `Welcome back` shall be displayed. Try to delete the cookies of `localhost` in your browser, see what happens while visiting `/hello-servlet` again.
+- Cookie 2: By default, your browser would accept cookies, so `response.encodeURL` does not necessarily fall back to URL rewriting.
 - Implement `log-out` for the simple login page.
+- Imagine there is a `HashMap` that stores the *(name -> password)* information. Please authenticate the user by this `HashMap`, and display error message such as **wrong password**, **no such user**.
 
-# Optional exercise 1 of this week
-Imagine there is a `HashMap` that stores the *(name -> password)* information. Please authenticate the user by this `HashMap`, and display error message such as **wrong password**, **no such user**.
-
-# Optional exercise 2 of this week
+# Optional exercise of this week
 Implement the `remember me for 1 week` in our simple login page.

@@ -14,7 +14,7 @@ public class URLRewriteServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         HttpSession session = request.getSession();
         out.println("<html><body>");
-        out.println("<a href=\"" + response.encodeURL("/hello-servlet") + "\">click me</a>");
+        out.println("<a href=\"" + response.encodeURL("hello-servlet") + "\">click me</a>");
         out.println("</body></html>");
     }
 }

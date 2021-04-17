@@ -12,6 +12,12 @@ The several reasons that you **still** learn JSP:
 - Help you to maintain legacy codes.
 - Help you to understand what a good template engine is. 
 
+# Useful links
+- [EL](https://stackoverflow.com/tags/el/info)
+- [What is Java Bean](https://stackoverflow.com/questions/3295496)
+- [include directive, jsp include action](https://stackoverflow.com/questions/7879906/)
 
 # Exercise of this week
-- Modify `HobbyServlet.java` so that each person can have serval hobbies.
+- Modify `HobbyServlet.java` so that each person can have several hobbies.
+- Add a beautiful `nav bar` for `hobbyResult.jsp` by `include directive`.
+- Refactor the *foo loop* using `JSTL` for `hobbyResult.jsp`.

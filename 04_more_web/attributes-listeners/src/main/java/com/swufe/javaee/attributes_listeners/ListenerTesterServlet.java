@@ -1,7 +1,6 @@
 package com.swufe.javaee.attributes_listeners;
 
 import com.swufe.javaee.attributes_listeners.model.Dog;
-
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;

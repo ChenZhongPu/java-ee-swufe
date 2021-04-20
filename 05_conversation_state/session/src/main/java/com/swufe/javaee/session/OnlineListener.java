@@ -1,6 +1,5 @@
 package com.swufe.javaee.session;
 
-import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 

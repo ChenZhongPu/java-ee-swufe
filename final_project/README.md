@@ -1,4 +1,4 @@
-Design and development a demo website like [Douban Book](https://book.douban.com/).
+Design and develop a demo website like [Douban Book](https://book.douban.com/).
 
 # Basic functionalities
 - There is an `Admin` user, and he/she is able to add new books, and delete books.
@@ -9,7 +9,7 @@ Design and development a demo website like [Douban Book](https://book.douban.com
 - The UI language should be English.
 
 # Notes
-- Each group can contain at most 5 people, and independent work is also welcome.
+- Each group can contain at most 4 people, and independent work is also welcome.
 - Each group will be asked to show the website.
 - Each group should also summit a pdf document covering the UI design, database design, MVC design, and highlights of the website.
 

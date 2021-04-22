@@ -18,5 +18,9 @@ ${dog.name}
 ${person.dog.name}
 <br/>
 ${city.shanghai}
+<br/>
+${balance + 1}
+<br/>
+${balance > 100}
 </body>
 </html>

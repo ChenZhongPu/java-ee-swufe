@@ -36,7 +36,9 @@ public class HobbyServlet extends HttpServlet {
        });
        request.setAttribute("names", names);
        request.setAttribute("hobby", hobby);
-       request.getRequestDispatcher("hobbyResult.jsp").forward(request, response);
+       // Two JSPs have different UI styles.
+       //  request.getRequestDispatcher("hobbyResult.jsp").forward(request, response);
+       request.getRequestDispatcher("hobbyResult2.jsp").forward(request, response);
     }
 
 }

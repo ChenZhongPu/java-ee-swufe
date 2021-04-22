@@ -21,6 +21,7 @@ public class ELServlet extends HttpServlet {
         Map<String, String> map = new HashMap<>();
         map.put("shanghai", "CN"); map.put("london", "UK");
         request.setAttribute("city", map);
+        request.setAttribute("balance", 100);
         request.getRequestDispatcher("el-result.jsp").forward(request, response);
     }
 }

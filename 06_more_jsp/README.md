@@ -22,5 +22,5 @@ The several reasons that you **still** learn JSP:
 
 # Exercise of this week
 - Modify `HobbyServlet.java` so that each person can have several hobbies.
-- Add a beautiful `nav bar` for `hobbyResult.jsp` by `include directive`.
+- Add a beautiful `nav bar` for `hobbyResult.jsp` by `include directive` or `jsp include action`.
 - Refactor the *foo loop* using `JSTL` for `hobbyResult.jsp`.

@@ -15,5 +15,7 @@
 <a href="sameHobby.html">Find friends</a>
 <br/>
 <a href="el">Expression Language</a>
+<br/>
+<a href="jstl">JSTL</a>
 </body>
 </html>

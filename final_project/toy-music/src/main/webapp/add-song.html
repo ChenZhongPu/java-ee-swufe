@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Add New Music</title>
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="icon" href="assets/image/logo.png" type="image/png">
+    <style>
+        .container {
+            max-width: 960px;
+        }
+    </style>
+    <!-- Custom styles for this template -->
+</head>
+<body>
+<div class="container">
+    <header class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+        <a href="#" class="d-flex align-items-center text-dark text-decoration-none">
+            <span class="fs-4">Admin Dashboard</span>
+        </a>
+    </header>
+    <form action="add-book" method="post">
+        <div class="mb-3">
+            <label for="inputMusicID" class="form-label">Song ID</label>
+            <input type="text" class="form-control" name="id" id="inputMusicID" required />
+        </div>
+        <div class="mb-3">
+            <label for="inputMusicTitle" class="form-label">Song Title</label>
+            <input type="text" class="form-control" name="title" id="inputMusicTitle" required>
+        </div>
+        <div class="mb-3">
+            <label for="inputSinger" class="form-label">Singer</label>
+            <input type="text" class="form-control" name="singer" id="inputSinger" required>
+        </div>
+        <div class="mb-3">
+            <label for="inputCover" class="form-label">Cover Image</label>
+            <input type="url" class="form-control" name="image" id="inputCover" required>
+        </div>
+        <div class="md-3">
+            <label for="inputDetail" class="form-label">Description</label>
+            <textarea class="form-control" name="description" id="inputDetail" rows="3" required >
+            </textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Add A New Song</button>
+    </form>
+</div>
+</body>
+</html>

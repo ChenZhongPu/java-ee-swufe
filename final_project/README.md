@@ -4,8 +4,8 @@ Design and develop a demo website like [Douban Book](https://book.douban.com/).
 - There is an `Admin` user, and he/she is able to add new books, and delete books.
 - Users can view books.
 - People can sign-up and login-in.
-- Users who have logged in can give ratings to books. (Optional)
-- The index page can display books which are recently added/published, and top-rated (Optional).
+- Users who have logged in can give ratings to books. 
+- The index page can display books which are recently added/published, and top-rated.
 - The UI language should be English.
 
 # Notes

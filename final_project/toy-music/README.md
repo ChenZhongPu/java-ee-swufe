@@ -10,6 +10,11 @@ Also, there are some `bad` designs which you can try your best to improve. For e
 - For Admin related pages, It would be better that the `is logged` check also works when visiting `jsp` or `html` pages directly? 
 - It would be better to reuse nav bar and footer.
 
+## Online demo
+[http://34.97.212.111/toy-music/](http://34.97.212.111/toy-music/)
+
+This is hosted at Google cloud. It is served for demonstration and please do not try to hack it.
+
 ## Screenshots
 ![screen 1](screenshot/1.png)
 

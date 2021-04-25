@@ -11,7 +11,7 @@ public class CONSTANTS {
 
     public final static String DATE_FORMAT = "yyyy-MM-dd";
     // for Windows, it can be something like: C:\\User\\yourname\\Desktop\\music.txt
-    public final static String SONG_FILE = "/home/zhongpu/Desktop/music.txt";
+    public final static String SONG_FILE = "/home/zhongpu/music.txt";
 
     public final static int TOP_K = 2;
 }

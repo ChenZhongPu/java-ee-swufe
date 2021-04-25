@@ -70,7 +70,7 @@ public class SongUtils {
        List<String> data = Arrays.asList(String.valueOf(id), singer, title, image, today, description);
        String song = System.lineSeparator() + String.join("|", data);
        try{
-           Path p = Files.write(Paths.get(CONSTANTS.SONG_FILE),
+           Files.write(Paths.get(CONSTANTS.SONG_FILE),
                    song.getBytes(), APPEND);
            return true;
        } catch (IOException e) {

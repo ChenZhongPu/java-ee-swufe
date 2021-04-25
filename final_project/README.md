@@ -4,7 +4,8 @@ Design and develop a demo website like [Douban Book](https://book.douban.com/).
 - There is an `Admin` user, and he/she is able to add new books, and delete books.
 - Users can view books.
 - People can sign-up and login-in.
-- Users who have logged in can give ratings to books. 
+- Users who have logged in can give ratings to books.
+- Users can search books.
 - The index page can display books which are recently added/published, and top-rated.
 - The UI language should be English.
 
@@ -14,7 +15,6 @@ Design and develop a demo website like [Douban Book](https://book.douban.com/).
 - Each group should also summit a pdf document covering the UI design, database design, MVC design, and highlights of the website.
 
 # Bonus
-- User can search books.
 - Multi-languages (*CN* and *EN*) support.
 - An elegant UI look, including but not limited to UI framework (e.g., Bootstrap).
 - Modern front-end framework (e.g., Vue).

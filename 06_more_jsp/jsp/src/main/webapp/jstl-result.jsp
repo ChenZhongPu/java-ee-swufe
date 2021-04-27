@@ -35,5 +35,16 @@
         Hey, man.
     </c:otherwise>
 </c:choose>
+
+<p>--------------------------</p>
+<c:out value="Hello"/>
+<br/>
+<c:out value="${user}" />
+<br/>
+<c:out value="${me}" default="Guest" />
+<br/>
+<c:out value="${me}">Guest</c:out>
+<br/>
+<c:out value="${user}">Guest</c:out>
 </body>
 </html>

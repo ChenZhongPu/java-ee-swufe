@@ -15,6 +15,9 @@ Also, there are some `bad` designs which you can try your best to improve. For e
 
 This is hosted at Google cloud. It is served for demonstration and please do not try to hack it.
 
+## For developers
+JDK 11+ is required.
+
 ## Screenshots
 ![screen 1](screenshot/1.png)
 

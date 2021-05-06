@@ -7,17 +7,15 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.util.*" %>
-<%@ page import="com.swufe.javaee.beerV1.model.Beer" %>
-<%@ page import="java.io.IOException" %>
 <html>
 <head>
-    <title>Beer Recommended JSP</title>
+    <title>String Recommended JSP</title>
 </head>
 <body>
 <%
-    List<Beer> styles = (List<Beer>) request.getAttribute("styles");
+    List<String> styles = (List<String>) request.getAttribute("styles");
     out.println("<br/>this is a jsp page");
-    for (Beer brand: styles) {
+    for (String brand: styles) {
         out.println("<br/>try: " + brand);
     }
 %>

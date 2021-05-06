@@ -15,11 +15,4 @@ public class BeerExpert {
         }
         return brands;
     }
-
-    public List<Beer> getBeers(String color) {
-        List<Beer> beers = new ArrayList<>();
-        beers.add(new Beer("A", 100.0));
-        beers.add(new Beer("B", 200.0));
-        return beers;
-    }
 }

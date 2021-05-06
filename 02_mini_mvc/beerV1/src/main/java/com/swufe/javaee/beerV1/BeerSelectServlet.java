@@ -1,6 +1,5 @@
 package com.swufe.javaee.beerV1;
 
-import com.swufe.javaee.beerV1.model.Beer;
 import com.swufe.javaee.beerV1.model.BeerExpert;
 
 import javax.servlet.*;
@@ -34,9 +33,8 @@ public class BeerSelectServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String c = request.getParameter("color");
         BeerExpert expert = new BeerExpert();
-        //List<String> result = expert.getBrands(c);
-        List<Beer> result2 = expert.getBeers(c);
-        request.setAttribute("styles", result2);
+        List<String> result = expert.getBrands(c);
+        request.setAttribute("styles", result);
         RequestDispatcher view = request.getRequestDispatcher("/result.jsp");
         view.forward(request, response);
     }

@@ -9,5 +9,5 @@ The Servlet 4.0 API can be found at [Tomcat Doc](https://tomcat.apache.org/tomca
 
 # Exercise of this week
 - Output an avatar dynamically in a `doGet()` method. You may use a third-party lib, such as [avatar-generator](https://github.com/gabrie-allaigre/avatar-generator).
-- Add non-empty and number value validation in both client side and server side for `selectbeer.html`.
+- Add non-empty and number value validation in either client side or server side for `selectbeer.html` (double validations are welcome).
 - Implement `image upload` in a servlet.

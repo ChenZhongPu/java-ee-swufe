@@ -13,5 +13,9 @@
 <a href="lan">Lan</a>
 <br/>
 <a href="beer">Beer</a>
+<br/>
+<a href="login">Login</a>
+<br/>
+<a href="dashboard">Dashboard</a>
 </body>
 </html>

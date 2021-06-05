@@ -1,5 +1,6 @@
 package com.example.thymeleaf;
 
+import com.example.thymeleaf.model.User;
 import org.thymeleaf.context.WebContext;
 import tleaf.utils.Leaf;
 import tleaf.utils.TemplateUtils;
@@ -19,7 +20,10 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-        
+        WebContext wx = new WebContext(req, resp, req.getServletContext());
+        String email = req.getParameter("email");
+        User user = new User(17, email);
+        req.getSession().setAttribute("user", user);
+        TemplateUtils.process("dashboard", wx);
     }
 }

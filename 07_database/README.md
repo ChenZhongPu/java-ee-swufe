@@ -54,7 +54,7 @@ Connection connection = source.getConnection();
 ```
 
 ## Login 3
-In fact, in this project, we are using the connection pool provided by `application server`(i.e., Tomcat).
+In this project, we are using the connection pool provided by our application server(i.e., `Tomcat`).
 
 Firstly, create a `context.xml` under `webapp/META-INF`:
 
@@ -84,3 +84,6 @@ Lastly, create a datasource via `JNDI`:
 InitialContext ctx = new InitialContext();
 DataSource source = (DataSource) ctx.lookup("java:comp/env/jdbc/MyDB");
 ```
+
+The method above here is container-specific, and this is because `context.xml` only works in `Tomcat`. In fact, it is possible to deploy datasource via `<data-source>` element. Read more at [is there a standard way to define a JDBC Datasource for Java EE containers?
+](https://stackoverflow.com/questions/2279913).

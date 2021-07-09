@@ -82,5 +82,5 @@ Lastly, create a datasource via `JNDI`:
 
 ```java
 InitialContext ctx = new InitialContext();
-DataSouce source = (DataSource) ctx.lookup("java:comp/env/jdbc/MyDB");
+DataSource source = (DataSource) ctx.lookup("java:comp/env/jdbc/MyDB");
 ```

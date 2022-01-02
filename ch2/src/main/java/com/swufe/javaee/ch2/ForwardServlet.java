@@ -1,3 +1,4 @@
+package com.swufe.javaee.ch2;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -8,7 +9,8 @@ import java.io.IOException;
 public class ForwardServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        RequestDispatcher dispatcher = request.getRequestDispatcher("a.jsp");
+        dispatcher.forward(request, response);
     }
 
     @Override

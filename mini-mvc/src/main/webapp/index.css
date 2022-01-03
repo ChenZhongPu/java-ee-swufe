@@ -1,0 +1,29 @@
+h1 {
+    color: red;
+    font-size: 5em;
+}
+
+.foo {
+    color: #568900;
+}
+
+.bar {
+    color: rgb(10, 20, 100);
+}
+
+#books {
+    background-color: cadetblue;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}

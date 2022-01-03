@@ -1,4 +1,4 @@
-<%--
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: zhongpu
   Date: 2022/1/2
@@ -11,6 +11,12 @@
     <title>Result</title>
 </head>
 <body>
-
+<h1>Recommendation:</h1>
+<%
+    List<String> books = (List<String>) request.getAttribute("books");
+    for (String b : books) {
+%>
+<%= b %><br>
+<% } %>
 </body>
 </html>

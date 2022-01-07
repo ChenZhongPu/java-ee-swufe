@@ -10,12 +10,12 @@ import java.io.PrintWriter;
 public class BookServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int age;
-        if (request.getParameter("age") != null) {
-            age = Integer.parseInt(request.getParameter("age"));
-            // normal logic
+        String[] reads = request.getParameterValues("read");
+        String agent = request.getHeader("User-Agent");
+        try {
+            int age = Integer.parseInt(request.getParameter("age"));
             request.getRequestDispatcher("ok.html").forward(request, response);
-        } else {
+        } catch (NumberFormatException e) {
             request.getRequestDispatcher("error.html").forward(request, response);
         }
     }

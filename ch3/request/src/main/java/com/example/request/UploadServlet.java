@@ -18,6 +18,7 @@ public class UploadServlet extends HttpServlet {
         Part part = request.getPart("file");
         String fileName = part.getSubmittedFileName();
         InputStream is = part.getInputStream();
+        // Windows path can be: "C:\\Users\\zhongpu\\Desktop\\"
         Path path = Path.of("/Users/zhongpu/Desktop/" + fileName);
         Files.copy(is, path);
         PrintWriter out = response.getWriter();

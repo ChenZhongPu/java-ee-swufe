@@ -16,5 +16,6 @@ public class Image2Servlet extends HttpServlet {
         assert is != null;
         byte[] data = is.readAllBytes();
         os.write(data);
+        os.close();
     }
 }

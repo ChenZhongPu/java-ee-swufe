@@ -27,8 +27,8 @@ public class Main {
         }
     }
 
-    private static void delete(Connection connection) throws SQLException {
-        // insert, update statements are similar
+    private static void insert(Connection connection) throws SQLException {
+        // delete, update statements are similar
         String sql = "INSERT INTO author(name, birth, country) VALUES(?, ?, ?)";
         try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
             preparedStatement.setString(1, "Wang Xiaobo");

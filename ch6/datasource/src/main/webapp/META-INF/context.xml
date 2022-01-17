@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Context>
+    <Resource
+            name="jdbc/db" type="javax.sql.DataSource"
+            maxActive="30" maxIdle="10" maxWait="10000"
+            url="jdbc:sqlite:/home/zhongpu/github/java-ee-swufe/ch6/test.db"
+            driverClassName="org.sqlite.JDBC"
+    />
+</Context>

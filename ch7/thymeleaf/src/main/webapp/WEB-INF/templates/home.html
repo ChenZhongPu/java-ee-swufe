@@ -5,6 +5,19 @@
     <title>Theymeleaf example</title>
 </head>
 <body>
+<h1 th:text="#{hello}">你好</h1>
+<h2 th:text="#{welcome(${session.user})}">欢迎用户！</h2>
 I am learning <span th:text="${name}">CS</span>.
+<br>
+<p th:text="${user.name}"></p>
+<br>
+Session: <span th:text="${session.foo}"></span>
+<br>
+Request: <span th:text="${bar}"></span>
+<br>
+<div th:object="${user}">
+    <p>Age: <span th:text="*{age}">18</span></p>
+    <p>Name: <span th:text="*{name}">Bob</span></p>
+</div>
 </body>
 </html>

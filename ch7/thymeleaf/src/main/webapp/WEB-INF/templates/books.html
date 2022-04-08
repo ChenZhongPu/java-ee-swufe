@@ -3,12 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Books</title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
 </head>
 <body>
-<ul>
-    <li>
-        <a href=""></a>
-    </li>
-</ul>
+<div th:object="${book}">
+    <img th:src="*{image}" src="https://img1.doubanio.com/view/subject/l/public/s3267547.jpg" alt="book cover">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th th:text="*{title}">book title</th>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td th:text="*{price}">0.0</td>
+        </tr>
+        <tr>
+            <td>ISBN</td>
+            <td th:text="*{isbn}">0</td>
+        </tr>
+    </table>
+</div>
 </body>
 </html>

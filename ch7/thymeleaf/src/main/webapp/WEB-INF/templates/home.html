@@ -19,5 +19,20 @@ Request: <span th:text="${bar}"></span>
     <p>Age: <span th:text="*{age}">18</span></p>
     <p>Name: <span th:text="*{name}">Bob</span></p>
 </div>
+
+<ul>
+    <li>
+        <a th:href="@{books?id=3}" href="#">@{books?id=3}</a>
+    </li>
+    <li>
+        <a th:href="@{books(id=3)}" href="#">@{books(id=3)}</a>
+    </li>
+    <li>
+        <a th:href="@{/books(id=3)}" href="#">@{/books(id=3)}</a>
+    </li>
+    <li>
+        <a th:href="@{books(id=${bookID})}" href="#">@{books(id=${bookID})}</a>
+    </li>
+</ul>
 </body>
 </html>

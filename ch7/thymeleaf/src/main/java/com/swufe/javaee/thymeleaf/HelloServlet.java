@@ -9,7 +9,7 @@ import java.io.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
-@WebServlet(name = "helloServlet", value = "/")
+@WebServlet(name = "helloServlet", value = {"/", "/test/123"})
 public class HelloServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         TemplateEngine engine = TemplateEngineUtil.getTemplateEngine(request.getServletContext());
@@ -21,6 +21,7 @@ public class HelloServlet extends HttpServlet {
         request.setAttribute("bar", 88);
         context.setVariable("name", "Java Web");
         context.setVariable("user", new User("Zhongpu", 30));
+        context.setVariable("bookID", 42);
         engine.process("home.html", context, response.getWriter());
     }
 }

@@ -11,14 +11,14 @@ public class Main {
     // Function to create the QR code
     public static void createQR(String data, String path,
                                 int height, int width)
-            throws WriterException, IOException
-    {
+            throws WriterException, IOException {
 
         BitMatrix matrix = new MultiFormatWriter().encode(
                 data,
                 BarcodeFormat.QR_CODE, width, height);
         MatrixToImageWriter.writeToPath(matrix, "PNG", Path.of(path));
     }
+
     public static void main(String[] args) throws IOException, WriterException {
         createQR("I love Java EE", "test.png", 400, 400);
     }

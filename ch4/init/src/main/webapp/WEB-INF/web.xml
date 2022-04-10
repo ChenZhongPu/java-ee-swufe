@@ -19,4 +19,13 @@
         <servlet-name>InitServlet</servlet-name>
         <url-pattern>/init</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Init4Servlet</servlet-name>
+        <servlet-class>com.swufe.javaee.init.Init4Servlet</servlet-class>
+        <init-param>
+            <param-name>path</param-name>
+            <param-value>/Users/zhongpu/Desktop/foo</param-value>
+        </init-param>
+    </servlet>
 </web-app>

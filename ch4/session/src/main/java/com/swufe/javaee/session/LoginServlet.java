@@ -15,6 +15,7 @@ public class LoginServlet extends HttpServlet {
         } else {
             // already logged
             response.sendRedirect("home");
+//            response.sendRedirect(response.encodeRedirectURL("home"));
         }
     }
 
@@ -24,5 +25,6 @@ public class LoginServlet extends HttpServlet {
         HttpSession session = request.getSession();
         session.setAttribute("email", email);
         response.sendRedirect("home");
+//        response.sendRedirect(response.encodeRedirectURL("home"));
     }
 }

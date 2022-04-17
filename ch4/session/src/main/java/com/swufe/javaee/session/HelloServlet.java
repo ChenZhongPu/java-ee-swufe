@@ -15,7 +15,9 @@ public class HelloServlet extends HttpServlet {
 
         if (session == null) {
             out.println("This is a new session");
-            request.getSession();
+            session = request.getSession();
+            session.setAttribute("name", "zhongpu");
+            session.setMaxInactiveInterval(10);
         } else {
             out.println("Welcome back");
         }

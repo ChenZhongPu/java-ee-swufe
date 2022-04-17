@@ -87,9 +87,9 @@
     <main class="px-3">
         <h1>Cover your page.</h1>
         <%
-        String name = (String) request.getAttribute("name");
+        String email = (String) request.getAttribute("email");
         %>
-        <p class="lead">Hello <%= name %></p>
+        <p class="lead">Hello <%= email %></p>
         <p class="lead">
             <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Learn more</a>
         </p>

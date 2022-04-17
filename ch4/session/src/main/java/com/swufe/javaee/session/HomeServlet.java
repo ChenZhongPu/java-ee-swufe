@@ -10,10 +10,10 @@ public class HomeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
-        if (session.getAttribute("name") == null) {
-            request.setAttribute("name", "Guest");
+        if (session.getAttribute("email") == null) {
+            request.setAttribute("email", "Guest");
         } else {
-           request.setAttribute("name", session.getAttribute("name"));
+           request.setAttribute("email", session.getAttribute("email"));
         }
         request.getRequestDispatcher("/WEB-INF/home.jsp").forward(request, response);
     }

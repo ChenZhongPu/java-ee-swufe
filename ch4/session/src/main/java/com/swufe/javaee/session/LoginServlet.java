@@ -10,7 +10,7 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
-        if (session.getAttribute("name") == null) {
+        if (session.getAttribute("email") == null) {
            request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
         } else {
             // already logged
@@ -22,7 +22,7 @@ public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String email = request.getParameter("email");
         HttpSession session = request.getSession();
-        session.setAttribute("name", email);
+        session.setAttribute("email", email);
         response.sendRedirect("home");
     }
 }

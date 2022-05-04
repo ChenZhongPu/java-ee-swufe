@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Submit</title>
+<style>
+    /* root font size */
+html {
+  font-size: 125%;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+section {
+  padding: 50px 0;
+}
+
+/* font styles */
+body {
+  font-family: 'Noto Sans', sans-serif;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  color: #0F0F0F;
+}
+
+a {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  font-size: 5rem;
+  color: #F6F6F6;
+}
+
+h2 {
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+p {
+  line-height: 1.5;
+  color:#545454;
+  padding-bottom: 20px;
+}
+/* header section styles */
+header {
+  background-image: url(https://psd.hackeryou.com/assignment1-assets/summit/asset-1.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-size: cover;
+  height: 90vh;
+}
+
+header span {
+  font-size: 1.2rem;
+  letter-spacing: 1.2px;
+  display: block;
+  line-height: 0;
+}
+
+/* button style */
+p ~ a {
+  padding: 15px 30px;
+  background-color: #8DD7E9;
+  text-transform: uppercase;
+  color: #0F0F0F;
+  text-decoration: none;
+}
+
+/* navigation styles */
+
+.mobile-nav {
+  display: none;
+}
+
+nav {
+  text-align: left;
+  display: flex;
+}
+
+.nav-logo {
+  margin-top: 20px;
+  width: 30%;
+}
+
+nav a {
+  color: #F6F6F6;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  width: 70%;  
+  align-items: flex-start;
+}
+
+nav li {
+  list-style: none;
+}
+
+nav li a {
+  padding: 20px 15px;
+  font-size: 0.8rem;
+  display: inline-block;  
+  text-decoration: none;
+}
+
+.image-intro {
+  padding-bottom: 0;
+}
+
+.social-links {
+  padding-bottom: 30px;
+}
+
+.social-links li {
+  text-align: right;
+  padding-bottom: 10px;
+  list-style: none;
+}
+
+.fab {
+  color: #215A6D;
+  display: inline-block;
+  font-size: 0.8rem;
+}
+
+.fa-facebook-f {
+  padding-right: 2px;
+}
+
+/* about section */
+.intro-info {
+  padding: 50px 0;
+  width: 65%;
+}
+
+/* image info section */
+.first-section {
+  display: flex;
+}
+
+.first-section img {
+  width: 50%;
+}
+
+.info-background {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.info-block {
+  margin-left: 70px;
+  width: 30vw;
+}
+
+.second-section {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.second-section img {
+  width: 50%;
+}
+
+.second-section .info-block {
+  margin-left: 120px;
+}
+
+/* icon links section */
+.icon-info {
+  background-color: #215A6D;
+  display: flex;
+}
+
+.icon-set ul {
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+}
+
+.icon-set li {
+  list-style: none;
+  padding: 20px 60px;
+}
+
+.icon-info .fas {
+  font-size: 2rem;
+  color: #F6F6F6;
+}
+
+.icon-info h3 {
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #F6F6F6;
+}
+
+/* personal intro section */
+.personal-intro {
+  display: flex;
+}
+
+.personal-image img{
+  width: 20vw;
+}
+
+.image-description {
+  padding-left: 3vw;
+  text-align: left;
+}
+
+.image-description h2 {
+  margin: 0;
+}
+/* mini gallery section */
+
+.gallery ul {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 30px;
+}
+.gallery li {
+  list-style: none;
+}
+
+.gallery li img {
+  width: 100%;
+}
+
+/* footer */
+footer {
+  background-color: #215A6D;
+}
+
+footer * {
+  text-align: left;
+  color: #F6F6F6;
+}
+
+footer h4 {
+  margin-bottom: 5px;
+}
+
+.footer-main {
+  padding: 40px 0 60px 0;
+  display: flex;
+}
+
+footer ul {
+  font-weight: 700;
+}
+
+footer li {
+  list-style: none;
+}
+
+footer a {
+  font-size: 0.75rem;
+  line-height: 1.6;
+  font-family: 'Noto Sans', sans-serif;  
+  font-weight: 400;
+  text-decoration: none;
+}
+
+/* newsletter form */
+.stay-updated {
+  width: 50%;
+}
+
+.stay-updated p {
+  margin: 0;
+}
+
+ input[type="email"] {
+   color: #000;
+   height: 38px;
+   border: none;
+   padding-left: 20px;
+   width: 60%;
+ }
+
+ button[type="submit"] {
+   font-size: 0.7rem;
+   font-family: 'Poppins', sans-serif;
+   text-align: center;
+   text-transform: uppercase;
+   margin-top: -20px;
+   margin-left: -6px;
+   height: 40px;
+   background-color: #8DD7E9;
+   border: 2px solid #8DD7E9;
+   color: #0F0F0F;
+   padding: 0 25px;
+ }
+
+/* menu contact links */
+.contact-links {
+  width: 50%;
+  display: flex;
+}
+
+.contact-links ul {
+  margin: 0;
+  width: 20vw;
+  padding-left: 30px;
+}
+
+.page-links {
+  text-transform: uppercase;
+}
+
+/* copyright info */
+.copyright-info {
+  padding: 15px;
+  background-color: #113b4a;
+}
+
+.copyright-info p {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 940px) {
+  /* footer changes */
+  input[type="email"] {
+    width: 100%;
+  }
+  button[type="submit"] {
+     text-align: left;
+     padding-left: 20px;
+     margin-top: 20px;
+     margin-left: 0;
+     width: 40%;
+  }
+}
+
+ @media (max-width: 768px) {
+   /* typography sizes */
+   h2 {
+    font-size: 2rem;     
+   }
+
+   h3 {
+     font-size: 1.8rem;
+   }
+
+   p {
+     font-size: 0.9rem;
+     line-height: 1.5rem;
+   }
+
+   a {
+     font-size: 1rem;
+   }
+
+   /* mobile nav */
+  .mobile {
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-logo a {
+    font-size: 1.7rem;
+  }
+
+  .mobile-nav {
+    display: inline-block
+  }
+
+  .mobile-nav button {
+    padding-top: 16px;
+    background-color: transparent;
+    border: none;
+  }
+
+  .mobile-nav .fas {
+    font-size: 2rem;
+    color: #F6F6F6;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  /* intro section */
+  .first-section,
+  .second-section {
+    flex-direction: column;
+  }
+
+  .image-intro img {
+    width: 100%;
+  }
+
+  .info-background {
+    width: 100%;
+  }
+
+  .second-section .info-block {
+    margin: 0 auto;
+    padding: 50px 0;
+   }
+
+  .info-block {
+    margin: 70px auto;
+    width: 80%;
+  }
+
+  /* icon section */
+  .icon-set ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .icon-set .fas {
+    font-size: 3rem;
+  }
+
+  .icon-set h3 {
+    font-size: 1.4rem;
+  }
+
+  /* personal image */
+  .personal-intro {
+    flex-direction: column;
+  }
+   
+  .personal-image img {
+    width: 80%;
+  }
+
+  .image-description {
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .image-description h2 {
+    font-size: 2rem;
+  }
+
+  .image-description p {
+    text-align: left;
+    margin-bottom: 30px;
+  }
+
+   /* gallery layout */
+  .gallery ul {
+     gap: 0;
+  }
+  .gallery li:last-of-type {
+    display: none;
+  }
+
+  /* footer */
+  h4 {
+    font-size: 1.3rem;
+  }
+
+  .stay-updated {
+    width: 100%;
+  }
+
+  .stay-updated input,
+  .stay-updated button,
+  .contact-links li a {
+      height: 50px;
+      font-size: 0.9rem;
+    }
+
+  .stay-updated input {
+    padding: 0;
+  }
+
+  .stay-updated button {
+    padding: 0;
+    margin-top: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .footer-main * {
+    text-align: center;
+  }
+
+  .footer-main,
+  .contact-links {
+    flex-direction: column;
+  }
+
+  .contact-links {
+    width: 100%;
+  }
+
+  .contact-links ul {
+    padding-left: 0;
+    text-align: center;
+    width: 100%;
+  }
+ }
+
+ @media (max-width: 480px) {
+   h1 {
+     font-size: calc(1rem + 15vw);
+   }
+   /* personal iamge */
+   .personal-image img {
+     width: 100%;
+   }
+
+   .image-description {
+     padding-left: 0;
+   }
+
+   /* gallery section */
+   .gallery {
+     width: 100%;
+     padding: 0;
+   }
+
+   .gallery ul {
+     margin: 0;
+   }
+
+   .footer-main {
+     margin-top: -4px;
+   }
+ }
+</style>
+    </head>
+    <body>
+        <header>
+            <!-- navigation starts here-->
+            <nav class="mobile wrapper">
+              <div class="nav-logo">
+                <a href="#index.html">Summit</a>
+              </div>
+              <!-- mobile nav bar -->
+              <div class="mobile-nav">
+                <button><span class="fas fa-bars"></span></button>
+              </div>
+              <!-- mobile nav ends -->
+              <!-- regular nav bar -->
+              <ul>
+               <li><a href="#">Home</a></li>
+               <li><a href="#">About</a></li>
+               <li><a href="#">Blog</a></li>
+               <li><a href="#">Contact</a></li>
+              </ul>
+              </nav>
+               <!-- navigation ends here-->
+               <div class="site-title wrapper">
+                 <h1><span>Welcome to</span> Summit</h1>
+               </div>
+               <ul class="social-links wrapper">
+                 <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+                 <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+                 <li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
+                 <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+               </ul>
+             </header>
+             <!-- header ends here -->
+             <!-- main section starts here -->
+             <main>
+               <!-- about section starts here -->
+               <section class="intro-info wrapper">
+                 <h2>About Summit</h2>
+                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit accusamus quam unde, quidem placeat dolore! Assumenda magnam perspiciatis rerum sequi tempora maiores architectodit recusandae, numquam odit nobis, sint velit quibusdam.</p>
+                 <a href="#">Find out more</a>
+               </section>
+               <!-- about section ends here -->
+               <!-- image section starts here -->
+               <section class="image-intro">
+                 <div class="first-section">
+                   <img src="https://psd.hackeryou.com/assignment1-assets/summit/asset-2.jpg" alt="Mountain peak covered in snow">
+                   <div class="info-background">
+                      <div class="info-block">
+                        <h3>Peak photos</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus voluptatem a fuga cum expedita ex earum id atque! Nostrum nisi totam recusandae maxime.</p>
+                        <a href="#">Read More</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="second-section">
+                    <img src="https://psd.hackeryou.com/assignment1-assets/summit/asset-3.jpg" alt="Looking over peaks from inside a plane">
+                    <div class="info-background">
+                      <div class="info-block">
+                        <h3>Packing Essentials</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet similique libero debitis dolores autem, accusantium accusamus voluptatum unde laboriosam dolor.</p>
+                        <a href="#">Read More</a>
+                     </div>
+                   </div>
+                 </div>      
+               </section>
+               <!-- image section ends here -->
+               <!-- icon section starts here -->
+               <section class="icon-info">
+                 <div class="icon-set wrapper">
+                   <ul>
+                     <li class="icon-1">
+                       <span class="fas fa-images"></span>
+                       <h3>Gallery</h3>
+                     </li>
+                     <li class="icon-2">
+                       <span class="fas fa-user"></span>
+                       <h3>About</h3>
+                     </li>
+                     <li class="icon-3">
+                       <span class="fas fa-envelope"></span>
+                       <h3>Contact</h3>
+                     </li>
+                   </ul>
+                 </div>
+               </section>
+               <!-- icon section ends here -->
+               <!-- personal intro starts here -->
+               <section class="personal-intro wrapper">
+                 <div class="personal-image">
+                 <img src="https://psd.hackeryou.com/assignment1-assets/summit/asset-7.png" alt="close crop image of woman looking at the camera">
+                 </div>
+                 <div class="image-description">
+                   <h2>About me</h2>
+                   <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur unde quod totam vel soluta tempore magni dolorem suscipit animi officia est, et esse, quasi nihil perferendis at deserunt voluptatum aperiam. Voluptatum excepturi architecto voluptatibus ipsa natus enim, doloremque at necessitatibus error cumque, blanditiis laboriosam delectus quod laudantium autem minus tempore, quis deleniti nobis rerum explicabo cupiditate? Earum pariatur fugiat officia?</p>
+                   <a href="#">Find out More</a>
+                 </div>
+               </section>
+               <!-- personal intro ends here -->
+               <!-- image grid here -->
+               <section class="gallery wrapper">
+                 <ul>
+                   <li><img src="https://psd.hackeryou.com/assignment1-assets/summit/asset-4.jpg" alt="A lush green forest with mountains in the background "></li>
+                   <li><img src="https://psd.hackeryou.com/assignment1-assets/summit/asset-5.jpg" alt="a snow covered mountain peak with a dark gradient backdrop"></li>
+                   <li><img src="https://psd.hackeryou.com/assignment1-assets/summit/asset-6.jpg" alt="a moutain slope against the backdrop of a bright blue sky"></li>
+                 </ul>
+               </section>
+               <!-- image grid ends here -->
+               <!-- footer starts here -->
+               <footer>
+                 <div class="footer-main wrapper">
+                   <!-- newsletter section -->
+                   <div class="stay-updated">
+                     <h4>Stay updated</h4>
+                     <p>Subscribe to our newsletter for updates</p>
+                     <form action="#" class="newsletter" name="newsletter"></form>
+                     <input type="email" placeholder="email address" name="email-address" required="true">
+                     <button type="submit">Subscribe</button>
+                   </div>
+                   <!-- footer site links -->
+                   <div class="contact-links">
+                     <ul>
+                       <h4>Contact</h4>
+                       <li><a href="#">info@email.com</a></li>
+                       <li><a href="#">123 - 456 - 7890</a></li>
+                       <li><a href="#">123 some road,</a></li>
+                       <li><a href="#">Toronto, ON</a></li>
+                     </ul>
+                     <ul class="page-links">
+                       <h4>Pages</h4>
+                       <li><a href="#">Home</a></li>
+                       <li><a href="#">About</a></li>
+                       <li><a href="#">Blog</a></li>
+                       <li><a href="#">Contact</a></li>
+                     </ul>
+                     <ul>
+                       <h4>Recent Posts</h4>
+                       <li><a href="#">Climbing Tips</a></li>
+                       <li><a href="#">Photography Guide</a></li>
+                       <li><a href="#">Top Mountains</a></li>
+                       <li><a href="#">Everest</a></li>
+                     </ul>
+                   </div>
+                 </div>        
+                   <!-- copyright -->
+                   <div class="copyright-info">
+                     <p>Copyright © 2018 HackerYou</p>
+                   </div>
+               </footer>
+               <!-- footer ends here -->
+             </main>
+           </body>
+           </html>        
+    </body>
+</html>

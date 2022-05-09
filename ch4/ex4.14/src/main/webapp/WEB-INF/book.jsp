@@ -1,4 +1,5 @@
-<%@ page import="com.javaee.swufe.ex4_14.models.Book" %><%--
+<%@ page import="com.javaee.swufe.ex4_14.models.Book" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: zhongpu
   Date: 2022/4/17
@@ -8,6 +9,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     Book book = (Book) request.getAttribute("book");
+
+    List<Book> books = (List<Book>) session.getAttribute("books");
+    int count = 0;
+    if (books != null) {
+        count = books.size();
+    }
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,7 +53,7 @@
                         <button class="btn btn-outline-dark" type="submit">
                             <i class="bi-cart-fill me-1"></i>
                             Cart
-                            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                            <span class="badge bg-dark text-white ms-1 rounded-pill"><%=count%></span>
                         </button>
                     </form>
                 </div>

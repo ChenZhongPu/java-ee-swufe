@@ -15,7 +15,7 @@ public class CartServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // TO DO: read the books from session
-        // TO DO: and then go to `cart.jsp` to displaying
+        // TO DO: and then go to `cart.jsp` for displaying
 
     }
 
@@ -35,6 +35,6 @@ public class CartServlet extends HttpServlet {
             books.add(book);
         }
         session.setAttribute("books", books);
-        response.sendRedirect("index.html");
+        response.sendRedirect("index.jsp");
     }
 }

@@ -74,11 +74,11 @@
                                 <h5 class="card-title"><%=book.getTitle() %></h5>
                                 <span class="badge bg-success">$<%=book.getPrice() %></span>
                                 <p class="card-text"><%=book.getDescription() %></p>
-                                <form>
+                                <form action="cart" method="post">
                                     <div class="input-group">
-                                        <input type="number" min="1" placeholder="amount">
+                                        <input type="number" min="1" placeholder="amount" name="amount">
                                         <input name="id" value="<%=book.getId()%>" type="hidden">
-                                        <button class="btn btn-primary" type="button">Add to shop cart</button>
+                                        <button class="btn btn-primary" type="submit">Add to shop cart</button>
                                     </div>
                                 </form>
                             </div>

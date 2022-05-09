@@ -28,14 +28,11 @@ public class CartServlet extends HttpServlet {
         List<Book> books;
         if (session.getAttribute("books") != null) {
             books = (List<Book>) session.getAttribute("books");
-            for (int i = 0; i < amount; i++) {
-                books.add(book);
-            }
         } else {
             books = new ArrayList<>();
-            for (int i = 0; i < amount; i++) {
-                books.add(book);
-            }
+        }
+        for (int i = 0; i < amount; i++) {
+            books.add(book);
         }
         session.setAttribute("books", books);
         response.sendRedirect("index.html");

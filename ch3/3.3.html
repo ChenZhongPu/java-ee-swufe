@@ -1,0 +1,343 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js rust">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>More About Request - Head First Java Web</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../preface.html">Preface</a></li><li class="chapter-item expanded "><a href="../ch1/index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch1/1.1.html"><strong aria-hidden="true">1.1.</strong> Jakarta EE Overview</a></li><li class="chapter-item expanded "><a href="../ch1/1.2.html"><strong aria-hidden="true">1.2.</strong> Your First Java Web Project</a></li><li class="chapter-item expanded "><a href="../ch1/1.3.html"><strong aria-hidden="true">1.3.</strong> A Brief Introduction To HTML</a></li><li class="chapter-item expanded "><a href="../ch1/1.4.html"><strong aria-hidden="true">1.4.</strong> A Brief Introduction To HTTP</a></li><li class="chapter-item expanded "><a href="../ch1/1.5.html"><strong aria-hidden="true">1.5.</strong> Revisit The First Java Web Project</a></li><li class="chapter-item expanded "><a href="../ch1/exercise.html"><strong aria-hidden="true">1.6.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch2/index.html"><strong aria-hidden="true">2.</strong> Web App Architecture And Mini MVC</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch2/2.1.html"><strong aria-hidden="true">2.1.</strong> Servlet And Container</a></li><li class="chapter-item expanded "><a href="../ch2/2.2.html"><strong aria-hidden="true">2.2.</strong> Search: The Way To Self-learning</a></li><li class="chapter-item expanded "><a href="../ch2/2.3.html"><strong aria-hidden="true">2.3.</strong> A Brief Introduction To MVC</a></li><li class="chapter-item expanded "><a href="../ch2/2.4.html"><strong aria-hidden="true">2.4.</strong> Hands On MVC (1)</a></li><li class="chapter-item expanded "><a href="../ch2/2.5.html"><strong aria-hidden="true">2.5.</strong> Hands on MVC (2)</a></li><li class="chapter-item expanded "><a href="../ch2/exercise.html"><strong aria-hidden="true">2.6.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch3/index.html"><strong aria-hidden="true">3.</strong> In-depth Servlet</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch3/3.1.html"><strong aria-hidden="true">3.1.</strong> Servlet: From Birth To Death</a></li><li class="chapter-item expanded "><a href="../ch3/3.2.html"><strong aria-hidden="true">3.2.</strong> Request And Response</a></li><li class="chapter-item expanded "><a href="../ch3/3.3.html" class="active"><strong aria-hidden="true">3.3.</strong> More About Request</a></li><li class="chapter-item expanded "><a href="../ch3/3.4.html"><strong aria-hidden="true">3.4.</strong> Upload Files In Servlets</a></li><li class="chapter-item expanded "><a href="../ch3/3.5.html"><strong aria-hidden="true">3.5.</strong> More About Response (1)</a></li><li class="chapter-item expanded "><a href="../ch3/3.6.html"><strong aria-hidden="true">3.6.</strong> More About Response (2)</a></li><li class="chapter-item expanded "><a href="../ch3/exercise.html"><strong aria-hidden="true">3.7.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch4/index.html"><strong aria-hidden="true">4.</strong> In-depth Web</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch4/4.1.html"><strong aria-hidden="true">4.1.</strong> Init parameters</a></li><li class="chapter-item expanded "><a href="../ch4/4.2.html"><strong aria-hidden="true">4.2.</strong> Attributes</a></li><li class="chapter-item expanded "><a href="../ch4/4.3.html"><strong aria-hidden="true">4.3.</strong> Session Management (1)</a></li><li class="chapter-item expanded "><a href="../ch4/4.4.html"><strong aria-hidden="true">4.4.</strong> Session Management (2)</a></li><li class="chapter-item expanded "><a href="../ch4/exercise.html"><strong aria-hidden="true">4.5.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch5/index.html"><strong aria-hidden="true">5.</strong> JSP And Scriptless JSP</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch5/5.1.html"><strong aria-hidden="true">5.1.</strong> Facts About JSP</a></li><li class="chapter-item expanded "><a href="../ch5/5.2.html"><strong aria-hidden="true">5.2.</strong> Expression Language</a></li><li class="chapter-item expanded "><a href="../ch5/5.3.html"><strong aria-hidden="true">5.3.</strong> JSTL</a></li><li class="chapter-item expanded "><a href="../ch5/exercise.html"><strong aria-hidden="true">5.4.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch6/index.html"><strong aria-hidden="true">6.</strong> Database</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch6/6.1.html"><strong aria-hidden="true">6.1.</strong> Introduction To Database</a></li><li class="chapter-item expanded "><a href="../ch6/6.2.html"><strong aria-hidden="true">6.2.</strong> SQL (1)</a></li><li class="chapter-item expanded "><a href="../ch6/6.3.html"><strong aria-hidden="true">6.3.</strong> SQL (2)</a></li><li class="chapter-item expanded "><a href="../ch6/6.4.html"><strong aria-hidden="true">6.4.</strong> Accessing Databases From Java (1)</a></li><li class="chapter-item expanded "><a href="../ch6/6.5.html"><strong aria-hidden="true">6.5.</strong> Accessing Databases From Java (2)</a></li><li class="chapter-item expanded "><a href="../ch6/exercise.html"><strong aria-hidden="true">6.6.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch7/index.html"><strong aria-hidden="true">7.</strong> Thymeleaf</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch7/7.1.html"><strong aria-hidden="true">7.1.</strong> Get Started With Thymeleaf</a></li><li class="chapter-item expanded "><a href="../ch7/7.2.html"><strong aria-hidden="true">7.2.</strong> Standard Expression Syntax</a></li><li class="chapter-item expanded "><a href="../ch7/exercise.html"><strong aria-hidden="true">7.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch9/index.html"><strong aria-hidden="true">8.</strong> Get Started With Spring</a></li><li class="chapter-item expanded "><a href="../appendix/index.html"><strong aria-hidden="true">9.</strong> Appendix</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../appendix/tomcat.html"><strong aria-hidden="true">9.1.</strong> A.1 Tomcat</a></li><li class="chapter-item expanded "><a href="../appendix/idea.html"><strong aria-hidden="true">9.2.</strong> A.2 IntelliJ IDEA</a></li><li class="chapter-item expanded "><a href="../appendix/jdk.html"><strong aria-hidden="true">9.3.</strong> A.3 JDK</a></li><li class="chapter-item expanded "><a href="../appendix/gradle.html"><strong aria-hidden="true">9.4.</strong> A.4 Gradle</a></li><li class="chapter-item expanded "><a href="../appendix/sqlite.html"><strong aria-hidden="true">9.5.</strong> A.5 SQLite</a></li><li class="chapter-item expanded "><a href="../appendix/cloud.html"><strong aria-hidden="true">9.6.</strong> A.6 Cloud (1)</a></li><li class="chapter-item expanded "><a href="../appendix/cloud2.html"><strong aria-hidden="true">9.7.</strong> A.7 Cloud (2)</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Head First Java Web</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="33-more-about-request"><a class="header" href="#33-more-about-request">3.3 More About Request</a></h1>
+<p>In this section, we continue studying more about <em>request</em> using a question-oriented method. To be specific,</p>
+<ul>
+<li>how to handle multi values with one name in a request?</li>
+<li>how to handle non-latin characters?</li>
+<li>what else can I get from a <em>request</em> object?</li>
+</ul>
+<h2 id="in-depth-parameter2"><a class="header" href="#in-depth-parameter2">In-depth parameter(2)</a></h2>
+<p>No matter what the HTTP method is, the query parameters in a request are started with a question mask <code>?</code>, and separated by the ampersand <code>&amp;</code>. So, how to handle multi values with one name in a request? It is mainly found in <code>checkbox</code>. Checkboxes let a user select zero or more options of a limited number of choices; while <code>select</code> only allows a user select zero or one option.</p>
+<pre><code class="language-html">&lt;input type=&quot;checkbox&quot; id=&quot;read1&quot; name=&quot;read&quot; value=&quot;PC&quot;&gt;
+&lt;label for=&quot;read1&quot;&gt;PC&lt;/label&gt;&lt;br&gt;
+&lt;input type=&quot;checkbox&quot; id=&quot;read2&quot; name=&quot;read&quot; value=&quot;Kindle&quot;&gt;
+&lt;label for=&quot;read2&quot;&gt;Kindle&lt;/label&gt;&lt;br&gt;
+&lt;input type=&quot;checkbox&quot; id=&quot;read3&quot; name=&quot;read&quot; value=&quot;paper&quot;&gt;
+&lt;label for=&quot;read3&quot;&gt;paper&lt;/label&gt;&lt;br&gt;
+&lt;input type=&quot;checkbox&quot; id=&quot;read4&quot; name=&quot;read&quot; value=&quot;phone&quot;&gt;
+&lt;label for=&quot;read4&quot;&gt;Phone&lt;/label&gt;&lt;br&gt;
+</code></pre>
+<p>Note that <code>name</code> with <em>&quot;read&quot;</em> is repeated for 4 times. If both <em>PC</em> and <em>Kindle</em> are selected, then the query string would contain <code>read=PC&amp;read=Kindle</code>. So how can we get those values in a servlet? Instead using <code>getParameter()</code>, we should use <code>getParameterValues()</code>:</p>
+<blockquote>
+<p>String[]	getParameterValues(String name)	
+Returns an array of String objects containing all of the values the given request parameter has, or null if the parameter does not exist.</p>
+</blockquote>
+<pre><code class="language-java">String[] reads = request.getParameterValues(&quot;read&quot;);
+</code></pre>
+<h2 id="in-depth-parameter3"><a class="header" href="#in-depth-parameter3">In-depth parameter(3)</a></h2>
+<p>Till now, we only use English in the web applications. But in the real world, we would like a international website which can be accessed by people using different languages all over the world[1]. It is not trivial problem, because garbled characters are very common in real systems if <em>i18n</em> is not well considered. For example, there are many legacy pages from <a href="https://docs.oracle.com/cd/E19199-01/817-4244-10/overview.html">Oracle</a> which are full of garbled characters, such as <em>&quot;锟斤拷&quot;</em>. We bet no one can interpret the meaning of <em>锟斤拷</em>:</p>
+<p><img src="image/ch3-oracle.png" alt="Figure 3.7 Garbled characters." title=":size=60%" /></p>
+<p>In this subsection, let's investigate this problem. </p>
+<p>First of all, we design a small test to reproduce this problem in <code>utf8.html</code> of <code>ch3/request</code>:</p>
+<pre><code class="language-html">&lt;form action=&quot;international&quot; method=&quot;post&quot;&gt;
+    &lt;label for=&quot;name&quot;&gt;Name: &lt;/label&gt;
+    &lt;input type=&quot;text&quot; name=&quot;name&quot; id=&quot;name&quot;&gt;
+    &lt;button type=&quot;submit&quot;&gt;Login in&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+<p>And in <code>InternationalServlet.java</code> whose URL name is <code>/international</code> we try to output the <em>name</em>:</p>
+<pre><code class="language-java">response.setContentType(&quot;text/html&quot;);
+PrintWriter out = response.getWriter();
+String name = request.getParameter(&quot;name&quot;);
+out.println(name);
+</code></pre>
+<p>If we input <em>Bob</em> in the input box, the output is <em>Box</em>, as we expected; but if we input <em>小明</em> in the input box, the output is <em>å°æ˜Ž</em>. WTF?</p>
+<blockquote>
+<p>[!TIP]
+<strong>TL;DR</strong> There are different character set encodings, and it may produce garbled characters when converting one to another. Modern applications should use <em>UTF-8</em> if you don't have special reasons to use alternatives.</p>
+</blockquote>
+<p>To understand this, you need know the background knowledge about <strong>how a string is represented</strong>. Essentially, <code>String</code>, as well as other objects, are a sequences of <em>bytes</em>[2]. Given a sequence of bytes, how to interpret it depends on the <em>character encoding</em>. To be precise, character encoding is the process of assigning numbers to graphical characters, especially the written characters of human language, allowing them to be stored, transmitted, and transformed using digital computers. And the character set used in encoding/decoding is usually abbreviated as <em>charset</em>.</p>
+<p>As an analogy, let's take an double entendre in English as an example: &quot;What's the longest sentence in the world?&quot; &quot;Life sentence.&quot; Here, <em>sentence</em> can be 1) a set of words that is complete in itself; or 2) the punishment assigned to a defendant found guilty by a court. Anyway, <strong>the same data can convey different meanings in different interpretations</strong>.</p>
+<p>There are a larger number of <a href="https://en.wikipedia.org/wiki/Character_encoding">character encodings</a>. For example:</p>
+<ul>
+<li>ASCII: for English [3]</li>
+<li>UTF-8: for Unicode</li>
+<li>ISO 8859: for Europe</li>
+<li>GB 2312: for Chinese</li>
+<li>...</li>
+</ul>
+<p>UTF-8 is by far the most common encoding for the World Wide Web, accounting for 98% of all web pages, and up to 100.0% for some languages, as of 2021[4]. So, please use UTF-8 encoding in your applications if possible. ISO 8859-1 is in the family of ISO-8859, which is used to encode western Europe languages, and it is the one what Tomcat is using. The following is what happens behind the scene.</p>
+<ul>
+<li>The parameters is encoded in <em>UTF-8</em> by the web browser, and sent to the server.</li>
+<li>Tomcat decodes the parameters in <em>ISO 8859-1</em>. Note that IOS 8859-1 can be only used to store western Europe characters.</li>
+<li>Tomcat sends this value as response in <em>ISO 8859-1</em> encoding.</li>
+</ul>
+<p>We can notice the response encoding in <code>Network</code> tab:</p>
+<p><img src="image/ch3-response-encoding.png" alt="Figure 3.8 HTTP response encoding." title=":size=70%" /></p>
+<p>Therefore, you cannot pass the parameters in Chinese (e.g., <em>你好</em>) or Japanese (e.g., <em>こんにちわ</em>). </p>
+<p>How to solve this problem? One solution is to specify the <em>UTF-8</em> charset for both request and response. Note that the case is insensitive.</p>
+<pre><code class="language-java">request.setCharacterEncoding(&quot;utf-8&quot;);
+response.setContentType(&quot;text/html;charset=utf-8&quot;);
+</code></pre>
+<p>Alternatively, you can specify the response's encoding separately:</p>
+<pre><code class="language-java">request.setCharacterEncoding(&quot;utf-8&quot;);
+response.setCharacterEncoding(&quot;utf-8&quot;);
+response.setContentType(&quot;text/html&quot;);
+</code></pre>
+<p>The code above works for <code>POST</code>. But as for <code>GET</code>, it does not make sense to set charset for <em>request</em>,</p>
+<blockquote>
+<p>void	setCharacterEncoding(String env)	
+Overrides the name of the character encoding used in the body of this request.</p>
+</blockquote>
+<p>Recall the the parameters of <code>POST</code> are wrapped in the request body, while the parameters of <code>GET</code> is appended in the URL directly. Therefore, when it comes to <code>GET</code>, specifying the encoding for the response is enough:</p>
+<pre><code class="language-java">response.setContentType(&quot;text/html;charset=utf-8&quot;);
+</code></pre>
+<p>By the way, as for <code>POST</code>, another solution is to encode nd decode manually without specifying the charset of <em>request</em>:</p>
+<pre><code class="language-java">String temp = request.getParameter(&quot;name&quot;);
+String name = new String(tmp.getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8);
+</code></pre>
+<p><img src="image/ch3-utf8.png" alt="Figure 3.9 Encoding and decoding." title=":size=70%" /></p>
+<p>In <code>utf8-2.html</code>, we send a parameter in Chinese to a servlet via <em>POST</em>, and then the servlet forwards this request to a JSP, like we did in the mini MVC project. To encode/decode correctly, the code is similar. Note that we don't need to set charset for response now, because the encoding of <code>result.jsp</code> has been specified to the UTF-8:</p>
+<pre><code class="language-jsp">&lt;%@ page contentType=&quot;text/html;charset=UTF-8&quot; language=&quot;java&quot; %&gt;
+</code></pre>
+<h2 id="beyond-parameters"><a class="header" href="#beyond-parameters">Beyond parameters</a></h2>
+<p>The <code>ServletRequest</code> and <code>HttpServletRequest</code> interfaces have a ton of methods you can call, but you don’t need to memorize them all. On your own, you really should look at the full API for <code>javax.servlet.ServletRequest</code> and <code>javax.servlet.http.HttpServletRequest</code>, but here we’ll look at only the methods you’re most likely to use in your work.</p>
+<p><strong>Don't worry if you are not clear about how or why you'd use each of these</strong>; we'll see more details on some of them (especially <em>cookies</em> and <em>session</em>) later in the book.</p>
+<h3 id="the-clients-platform-and-browser-info"><a class="header" href="#the-clients-platform-and-browser-info">The client's platform and browser info</a></h3>
+<p>As we can see in Fig 1.15 and 3.4, a large number of information, in the form of <code>&lt;name&gt;: &lt;value&gt;</code>, contained in the <em>request header</em>, and then we can use <code>getHeader()</code> to extract targeted one:</p>
+<blockquote>
+<p>String	getHeader(String name)	
+Returns the value of the specified request header as a String.</p>
+</blockquote>
+<p>A user agent is a computer program representing a person, for example, a browser in a Web context. The <code>User-Agent</code> request header is a characteristic string that lets servers and network peers identify the application, operating system, vendor, and/or version of the requesting <em>user agent</em>[5]. The <em>user agent</em> string of my web browser indicates I am using MacOS and Edge:</p>
+<blockquote>
+<p>User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 Edg/96.0.1054.62</p>
+</blockquote>
+<p>And it can be obtained in a servlet:</p>
+<pre><code class="language-java">String agent = request.getHeader(&quot;User-Agent&quot;);
+</code></pre>
+<h3 id="the-cookies-associated-with-this-request"><a class="header" href="#the-cookies-associated-with-this-request">The cookies associated with this request</a></h3>
+<pre><code class="language-java">Cookie[] cookies = request.getCookies();
+</code></pre>
+<h3 id="the-session-associated-with-this-request"><a class="header" href="#the-session-associated-with-this-request">The session associated with this request</a></h3>
+<pre><code class="language-java">HttpSession session = request.getSession();
+</code></pre>
+<h3 id="the-http-method-of-this-request"><a class="header" href="#the-http-method-of-this-request">The HTTP method of this request</a></h3>
+<pre><code class="language-java">String method = request.getMethod();
+</code></pre>
+<hr />
+<p>[1] It is often called <em>i18n</em>, short for internationalization and localization. Internationalization is the process of designing a software application so that it can be adapted to various languages and regions without engineering changes. Localization is the process of adapting internationalized software for a specific region or language by translating text and adding locale-specific components.</p>
+<p>[2] A byte is a unit of measurement of the size of information on a computer or other electronic device. A single byte is usually eight bits.</p>
+<p>[3] Here we mean <a href="https://en.wikipedia.org/wiki/ASCII">US-ASCII</a>.</p>
+<p>[4] https://en.wikipedia.org/wiki/UTF-8</p>
+<p>[5] https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../ch3/3.2.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../ch3/3.4.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../ch3/3.2.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../ch3/3.4.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+        <script type="text/javascript">
+            window.playground_line_numbers = true;
+        </script>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js rust">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Search: The Way To Self-learning - Head First Java Web</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../preface.html">Preface</a></li><li class="chapter-item expanded "><a href="../ch1/index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch1/1.1.html"><strong aria-hidden="true">1.1.</strong> Jakarta EE Overview</a></li><li class="chapter-item expanded "><a href="../ch1/1.2.html"><strong aria-hidden="true">1.2.</strong> Your First Java Web Project</a></li><li class="chapter-item expanded "><a href="../ch1/1.3.html"><strong aria-hidden="true">1.3.</strong> A Brief Introduction To HTML</a></li><li class="chapter-item expanded "><a href="../ch1/1.4.html"><strong aria-hidden="true">1.4.</strong> A Brief Introduction To HTTP</a></li><li class="chapter-item expanded "><a href="../ch1/1.5.html"><strong aria-hidden="true">1.5.</strong> Revisit The First Java Web Project</a></li><li class="chapter-item expanded "><a href="../ch1/exercise.html"><strong aria-hidden="true">1.6.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch2/index.html"><strong aria-hidden="true">2.</strong> Web App Architecture And Mini MVC</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch2/2.1.html"><strong aria-hidden="true">2.1.</strong> Servlet And Container</a></li><li class="chapter-item expanded "><a href="../ch2/2.2.html" class="active"><strong aria-hidden="true">2.2.</strong> Search: The Way To Self-learning</a></li><li class="chapter-item expanded "><a href="../ch2/2.3.html"><strong aria-hidden="true">2.3.</strong> A Brief Introduction To MVC</a></li><li class="chapter-item expanded "><a href="../ch2/2.4.html"><strong aria-hidden="true">2.4.</strong> Hands On MVC (1)</a></li><li class="chapter-item expanded "><a href="../ch2/2.5.html"><strong aria-hidden="true">2.5.</strong> Hands on MVC (2)</a></li><li class="chapter-item expanded "><a href="../ch2/exercise.html"><strong aria-hidden="true">2.6.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch3/index.html"><strong aria-hidden="true">3.</strong> In-depth Servlet</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch3/3.1.html"><strong aria-hidden="true">3.1.</strong> Servlet: From Birth To Death</a></li><li class="chapter-item expanded "><a href="../ch3/3.2.html"><strong aria-hidden="true">3.2.</strong> Request And Response</a></li><li class="chapter-item expanded "><a href="../ch3/3.3.html"><strong aria-hidden="true">3.3.</strong> More About Request</a></li><li class="chapter-item expanded "><a href="../ch3/3.4.html"><strong aria-hidden="true">3.4.</strong> Upload Files In Servlets</a></li><li class="chapter-item expanded "><a href="../ch3/3.5.html"><strong aria-hidden="true">3.5.</strong> More About Response (1)</a></li><li class="chapter-item expanded "><a href="../ch3/3.6.html"><strong aria-hidden="true">3.6.</strong> More About Response (2)</a></li><li class="chapter-item expanded "><a href="../ch3/exercise.html"><strong aria-hidden="true">3.7.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch4/index.html"><strong aria-hidden="true">4.</strong> In-depth Web</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch4/4.1.html"><strong aria-hidden="true">4.1.</strong> Init parameters</a></li><li class="chapter-item expanded "><a href="../ch4/4.2.html"><strong aria-hidden="true">4.2.</strong> Attributes</a></li><li class="chapter-item expanded "><a href="../ch4/4.3.html"><strong aria-hidden="true">4.3.</strong> Session Management (1)</a></li><li class="chapter-item expanded "><a href="../ch4/4.4.html"><strong aria-hidden="true">4.4.</strong> Session Management (2)</a></li><li class="chapter-item expanded "><a href="../ch4/exercise.html"><strong aria-hidden="true">4.5.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch5/index.html"><strong aria-hidden="true">5.</strong> JSP And Scriptless JSP</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch5/5.1.html"><strong aria-hidden="true">5.1.</strong> Facts About JSP</a></li><li class="chapter-item expanded "><a href="../ch5/5.2.html"><strong aria-hidden="true">5.2.</strong> Expression Language</a></li><li class="chapter-item expanded "><a href="../ch5/5.3.html"><strong aria-hidden="true">5.3.</strong> JSTL</a></li><li class="chapter-item expanded "><a href="../ch5/exercise.html"><strong aria-hidden="true">5.4.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch6/index.html"><strong aria-hidden="true">6.</strong> Database</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch6/6.1.html"><strong aria-hidden="true">6.1.</strong> Introduction To Database</a></li><li class="chapter-item expanded "><a href="../ch6/6.2.html"><strong aria-hidden="true">6.2.</strong> SQL (1)</a></li><li class="chapter-item expanded "><a href="../ch6/6.3.html"><strong aria-hidden="true">6.3.</strong> SQL (2)</a></li><li class="chapter-item expanded "><a href="../ch6/6.4.html"><strong aria-hidden="true">6.4.</strong> Accessing Databases From Java (1)</a></li><li class="chapter-item expanded "><a href="../ch6/6.5.html"><strong aria-hidden="true">6.5.</strong> Accessing Databases From Java (2)</a></li><li class="chapter-item expanded "><a href="../ch6/exercise.html"><strong aria-hidden="true">6.6.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch7/index.html"><strong aria-hidden="true">7.</strong> Thymeleaf</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch7/7.1.html"><strong aria-hidden="true">7.1.</strong> Get Started With Thymeleaf</a></li><li class="chapter-item expanded "><a href="../ch7/7.2.html"><strong aria-hidden="true">7.2.</strong> Standard Expression Syntax</a></li><li class="chapter-item expanded "><a href="../ch7/exercise.html"><strong aria-hidden="true">7.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch9/index.html"><strong aria-hidden="true">8.</strong> Get Started With Spring</a></li><li class="chapter-item expanded "><a href="../appendix/index.html"><strong aria-hidden="true">9.</strong> Appendix</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../appendix/tomcat.html"><strong aria-hidden="true">9.1.</strong> A.1 Tomcat</a></li><li class="chapter-item expanded "><a href="../appendix/idea.html"><strong aria-hidden="true">9.2.</strong> A.2 IntelliJ IDEA</a></li><li class="chapter-item expanded "><a href="../appendix/jdk.html"><strong aria-hidden="true">9.3.</strong> A.3 JDK</a></li><li class="chapter-item expanded "><a href="../appendix/gradle.html"><strong aria-hidden="true">9.4.</strong> A.4 Gradle</a></li><li class="chapter-item expanded "><a href="../appendix/sqlite.html"><strong aria-hidden="true">9.5.</strong> A.5 SQLite</a></li><li class="chapter-item expanded "><a href="../appendix/cloud.html"><strong aria-hidden="true">9.6.</strong> A.6 Cloud (1)</a></li><li class="chapter-item expanded "><a href="../appendix/cloud2.html"><strong aria-hidden="true">9.7.</strong> A.7 Cloud (2)</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Head First Java Web</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="22-search-the-way-to-self-learning"><a class="header" href="#22-search-the-way-to-self-learning">2.2 Search: The Way To Self-learning</a></h1>
+<p>When people start to learn a course or read a textbook, the first question that they may put forward to is probably: <em>what is the key point</em>? Now we would like to answer this question: <strong>this section is of great importance throughout this textbook, even throughout the journal of your programming learning</strong>.</p>
+<p>Real beginners who start to learn programming often get lost when they are encountering something new, including new terms, new classes, and new methods. More or less, most people are afraid of things they are not familiar with, and this phenomenon is quite common even among expects. Technologies, especially the information technologies, are undergoing rapid changes, therefore it is impossible to rely on one book or one course if you would like to catch up with the state-of-the-art. How can you renew yourself? Well, perhaps the only way is to self-learning. And there is no doubt that a large number of &quot;new&quot;s would be the obstacles on your way to self-promotion. So how to escape from the vicious circle? The definite answer is short yet inspiring: <strong>search</strong>! <strong>search</strong>! <strong>search</strong>! </p>
+<p>There are many awesome tools you can trust: search engines (e.g., Google, Bing), IDEs (e.g., Intellij IDEA), and websites (e.g., StackOverFlow). In this section, we will show you some practical skills of searching, and we believe it would be a lifelong benefit if you keep practicing.</p>
+<h2 id="java-doc"><a class="header" href="#java-doc">Java Doc</a></h2>
+<p>Reading documentation is a basic skill while learning programming. For example, some students may find it difficult to understand this following code in <a href="ch1/1.5.html">Section 1.5</a> because <code>java.time.LocalDate</code> is a strange API.</p>
+<pre><code class="language-jsp">&lt;h2&gt;&lt;%= java.time.LocalDate.now() %&gt;&lt;/h2&gt;
+</code></pre>
+<p>Don't worry. Oracle provides the complete documentation for JDK (Java SE) API, often referred as Java Doc, according to which JDK version you are using, and it provides a user-friendly searching box. For example, in this textbook, we are using <a href="https://docs.oracle.com/en/java/javase/11/docs/api/index.html">JDK 11</a>. It is recommended to add this website into your bookmark.</p>
+<p><img src="image/ch2-java-doc.png" alt="Figure 2.8 JDK documentation searching." title=":size=60%" /></p>
+<p>After clicking the matching result, you will see the detailed API descriptions, including what this class does, what (public) methods and fields it has, and how to use its (public) methods and fields. </p>
+<blockquote>
+<p>A date without a time-zone in the ISO-8601 calendar system, such as 2007-12-03.</p>
+</blockquote>
+<p>For example, if you would like to convert a string <code>&quot;2008-8-8&quot;</code> (when Beijing Olympic was held) to the <code>LocalDate</code> object, please move to the <em>Method Summary</em> part, and after a quick glancing, you will notice </p>
+<blockquote>
+<p>static LocalDate	parse​(CharSequence text)	
+Obtains an instance of LocalDate from a text string such as 2007-12-03.</p>
+</blockquote>
+<blockquote>
+<p>[!NOTE]
+All good APIs are generally intuitive, and it is straightforward to grasp what it does through its name.</p>
+</blockquote>
+<p>Based on its summary, this method probably meets your requirement. But wait a moment, it seems that it only supports strings like <code>&quot;2008-08-08&quot;</code> with padding zero. Please don't be overly concerned. Just take a brave try, and let Java compiler tells you the result. Remember: <em>talk is cheap, show me the code</em>[1].</p>
+<p>You can create a simple Java project (or file) using your favorite IDE (or editor) to conduct an experiment. To keep consistency, here we adopt IntelliJ IDEA. Click <code>New Project</code> button in the welcome screen of IntelliJ IDEA, or <code>File | New | Project</code> at the menu if you have already opened an project. In the <code>New Project</code> dialog, select <code>Java</code>, and then click <code>Next</code> button. It is fine to leave all options as default, and input an appropriate project name (default is <code>untitled</code>) in your desired location, and then click <code>Finish</code> button. Now it is time to crate a new Java class by right clicking the <code>src</code> folder.</p>
+<p><img src="image/ch2-java-project.png" alt="Figure 2.9 Create a Java class." title=":size=60%" /></p>
+<p>Add a <code>main()</code> method:</p>
+<pre><code class="language-java">import java.time.LocalDate;
+
+public class Main {
+    public static void main(String[] args) {
+        LocalDate time = LocalDate.parse(&quot;2008-8-8&quot;);
+        System.out.println(time);
+    }
+}
+</code></pre>
+<p>Click the green right triangle button (<span style='color: green'>▶</span>) on the left side of <code>public class Main</code>. Oops! An error, or technically, an exception, will be complained by Java compiler, and it is your task to fix this error. Go for it!</p>
+<p>Sometimes it may be a bit cumbersome to crate a Java project for a simple API testing, and luckily, since Java 9, JShell, a Java read-eval-print loop (REPL)[2], has been introduced. Assume Java's path has been added into the <em>PATH environment variable</em>[3], you can open the terminal on Unix-like systems or CMD on Windows, and then input <code>jshell</code>:</p>
+<p><img src="image/ch2-jshell.png" alt="Figure 2.10 JShell interface." title=":size=60%" /></p>
+<p>And try to type <code>System.out.println(&quot;Hello World!&quot;);</code> after the <code>jshell&gt;</code> prompt. As usual Java code, type the following code:</p>
+<p><img src="image/ch2-jshell-date.png" alt="Figure 2.11 LocalDate in JShell." title=":size=60%" /></p>
+<p>If you want to exit from JShell, you can type <code>/exit</code>.</p>
+<p>Back to the main focus, let's continue to learn how to use the Java Doc. Here are more examples:</p>
+<ul>
+<li>If you want to extract the days of the year from a <code>LocalDate</code> object (e.g., 33 days of <code>2022-02-02</code>), you will notice</li>
+</ul>
+<blockquote>
+<p>int	getDayOfYear()	
+Gets the day-of-year field.</p>
+</blockquote>
+<ul>
+<li>If you want to determine whether a <code>LocalDate</code> object is a leap year[4], you will notice</li>
+</ul>
+<blockquote>
+<p>boolean	isLeapYear()	
+Checks if the year is a leap year, according to the ISO proleptic calendar system rules.</p>
+</blockquote>
+<p>As you can see, you will easily add many powerful weapons into your programming tool box if you get comfortable with Java Doc. Last but not least, many beginners may also ask this question: should I memorize those classes and methods as I recite English words? The answer can be &quot;yes or no&quot;. To begin with, like English words, never recite them by rote without their context. Secondly, remember the basic syntax is necessary and as for the remaining, just keep in mind that <em>no secret, I just have much experience</em>[5]. As long as you can find the right place to search APIs to solve your problem, forgetting is not a big deal, especially when you have to switch between different programming languages regularly.</p>
+<h2 id="java-ee-api"><a class="header" href="#java-ee-api">Java EE API</a></h2>
+<p>Similar to JDK document as well as any other frameworks and libraries, the ability to search Java EE API can be of great help. Similarly, based on which version you are using, you shall refer to the corresponding API documentations. For example, in this textbook, we are using <a href="https://tomcat.apache.org/tomcat-9.0-doc/servletapi/index.html">Tomcat 9</a>. It is also recommended adding this website into your bookmark.</p>
+<blockquote>
+<p>[!NOTE]
+The skills discussed here is essentially the same with those in the last subsection.</p>
+</blockquote>
+<p>Recall the code in <code>HelloServlet.java</code>, and some beginners might get lost when they see <code>response.getWriter()</code>. Again, ask the API documentation for help. Luckily, the number of classes introduced by Tomcat is limited, and we can easily locate <code>HttpServletResponse</code> under <code>All Classes</code> panel. By the way, you can use the shortcut (<code>Ctrl + F</code> in Windows/Linux, and <code>Cmd + F</code> in MacOS) to locate a specific word quickly.</p>
+<p><img src="image/ch2-response-api.png" alt="Figure 2.12 HttpServletResponse." title=":size=30%" /></p>
+<p>And soon you will also find that <code>getWriter()</code> is not defined by <code>HttpServletResponse</code>, and instead, it is inherited from the interface <code>javax.servlet.ServletResponse</code>. Then follow this hint by clicking the hyperlink, and we shall find some information important:</p>
+<blockquote>
+<p>(ServletResponse) Defines an object to assist a servlet in sending a response to the client. ... To send character data, use the <code>PrintWriter</code> object returned by <code>getWriter()</code>.</p>
+</blockquote>
+<p>Still want to know about <code>PrintWriter</code>? Just ask the documentation for help, again! So, learning programming, especially when looking up API documentations, is much like looking up a dictionary.</p>
+<h2 id="intellij-idea"><a class="header" href="#intellij-idea">IntelliJ IDEA</a></h2>
+<p>Modern IDEs, such as IntelliJ IDEA and Eclipse, provide built-in supports for API documentations looking-up, and they are often the main entry-point if you would like to inspect the source code. In this textbook, we will take IntelliJ IDEA, the most popular IDE among Java developers, as the running example.</p>
+<p>Firstly, when you move the cursor to a <em>Class</em>, <em>Interface</em>, or <em>method</em>, the corresponding description of the API. For instance, the following illustrates what will pop up when you move the cursor to <code>String</code>.</p>
+<p><img src="image/ch2-string.png" alt="Figure 2.13 API summary of String." title=":size=50%" /></p>
+<p>You can practice this useful skill by moving the cursor to <code>setContentType</code> and <code>HttpServlet</code>, respectively.</p>
+<p>Secondly, when you move the cursor and please keep pressing-down the Ctrl in Windows/Linux and Cmd in MacOS, you will notice that <em>Class</em>, <em>Interface</em>, <em>method</em>, and <em>variables</em> are becoming hyperlinks. So you could jump among Java codes and locate their implementations. FOr example, if you are curious about how <code>println</code> of <code>PrinterWriter</code> is implemented, you could see the following (don't worry if you cannot get grasp of the code itself):</p>
+<pre><code class="language-java">public void println(String x) {
+    synchronized (lock) {
+        print(x);
+        println();
+    }
+}
+</code></pre>
+<p>Anyway, all classes, interfaces and methods are not in a black-box now, and you can inspect them clearly.</p>
+<hr />
+<p>[1] It is a famous quote by Linus Torvalds, the father of Linux.</p>
+<p>[2] REPL is an interactive tool for leaning programming language, mostly found in scripting languages such as Python, JavaScript and Ruby, which enables users to write codes on the command line and see the results immediately.</p>
+<p>[3] PATH is an environment variable that is used by Operating System to locate the executive programs (e.g., <code>.exe</code> on Windows) or java binaries (e.g., <code>java</code> or <code>javac</code> command). Instruction on how to set environment path for Java can be found <a href="https://www.geeksforgeeks.org/how-to-set-java-path-in-windows-and-linux/">here</a>.</p>
+<p>[4] Leap years are years where an extra, or intercalary, day is added to the end of the shortest month, February. For example, in the Gregorian calendar, each leap year has 366 days instead of 365.</p>
+<p>[5] A Chinese old saying: 无他，但手熟尔.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../ch2/2.1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../ch2/2.3.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../ch2/2.1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../ch2/2.3.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+        <script type="text/javascript">
+            window.playground_line_numbers = true;
+        </script>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js rust">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>More About Response (2) - Head First Java Web</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../preface.html">Preface</a></li><li class="chapter-item expanded "><a href="../ch1/index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch1/1.1.html"><strong aria-hidden="true">1.1.</strong> Jakarta EE Overview</a></li><li class="chapter-item expanded "><a href="../ch1/1.2.html"><strong aria-hidden="true">1.2.</strong> Your First Java Web Project</a></li><li class="chapter-item expanded "><a href="../ch1/1.3.html"><strong aria-hidden="true">1.3.</strong> A Brief Introduction To HTML</a></li><li class="chapter-item expanded "><a href="../ch1/1.4.html"><strong aria-hidden="true">1.4.</strong> A Brief Introduction To HTTP</a></li><li class="chapter-item expanded "><a href="../ch1/1.5.html"><strong aria-hidden="true">1.5.</strong> Revisit The First Java Web Project</a></li><li class="chapter-item expanded "><a href="../ch1/exercise.html"><strong aria-hidden="true">1.6.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch2/index.html"><strong aria-hidden="true">2.</strong> Web App Architecture And Mini MVC</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch2/2.1.html"><strong aria-hidden="true">2.1.</strong> Servlet And Container</a></li><li class="chapter-item expanded "><a href="../ch2/2.2.html"><strong aria-hidden="true">2.2.</strong> Search: The Way To Self-learning</a></li><li class="chapter-item expanded "><a href="../ch2/2.3.html"><strong aria-hidden="true">2.3.</strong> A Brief Introduction To MVC</a></li><li class="chapter-item expanded "><a href="../ch2/2.4.html"><strong aria-hidden="true">2.4.</strong> Hands On MVC (1)</a></li><li class="chapter-item expanded "><a href="../ch2/2.5.html"><strong aria-hidden="true">2.5.</strong> Hands on MVC (2)</a></li><li class="chapter-item expanded "><a href="../ch2/exercise.html"><strong aria-hidden="true">2.6.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch3/index.html"><strong aria-hidden="true">3.</strong> In-depth Servlet</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch3/3.1.html"><strong aria-hidden="true">3.1.</strong> Servlet: From Birth To Death</a></li><li class="chapter-item expanded "><a href="../ch3/3.2.html"><strong aria-hidden="true">3.2.</strong> Request And Response</a></li><li class="chapter-item expanded "><a href="../ch3/3.3.html"><strong aria-hidden="true">3.3.</strong> More About Request</a></li><li class="chapter-item expanded "><a href="../ch3/3.4.html"><strong aria-hidden="true">3.4.</strong> Upload Files In Servlets</a></li><li class="chapter-item expanded "><a href="../ch3/3.5.html"><strong aria-hidden="true">3.5.</strong> More About Response (1)</a></li><li class="chapter-item expanded "><a href="../ch3/3.6.html" class="active"><strong aria-hidden="true">3.6.</strong> More About Response (2)</a></li><li class="chapter-item expanded "><a href="../ch3/exercise.html"><strong aria-hidden="true">3.7.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch4/index.html"><strong aria-hidden="true">4.</strong> In-depth Web</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch4/4.1.html"><strong aria-hidden="true">4.1.</strong> Init parameters</a></li><li class="chapter-item expanded "><a href="../ch4/4.2.html"><strong aria-hidden="true">4.2.</strong> Attributes</a></li><li class="chapter-item expanded "><a href="../ch4/4.3.html"><strong aria-hidden="true">4.3.</strong> Session Management (1)</a></li><li class="chapter-item expanded "><a href="../ch4/4.4.html"><strong aria-hidden="true">4.4.</strong> Session Management (2)</a></li><li class="chapter-item expanded "><a href="../ch4/exercise.html"><strong aria-hidden="true">4.5.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch5/index.html"><strong aria-hidden="true">5.</strong> JSP And Scriptless JSP</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch5/5.1.html"><strong aria-hidden="true">5.1.</strong> Facts About JSP</a></li><li class="chapter-item expanded "><a href="../ch5/5.2.html"><strong aria-hidden="true">5.2.</strong> Expression Language</a></li><li class="chapter-item expanded "><a href="../ch5/5.3.html"><strong aria-hidden="true">5.3.</strong> JSTL</a></li><li class="chapter-item expanded "><a href="../ch5/exercise.html"><strong aria-hidden="true">5.4.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch6/index.html"><strong aria-hidden="true">6.</strong> Database</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch6/6.1.html"><strong aria-hidden="true">6.1.</strong> Introduction To Database</a></li><li class="chapter-item expanded "><a href="../ch6/6.2.html"><strong aria-hidden="true">6.2.</strong> SQL (1)</a></li><li class="chapter-item expanded "><a href="../ch6/6.3.html"><strong aria-hidden="true">6.3.</strong> SQL (2)</a></li><li class="chapter-item expanded "><a href="../ch6/6.4.html"><strong aria-hidden="true">6.4.</strong> Accessing Databases From Java (1)</a></li><li class="chapter-item expanded "><a href="../ch6/6.5.html"><strong aria-hidden="true">6.5.</strong> Accessing Databases From Java (2)</a></li><li class="chapter-item expanded "><a href="../ch6/exercise.html"><strong aria-hidden="true">6.6.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch7/index.html"><strong aria-hidden="true">7.</strong> Thymeleaf</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch7/7.1.html"><strong aria-hidden="true">7.1.</strong> Get Started With Thymeleaf</a></li><li class="chapter-item expanded "><a href="../ch7/7.2.html"><strong aria-hidden="true">7.2.</strong> Standard Expression Syntax</a></li><li class="chapter-item expanded "><a href="../ch7/exercise.html"><strong aria-hidden="true">7.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch9/index.html"><strong aria-hidden="true">8.</strong> Get Started With Spring</a></li><li class="chapter-item expanded "><a href="../appendix/index.html"><strong aria-hidden="true">9.</strong> Appendix</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../appendix/tomcat.html"><strong aria-hidden="true">9.1.</strong> A.1 Tomcat</a></li><li class="chapter-item expanded "><a href="../appendix/idea.html"><strong aria-hidden="true">9.2.</strong> A.2 IntelliJ IDEA</a></li><li class="chapter-item expanded "><a href="../appendix/jdk.html"><strong aria-hidden="true">9.3.</strong> A.3 JDK</a></li><li class="chapter-item expanded "><a href="../appendix/gradle.html"><strong aria-hidden="true">9.4.</strong> A.4 Gradle</a></li><li class="chapter-item expanded "><a href="../appendix/sqlite.html"><strong aria-hidden="true">9.5.</strong> A.5 SQLite</a></li><li class="chapter-item expanded "><a href="../appendix/cloud.html"><strong aria-hidden="true">9.6.</strong> A.6 Cloud (1)</a></li><li class="chapter-item expanded "><a href="../appendix/cloud2.html"><strong aria-hidden="true">9.7.</strong> A.7 Cloud (2)</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Head First Java Web</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="36-more-about-response-2"><a class="header" href="#36-more-about-response-2">3.6 More About Response (2)</a></h1>
+<p>In this section, we continue studying <em>response</em> using a question-oriented method. To be specific,</p>
+<ul>
+<li>How to serve static files outside the web application?</li>
+<li>How to customize error page?</li>
+<li>To respond, or not to respond?</li>
+</ul>
+<h2 id="static-files-outside-the-web-application1"><a class="header" href="#static-files-outside-the-web-application1">Static files outside the web application[1]</a></h2>
+<p>In the last section, we introduced several methods to return an image as the response. What if the <code>cat.png</code> is located <em>outside</em> the web application? This question can be easily solved as long as we can get its <em>path</em>. Then, what if we would to server a static folder outside the web application? For example, a folder is on you desktop and its absolute path can be <em>/Users/zhongpu/Desktop/foo</em> on MacOS, or <em>C:\Users\zhongpu
+Desktop\foo</em> on Windows, or <em>/home/zhongpu/Desktop/foo</em> on Linux, and there are all kinds of files (e.g., <code>.mp3</code>, <code>.pdf</code>) in the folder.</p>
+<p>We expect to get <code>a.mp3</code> via <code>/static/a.mp3</code>, get <code>b.png</code> via <code>/static/b.png</code>, and so on. Shall we write every single servlet for each file? Of course not! We even do not know how many files, and what types they are.</p>
+<p>To solve this problem, we need to solve several sub-problems:</p>
+<ul>
+<li><em>How to write a general URL pattern</em>?</li>
+</ul>
+<p>The URL mapping for servlets supports wildcard characters. For example, <code>/static/*</code> can match any URL starting with <code>static/</code>.</p>
+<ul>
+<li><em>How to extract the file name from URL</em>?</li>
+</ul>
+<p>For example, we need to extract string <code>a.mp3</code> from URL <code>/static/a.mp3</code>. This task can be accomplished by a simple string operations.</p>
+<pre><code class="language-java">String filename = URLDecoder.decode(request.getPathInfo().substring(1), StandardCharsets.UTF_8);
+</code></pre>
+<p>Here, <code>request.getPathInfo()</code> returns any extra path information associated with the URL the client sent when it made this request. The extra path information follows the servlet path but precedes the query string and will start with a &quot;/&quot; character. For example, for URL <code>/static/a.mp3</code>, it will return <code>/a.mp3</code>. And <code>decode()</code> is used to decode an <code>application/x-www-form-urlencoded</code> string. Recall that URL is encoded by the browser before sending an HTTP request.</p>
+<ul>
+<li><em>How to get the mime type of a file</em>?</li>
+</ul>
+<pre><code class="language-java">String mime = getServletContext().getMimeType(fileName);
+response.setContentType(mime);
+</code></pre>
+<p>Again, <code>ServletContext</code> is on call. The complete code can be found at <code>StaticResourceServlet.java</code> of <code>ch3/response</code>.</p>
+<h2 id="error-page"><a class="header" href="#error-page">Error page</a></h2>
+<p>Errors often occur in a system, and how to handle them properly mainly depends on the business logic. Recall the example converting a string to <code>int</code> in <a href="ch3/3.2">Section 3.2</a>.</p>
+<p>Suppose there is no <code>a.png</code> inside our static folder. What if we access http://localhost:8080/response/static/a.png? As expected, it throws a <code>NoSuchFileException</code>. Yes, there is NO such file. As a result, HTTP response's status code becomes 500, indicating there is  an <em>Internal Server Error</em>.</p>
+<p><img src="image/ch3-500.png" alt="Figure 3.13 HTTP status code: 500." title=":size=60%" /></p>
+<p>Then what if we access http://localhost:8080/response/abc? Again, suppose currently there is no any resource whose URL name is <code>abc</code>. In this case, HTTP response's status code becomes 404, indicating the targeted resource is <em>NOT Found</em>.</p>
+<p>Some severs have their default error page, as we have witnessed, but we would like to customize the error page for our website. Fig 3.14 shows the 404 page of Google.</p>
+<p><img src="image/ch3-google-404.png" alt="Figure 3.14 Google's 404 page." title=":size=60%" /></p>
+<p>Firstly, we need to prepare a resource, including an HTML, JSP and servlet, to take the responsibility to show <em>404</em>. Here we simply use an HTML page which is adapted from <a href="https://www.zhihu.com/abc">zhihu.com</a>. Next, we add the following configuration in DD (i.e., <code>web.xml</code>):</p>
+<pre><code class="language-xml">&lt;error-page&gt;
+    &lt;error-code&gt;404&lt;/error-code&gt;
+    &lt;location&gt;/404.html&lt;/location&gt;
+&lt;/error-page&gt;
+</code></pre>
+<p>It tells the Tomcat that please display <code>404.html</code> when the status code is 404. Note that if <code>&lt;error-code&gt;</code> is not specified explicitly, it means it is able to match all status codes. That is all for customizing an error page.</p>
+<blockquote>
+<p>[!WARNING]
+HTTP status code is commonly misused in software engineering.</p>
+</blockquote>
+<p>Please keep the rule <em>&quot;Use it as it should be&quot;</em> in mind when designing APIs. Some programmers may always return <code>200</code> even if there is an error, and it is definitely a bad practice. For example, in the last subsection's example, from the standpoint of an API, it would be better to return a <code>404</code> when the file is not found. And this can achieved by a simple <code>if-else</code>[2]:</p>
+<pre><code class="language-java">if (source.toFile().exists()) {
+    response.setContentType(mime);
+    ServletOutputStream os = response.getOutputStream();
+    Files.copy(source, os);
+} else {
+    response.sendError(404);
+}
+</code></pre>
+<h2 id="to-respond-or-not-to-respond"><a class="header" href="#to-respond-or-not-to-respond">To respond, or not to respond</a></h2>
+<p>In the previous examples, we mainly deal with the response within the servlet. In other words, the single servlet does all work for the <em>request-response</em> model in the server. But, you can choose to have something else handle the response for your request. You can either <em>redirect</em> the request to a completely different URL, or you can <em>dispatch the request</em> to some other component in your web app (as we have seen in the mini MVC project). In what follows, we will discuss about when and how to make a response by redirecting and dispatching.</p>
+<blockquote>
+<p>[!TIP]
+<strong>TL;DR</strong>. Servlet redirect makes the <em>browser</em> do the work, while a request dispatch does the work on the <em>server</em> side.</p>
+</blockquote>
+<h3 id="redirect"><a class="header" href="#redirect">Redirect</a></h3>
+<p>As for <em>redirect</em>, it means when a web browser attempts to open a URL that has been redirected, a page with a different URL is opened.</p>
+<pre><code class="language-java">@WebServlet(name = &quot;RedirectServlet&quot;, value = &quot;/redirect&quot;)
+public class RedirectServlet extends HttpServlet {
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        response.sendRedirect(&quot;https://zhongpu.gitlab.io/java-web-book/&quot;);
+    }
+}
+</code></pre>
+<p>In the code above, when a user visit <code>/redirect</code>, it would send a <em>redirect</em> to another URL. Let's have a closer look at what it happened exactly.</p>
+<ul>
+<li>Step 1: As usual, the client sends an HTTP request to the server.</li>
+<li>Step 2: The server redirects this request by returning a new URL to the client[3]. Note that the response status code is <code>301</code> (indicating <em>Moved Permanently</em>) or <code>302</code> (indicating <code>Found</code>)[4].</li>
+<li>Step 3: After the client received the new URL, it will visit this new URL automatically.</li>
+</ul>
+<p>Since it is the <em>client</em> that does all work for a new request, the client will see the new URL.</p>
+<p>Now let's try to make some changes for the new URL. In the code above, the URL is absolute, but relative URLs are more common when using <code>sendRedirect()</code>. Relative URLs come in two flavors: with or without a starting forward slash (&quot;/&quot;)[5].</p>
+<p>Image the client originally typed in: http://localhost:8080/response/foo/redirect.</p>
+<p>When the request comes into the servlet named &quot;redirect&quot;, the servlet calls <code>sendRedirect()</code> with a relative URL that does not start with a forward slash:</p>
+<pre><code class="language-java">sendRedirect(&quot;bar/test.html&quot;)
+</code></pre>
+<p>Then container builds the full URL relative to the original request URL: http://localhost:8080/response/foo/bar/test.html.</p>
+<p>But if the argument to <code>sendRedirect()</code> starts with a forward slash:</p>
+<pre><code class="language-java">sendRedirect(&quot;/bar/test.html&quot;)
+</code></pre>
+<p>Then the container builds the complete URL <strong>relative to the web container root itself</strong>. So the new URL will be: http://localhost:8080/bar/test.html. Recall that there may be several applications within a container.</p>
+<p>Readers can design tests to understand these two kinds of relative URLs[6].</p>
+<blockquote>
+<p>[!NOTE]
+You cannot do a <code>sendRedirect()</code> after writing to the response.</p>
+</blockquote>
+<h3 id="dispatch"><a class="header" href="#dispatch">Dispatch</a></h3>
+<p>We have studied how to <em>dispatch</em> a request in the mini MVC project. Different from <em>redirect</em>, a request dispatch does the work on the server side.</p>
+<pre><code class="language-java">RequestDispatcher dispatcher = request.getRequestDispatcher(&quot;json&quot;);
+dispatcher.forward(request, response);
+</code></pre>
+<p>Instead, the browser address bar didn't change, and the user does not know that <code>json</code> generated the response. Different from <em>redirect</em>, the servlet only make one response, and it simply forwards the same request to another resource within the same application.</p>
+<p>Note that the parameter what <code>getRequestDispatcher()</code> accepts is always a <em>relative</em> path. Similarly, relative URLs come in two flavors: with or without a starting forward slash (&quot;/&quot;).</p>
+<pre><code class="language-java">@WebServlet(name = &quot;Forward2Servlet&quot;, value = &quot;/foo/forward&quot;)
+public class Forward2Servlet extends HttpServlet {
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.getRequestDispatcher(&quot;/json&quot;).forward(request, response);
+    }
+}
+</code></pre>
+<p>Image this servlet is accessed by http://localhost:8080/response/foo/forward. The relative path <code>/json</code>, starting with &quot;/&quot;, will build a path relative to the servlet's context root. So the final path is http://localhost:8080/response/json. If it were <code>json</code>, without the forwarding slash, then the final path would be http://localhost:8080/response/foo/json. </p>
+<h3 id="a-summary-of-redirect-and-dispatch"><a class="header" href="#a-summary-of-redirect-and-dispatch">A summary of redirect and dispatch</a></h3>
+<p>To sum up, <em>dispatch</em> is a practical technique in MVC design, while <em>redirect</em> is mainly to make a web page available under more than one URL address. For example[7]:</p>
+<ul>
+<li><strong>Force HTTPS</strong>: Some websites would redirect HTTP requests to HTTPS requests for security issues.</li>
+<li><strong>Moving pages to a new domain</strong>: Some websites may has more than one domain name, and they would redirect <code>olddomain.com</code> to <code>newdomain.com</code>.</li>
+<li><strong>URL shortening</strong>: Web applications often include lengthy descriptive attributes in their URLs, and URL shortening services provide a solution to this problem by redirecting a user to a longer URL from a shorter one.</li>
+</ul>
+<p>Last but not the least, let's consider a non-trivial problem for MVC design: where should we put <em>views</em>? Recall that in the mini MVC project, <code>result.jsp</code> is located at the <code>webapp</code>, then what happens if a user visit <code>result.jsp</code> directly without the transit of <em>forward</em>? She would find there is a 500 error due to the <code>NullPointerException</code>. Although we can provide default values for them or add non-null checking, this approach does not really make logic sense. </p>
+<p><img src="image/ch3-result.png" alt="Figure 3.15 Server internal error in a view." title=":size=60%" /></p>
+<p>To avoid this problem, a better solution is to hide the view from users. So we could put views under <code>webapp/WEB-INF</code>, where users cannot access them directly.</p>
+<pre><code class="language-java">request.getRequestDispatcher(&quot;/WEB-INF/result.jsp&quot;).forward(request, response);
+</code></pre>
+<hr />
+<p>[1] This subsection is adapted from <a href="https://stackoverflow.com/questions/1812244">StackOverflow</a>.</p>
+<p>[2] As a matter of fact, there is also a method called <code>setStatus()</code>. But if we consider such <em>status code</em> as an error, we should use <code>sendError()</code>.</p>
+<p>[3] The new URL is in HTTP response's <em>Location</em> header.</p>
+<p>[4] 3XX is for <em>Redirection</em> messages; 4XX is for <em>Client error</em> responses; 5XX is for <em>Server error</em> responses.</p>
+<p>[5] Readers may analogize URLs to paths in file system when it comes to <em>absolute</em> or <em>relative</em>.</p>
+<p>[6] It is also legal to double forward slash (&quot;//&quot;), and the container interprets it as a network-path reference. For example, <code>//zhongpu.gitlab.io/java-web-book/</code></p>
+<p>[7] https://en.wikipedia.org/wiki/URL_redirection</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../ch3/3.5.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../ch3/exercise.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../ch3/3.5.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../ch3/exercise.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+        <script type="text/javascript">
+            window.playground_line_numbers = true;
+        </script>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

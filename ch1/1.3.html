@@ -1,0 +1,306 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js rust">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>A Brief Introduction To HTML - Head First Java Web</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../preface.html">Preface</a></li><li class="chapter-item expanded "><a href="../ch1/index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch1/1.1.html"><strong aria-hidden="true">1.1.</strong> Jakarta EE Overview</a></li><li class="chapter-item expanded "><a href="../ch1/1.2.html"><strong aria-hidden="true">1.2.</strong> Your First Java Web Project</a></li><li class="chapter-item expanded "><a href="../ch1/1.3.html" class="active"><strong aria-hidden="true">1.3.</strong> A Brief Introduction To HTML</a></li><li class="chapter-item expanded "><a href="../ch1/1.4.html"><strong aria-hidden="true">1.4.</strong> A Brief Introduction To HTTP</a></li><li class="chapter-item expanded "><a href="../ch1/1.5.html"><strong aria-hidden="true">1.5.</strong> Revisit The First Java Web Project</a></li><li class="chapter-item expanded "><a href="../ch1/exercise.html"><strong aria-hidden="true">1.6.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch2/index.html"><strong aria-hidden="true">2.</strong> Web App Architecture And Mini MVC</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch2/2.1.html"><strong aria-hidden="true">2.1.</strong> Servlet And Container</a></li><li class="chapter-item expanded "><a href="../ch2/2.2.html"><strong aria-hidden="true">2.2.</strong> Search: The Way To Self-learning</a></li><li class="chapter-item expanded "><a href="../ch2/2.3.html"><strong aria-hidden="true">2.3.</strong> A Brief Introduction To MVC</a></li><li class="chapter-item expanded "><a href="../ch2/2.4.html"><strong aria-hidden="true">2.4.</strong> Hands On MVC (1)</a></li><li class="chapter-item expanded "><a href="../ch2/2.5.html"><strong aria-hidden="true">2.5.</strong> Hands on MVC (2)</a></li><li class="chapter-item expanded "><a href="../ch2/exercise.html"><strong aria-hidden="true">2.6.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch3/index.html"><strong aria-hidden="true">3.</strong> In-depth Servlet</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch3/3.1.html"><strong aria-hidden="true">3.1.</strong> Servlet: From Birth To Death</a></li><li class="chapter-item expanded "><a href="../ch3/3.2.html"><strong aria-hidden="true">3.2.</strong> Request And Response</a></li><li class="chapter-item expanded "><a href="../ch3/3.3.html"><strong aria-hidden="true">3.3.</strong> More About Request</a></li><li class="chapter-item expanded "><a href="../ch3/3.4.html"><strong aria-hidden="true">3.4.</strong> Upload Files In Servlets</a></li><li class="chapter-item expanded "><a href="../ch3/3.5.html"><strong aria-hidden="true">3.5.</strong> More About Response (1)</a></li><li class="chapter-item expanded "><a href="../ch3/3.6.html"><strong aria-hidden="true">3.6.</strong> More About Response (2)</a></li><li class="chapter-item expanded "><a href="../ch3/exercise.html"><strong aria-hidden="true">3.7.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch4/index.html"><strong aria-hidden="true">4.</strong> In-depth Web</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch4/4.1.html"><strong aria-hidden="true">4.1.</strong> Init parameters</a></li><li class="chapter-item expanded "><a href="../ch4/4.2.html"><strong aria-hidden="true">4.2.</strong> Attributes</a></li><li class="chapter-item expanded "><a href="../ch4/4.3.html"><strong aria-hidden="true">4.3.</strong> Session Management (1)</a></li><li class="chapter-item expanded "><a href="../ch4/4.4.html"><strong aria-hidden="true">4.4.</strong> Session Management (2)</a></li><li class="chapter-item expanded "><a href="../ch4/exercise.html"><strong aria-hidden="true">4.5.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch5/index.html"><strong aria-hidden="true">5.</strong> JSP And Scriptless JSP</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch5/5.1.html"><strong aria-hidden="true">5.1.</strong> Facts About JSP</a></li><li class="chapter-item expanded "><a href="../ch5/5.2.html"><strong aria-hidden="true">5.2.</strong> Expression Language</a></li><li class="chapter-item expanded "><a href="../ch5/5.3.html"><strong aria-hidden="true">5.3.</strong> JSTL</a></li><li class="chapter-item expanded "><a href="../ch5/exercise.html"><strong aria-hidden="true">5.4.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch6/index.html"><strong aria-hidden="true">6.</strong> Database</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch6/6.1.html"><strong aria-hidden="true">6.1.</strong> Introduction To Database</a></li><li class="chapter-item expanded "><a href="../ch6/6.2.html"><strong aria-hidden="true">6.2.</strong> SQL (1)</a></li><li class="chapter-item expanded "><a href="../ch6/6.3.html"><strong aria-hidden="true">6.3.</strong> SQL (2)</a></li><li class="chapter-item expanded "><a href="../ch6/6.4.html"><strong aria-hidden="true">6.4.</strong> Accessing Databases From Java (1)</a></li><li class="chapter-item expanded "><a href="../ch6/6.5.html"><strong aria-hidden="true">6.5.</strong> Accessing Databases From Java (2)</a></li><li class="chapter-item expanded "><a href="../ch6/exercise.html"><strong aria-hidden="true">6.6.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch7/index.html"><strong aria-hidden="true">7.</strong> Thymeleaf</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch7/7.1.html"><strong aria-hidden="true">7.1.</strong> Get Started With Thymeleaf</a></li><li class="chapter-item expanded "><a href="../ch7/7.2.html"><strong aria-hidden="true">7.2.</strong> Standard Expression Syntax</a></li><li class="chapter-item expanded "><a href="../ch7/exercise.html"><strong aria-hidden="true">7.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch9/index.html"><strong aria-hidden="true">8.</strong> Get Started With Spring</a></li><li class="chapter-item expanded "><a href="../appendix/index.html"><strong aria-hidden="true">9.</strong> Appendix</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../appendix/tomcat.html"><strong aria-hidden="true">9.1.</strong> A.1 Tomcat</a></li><li class="chapter-item expanded "><a href="../appendix/idea.html"><strong aria-hidden="true">9.2.</strong> A.2 IntelliJ IDEA</a></li><li class="chapter-item expanded "><a href="../appendix/jdk.html"><strong aria-hidden="true">9.3.</strong> A.3 JDK</a></li><li class="chapter-item expanded "><a href="../appendix/gradle.html"><strong aria-hidden="true">9.4.</strong> A.4 Gradle</a></li><li class="chapter-item expanded "><a href="../appendix/sqlite.html"><strong aria-hidden="true">9.5.</strong> A.5 SQLite</a></li><li class="chapter-item expanded "><a href="../appendix/cloud.html"><strong aria-hidden="true">9.6.</strong> A.6 Cloud (1)</a></li><li class="chapter-item expanded "><a href="../appendix/cloud2.html"><strong aria-hidden="true">9.7.</strong> A.7 Cloud (2)</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Head First Java Web</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="13-a-brief-introduction-to-html"><a class="header" href="#13-a-brief-introduction-to-html">1.3 A Brief Introduction To HTML</a></h1>
+<p>When you are surfing on the Internet, and seeing all sorts of web pages from different websites, including the one we built in <a href="1.2.html">Section 1.2</a>, a natural question is: <strong>how is an web page displayed</strong>? Well, to answer this question, let's run the previous web application again. Once the <code>Hello World</code> web page is opened in the web browser, right-click to display the pop-up menu, and then select <code>Show Page Source</code> (in Safari) or <code>View Page Source</code> (in Edge, Firefox and Chrome). The following is what you will see:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;JSP - Hello World&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Hello World!
+&lt;/h1&gt;
+&lt;br/&gt;
+&lt;a href=&quot;hello-servlet&quot;&gt;Hello Servlet&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>These lines of code are written in <code>HTML</code>, the standard markup language for web pages, short for <em>HyperText Markup Language</em>. HTML is probably the least complex and most worth-learning web skill, and five minutes are enough for you to become an experienced HTML developer. We are not kidding: <em>FIVE</em> minutes.</p>
+<p>Here what you will need[1]:</p>
+<ul>
+<li>A text editor. Here, we highly recommend <a href="https://code.visualstudio.com/">Visual Studio Code</a>.</li>
+<li>A modern web browser (e.g., Edge, Chrome, Firefox and Safari) to view HTML pages.</li>
+</ul>
+<h2 id="get-started-with-html"><a class="header" href="#get-started-with-html">Get started with HTML</a></h2>
+<blockquote>
+<p>[!TIP]
+<strong>TL;DR</strong> HTML consists of a series of <em>elements</em>, controlling how contents on web pages appear or act. Elements can be <em>nested</em>, and elements can also have <em>attributes</em>. </p>
+</blockquote>
+<p>HTML (Hypertext Markup Language) is not a programming language. It is a markup language that tells web browsers how to structure the web pages you visit. HTML consists of a series of <em>elements</em>, which you use to enclose, wrap, or mark up different parts of content to make it appear or act in a certain way. The process of the web browser interpreting HTML code for a display is <em>rendering</em>.</p>
+<p>For example, consider the following line of text:</p>
+<pre><code class="language-text">My cat is very grumpy.
+</code></pre>
+<p>If we wanted the text to stand by itself, we could specify that it is a paragraph by enclosing it in a paragraph (<code>&lt;p&gt;</code>) element:</p>
+<pre><code class="language-html">&lt;p&gt;My cat is very grumpy&lt;/p&gt;
+</code></pre>
+<blockquote>
+<p>[!NOTE]
+Tags in HTML are not case-sensitive. However, it is best practice to write all tags in lowercase for consistency and readability.</p>
+</blockquote>
+<p>In this example, we can notice that our element includes <em>opening tag</em>, and <em>content</em>, and <em>closing tag</em>, as illustrated in Figure 1.9.</p>
+<p><img src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started/grumpy-cat-small.png" alt="Figure 1.9 Three parts of an HTML element." title=":size=50%" /></p>
+<p>Elements can be placed within other elements. This is called <em>nesting</em>. Notice that the tags have to open and close in a way that they are inside or outside one another. For example, </p>
+<pre><code class="language-html">&lt;!-- Correct nesting --&gt;
+&lt;p&gt;My cat is &lt;strong&gt;very&lt;/strong&gt; grumpy.&lt;/p&gt;
+
+&lt;!-- Wrong nesting --&gt;
+&lt;p&gt;My cat is &lt;strong&gt;very grumpy.&lt;/p&gt;&lt;/strong&gt;
+</code></pre>
+<p>is a correct and wrong way of nesting, respectively, where</p>
+<ul>
+<li>
+<p><code>&lt;!-- --&gt;</code> is the comment sign in HTML, just like <code>//</code> in Java.</p>
+</li>
+<li>
+<p><code>&lt;strong&gt;</code> is to wrap the word and make it look strong(er) in text formatting.</p>
+<blockquote>
+<p>[!NOTE]
+Some elements consist of a single tag, without content and classing tag. For example <code>&lt;img src=&quot;cat.png&quot;&gt;</code> alone can embed an image file <code>cat.png</code> onto a page, and you don't have to write <code>&lt;img src=&quot;cat.png&quot;&gt;&lt;/image&gt;</code>.</p>
+</blockquote>
+</li>
+</ul>
+<p>In the note above, we can find that elements can also have <em>attributes</em>. An attribute should have an <em>attribute name</em>, followed by an equal sign, and an <em>attribute value</em>, wrapped with opening and closing quote marks. So, <code>src</code> is the attribute name to donate the image <em>source</em>. In Figure 1.10, the <code>&lt;p&gt;</code> element has an attribute name <code>class</code> with value <code>editor-note</code>.</p>
+<p><img src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started/grumpy-cat-attribute-small.png" alt="Figure 1.10 Attribute of an HTML element" title=":size=70%" /></p>
+<p>Basically, you have learnt all grammar knowledge of HTML[2], and what you need to enhance is to grasp more elements as well as their attributes. If you encounter some unfamiliar elements or attributes, please refer to many great resources available for learning HTML, such as <a href="https://www.w3schools.com/html/">HTML Tutorial</a> by <em>W3School</em>.</p>
+<h2 id="anatomy-of-a-complete-example"><a class="header" href="#anatomy-of-a-complete-example">Anatomy of a complete example</a></h2>
+<p>Let's revisit the <code>HTML</code> code in the beginning of this section. Copy the code into a document and save it as <code>test.html</code>. Double click <code>test.html</code>, and then your default web browser will open it.</p>
+<blockquote>
+<p>[!NOTE]
+The file suffix of HTML can be either <code>.htm</code> or <code>.html</code>. But it is a good practice to use the latter one.</p>
+</blockquote>
+<ul>
+<li>The <code>&lt;!DOCTYPE html&gt;</code> declaration defines that this document is an HTML5[3] document.</li>
+<li>The <code>&lt;html&gt;</code> element is the root element of an HTML page.</li>
+<li>The <code>&lt;head&gt;</code> element contains <em>meta</em> information about the HTML page.</li>
+<li>The <code>&lt;title&gt;</code> element specifies a title for the HTML page (which is shown in the browser's title bar or in the page's tab).</li>
+<li>The <code>&lt;body&gt;</code> element defines the document's body, and is a container for all the <em>visible</em> contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.</li>
+<li>The <code>&lt;h1&gt;</code> element defines a large heading.</li>
+<li>The <code>&lt;br&gt;</code> element inserts a single line break.</li>
+<li>The <code>&lt;a&gt;</code> element defines a <em>hyperlink</em>.</li>
+</ul>
+<p>As a minimal web page, you should at least include <code>&lt;html&gt;</code> and <code>&lt;body&gt;</code>. </p>
+<p><img src="image/html.png" alt="Figure 1.11 Anatomy of an HTML page" title=":size=40%" /></p>
+<p>You can click on <code>&lt;a&gt;</code> and jump to another document. The most important attribute of <code>&lt;a&gt;</code> is the <code>href</code> attribute, which indicates the link's destination. Try to append <code>&lt;a href=&quot;https://wwww.bing.com&quot;&gt;Bing&lt;/a&gt;</code> before <code>&lt;/body&gt;</code> tag, and the refresh <code>index.html</code> in the web browser. A new link <code>Bing</code> colored in blue appears, right? And see what happens when you click it. Congratulations! You are already an HTML guru now.</p>
+<hr />
+<p>[1] This section is adapted from <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML">Structuring the web with HTML</a> by <em>Mozilla</em>.</p>
+<p>[2] To write <em>workable</em> (practical) web pages, you need also to understand more advanced topics like <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS">CSS</a> and <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript">JavaScript</a>.</p>
+<p>[3] The current version of HTML is HTML5.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../ch1/1.2.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../ch1/1.4.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../ch1/1.2.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../ch1/1.4.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+        <script type="text/javascript">
+            window.playground_line_numbers = true;
+        </script>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

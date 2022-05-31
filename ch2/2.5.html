@@ -1,0 +1,337 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js rust">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Hands on MVC (2) - Head First Java Web</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../preface.html">Preface</a></li><li class="chapter-item expanded "><a href="../ch1/index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch1/1.1.html"><strong aria-hidden="true">1.1.</strong> Jakarta EE Overview</a></li><li class="chapter-item expanded "><a href="../ch1/1.2.html"><strong aria-hidden="true">1.2.</strong> Your First Java Web Project</a></li><li class="chapter-item expanded "><a href="../ch1/1.3.html"><strong aria-hidden="true">1.3.</strong> A Brief Introduction To HTML</a></li><li class="chapter-item expanded "><a href="../ch1/1.4.html"><strong aria-hidden="true">1.4.</strong> A Brief Introduction To HTTP</a></li><li class="chapter-item expanded "><a href="../ch1/1.5.html"><strong aria-hidden="true">1.5.</strong> Revisit The First Java Web Project</a></li><li class="chapter-item expanded "><a href="../ch1/exercise.html"><strong aria-hidden="true">1.6.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch2/index.html"><strong aria-hidden="true">2.</strong> Web App Architecture And Mini MVC</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch2/2.1.html"><strong aria-hidden="true">2.1.</strong> Servlet And Container</a></li><li class="chapter-item expanded "><a href="../ch2/2.2.html"><strong aria-hidden="true">2.2.</strong> Search: The Way To Self-learning</a></li><li class="chapter-item expanded "><a href="../ch2/2.3.html"><strong aria-hidden="true">2.3.</strong> A Brief Introduction To MVC</a></li><li class="chapter-item expanded "><a href="../ch2/2.4.html"><strong aria-hidden="true">2.4.</strong> Hands On MVC (1)</a></li><li class="chapter-item expanded "><a href="../ch2/2.5.html" class="active"><strong aria-hidden="true">2.5.</strong> Hands on MVC (2)</a></li><li class="chapter-item expanded "><a href="../ch2/exercise.html"><strong aria-hidden="true">2.6.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch3/index.html"><strong aria-hidden="true">3.</strong> In-depth Servlet</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch3/3.1.html"><strong aria-hidden="true">3.1.</strong> Servlet: From Birth To Death</a></li><li class="chapter-item expanded "><a href="../ch3/3.2.html"><strong aria-hidden="true">3.2.</strong> Request And Response</a></li><li class="chapter-item expanded "><a href="../ch3/3.3.html"><strong aria-hidden="true">3.3.</strong> More About Request</a></li><li class="chapter-item expanded "><a href="../ch3/3.4.html"><strong aria-hidden="true">3.4.</strong> Upload Files In Servlets</a></li><li class="chapter-item expanded "><a href="../ch3/3.5.html"><strong aria-hidden="true">3.5.</strong> More About Response (1)</a></li><li class="chapter-item expanded "><a href="../ch3/3.6.html"><strong aria-hidden="true">3.6.</strong> More About Response (2)</a></li><li class="chapter-item expanded "><a href="../ch3/exercise.html"><strong aria-hidden="true">3.7.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch4/index.html"><strong aria-hidden="true">4.</strong> In-depth Web</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch4/4.1.html"><strong aria-hidden="true">4.1.</strong> Init parameters</a></li><li class="chapter-item expanded "><a href="../ch4/4.2.html"><strong aria-hidden="true">4.2.</strong> Attributes</a></li><li class="chapter-item expanded "><a href="../ch4/4.3.html"><strong aria-hidden="true">4.3.</strong> Session Management (1)</a></li><li class="chapter-item expanded "><a href="../ch4/4.4.html"><strong aria-hidden="true">4.4.</strong> Session Management (2)</a></li><li class="chapter-item expanded "><a href="../ch4/exercise.html"><strong aria-hidden="true">4.5.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch5/index.html"><strong aria-hidden="true">5.</strong> JSP And Scriptless JSP</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch5/5.1.html"><strong aria-hidden="true">5.1.</strong> Facts About JSP</a></li><li class="chapter-item expanded "><a href="../ch5/5.2.html"><strong aria-hidden="true">5.2.</strong> Expression Language</a></li><li class="chapter-item expanded "><a href="../ch5/5.3.html"><strong aria-hidden="true">5.3.</strong> JSTL</a></li><li class="chapter-item expanded "><a href="../ch5/exercise.html"><strong aria-hidden="true">5.4.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch6/index.html"><strong aria-hidden="true">6.</strong> Database</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch6/6.1.html"><strong aria-hidden="true">6.1.</strong> Introduction To Database</a></li><li class="chapter-item expanded "><a href="../ch6/6.2.html"><strong aria-hidden="true">6.2.</strong> SQL (1)</a></li><li class="chapter-item expanded "><a href="../ch6/6.3.html"><strong aria-hidden="true">6.3.</strong> SQL (2)</a></li><li class="chapter-item expanded "><a href="../ch6/6.4.html"><strong aria-hidden="true">6.4.</strong> Accessing Databases From Java (1)</a></li><li class="chapter-item expanded "><a href="../ch6/6.5.html"><strong aria-hidden="true">6.5.</strong> Accessing Databases From Java (2)</a></li><li class="chapter-item expanded "><a href="../ch6/exercise.html"><strong aria-hidden="true">6.6.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch7/index.html"><strong aria-hidden="true">7.</strong> Thymeleaf</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch7/7.1.html"><strong aria-hidden="true">7.1.</strong> Get Started With Thymeleaf</a></li><li class="chapter-item expanded "><a href="../ch7/7.2.html"><strong aria-hidden="true">7.2.</strong> Standard Expression Syntax</a></li><li class="chapter-item expanded "><a href="../ch7/exercise.html"><strong aria-hidden="true">7.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch9/index.html"><strong aria-hidden="true">8.</strong> Get Started With Spring</a></li><li class="chapter-item expanded "><a href="../appendix/index.html"><strong aria-hidden="true">9.</strong> Appendix</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../appendix/tomcat.html"><strong aria-hidden="true">9.1.</strong> A.1 Tomcat</a></li><li class="chapter-item expanded "><a href="../appendix/idea.html"><strong aria-hidden="true">9.2.</strong> A.2 IntelliJ IDEA</a></li><li class="chapter-item expanded "><a href="../appendix/jdk.html"><strong aria-hidden="true">9.3.</strong> A.3 JDK</a></li><li class="chapter-item expanded "><a href="../appendix/gradle.html"><strong aria-hidden="true">9.4.</strong> A.4 Gradle</a></li><li class="chapter-item expanded "><a href="../appendix/sqlite.html"><strong aria-hidden="true">9.5.</strong> A.5 SQLite</a></li><li class="chapter-item expanded "><a href="../appendix/cloud.html"><strong aria-hidden="true">9.6.</strong> A.6 Cloud (1)</a></li><li class="chapter-item expanded "><a href="../appendix/cloud2.html"><strong aria-hidden="true">9.7.</strong> A.7 Cloud (2)</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Head First Java Web</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="25-hands-on-mvc-2"><a class="header" href="#25-hands-on-mvc-2">2.5 Hands On MVC (2)</a></h1>
+<p>In this section, we are going to enhance the mini MVC project by introducing CSS. It is not mandatory for Java developers to master front-end technologies, but enriching your developing toolbox is always welcome if the input-output ratio is relatively small[1]. And strictly speaking, when it comes the front-end, both CSS and JS are essential. However, in this textbook, we only focus on basic CSS, a practical skill with small input-output ratio, and further self-learning is welcomed.</p>
+<blockquote>
+<p>[!NOTE]
+You can jump to the next chapter directly if you are not interested in the front-end skills.</p>
+</blockquote>
+<h2 id="a-brief-introduction-to-css-2"><a class="header" href="#a-brief-introduction-to-css-2">A brief introduction to CSS [2]</a></h2>
+<p>Cascading Stylesheets — or CSS — is the first technology you should start learning after HTML. While HTML is used to define the structure and semantics of your content, CSS is used to style it and lay it out[3]. For example, you can use CSS to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features.</p>
+<p>Fist of all, let's have a look at CSS syntax. CSS is a rule-based language — you define rules specifying groups of styles that should be applied to particular elements or groups of elements on your web page. For example &quot;<em>I want the main heading on my page to be shown as large red text.</em>&quot;</p>
+<p>The following code shows a very simple CSS rule that would achieve the styling described above:</p>
+<pre><code class="language-css">h1 {
+    color: red;
+    font-size: 5em;
+}
+</code></pre>
+<p>The rule opens with a <code>selector</code> . This selects the HTML element that we are going to style. In this case we are styling level one headings (<code>&lt;h1&gt;</code>). We then have a set of curly braces <code>{ }</code>. Inside those will be one or more <strong>declarations</strong>, which take the form of <strong>property</strong> and <strong>value</strong> pairs. In our example, we have the <code>color</code> property, which can take various <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#color">color values</a>. We also have the <code>font-size</code> property. This property can take various <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numbers_lengths_and_percentages">size units</a> as a value.</p>
+<p>The CSS code above can be put in the <code>&lt;style&gt;</code> tag nested in <code>&lt;head&gt;</code>, and you can find the complete code in <code>index2.html</code> under <code>mini-mvc | src | main | webapp</code>.</p>
+<p><img src="image/ch2-css-1.png" alt="Figure 2.22 A simple CSS style." title=":size=50%" /></p>
+<p>Of course, this new HTML page is far away from beauty, but it is a good start for <em>styling</em>. In practice, we often write CSS code in a single file (<code>.css</code>) for the ease of reuse[4], and then <em>link</em> to that CSS file in HTML via <code>&lt;link&gt;</code> tag nested in <code>&lt;head&gt;</code>. You can find the complete code in <code>index3.html</code> under <code>mini-mvc | src | main | webapp</code>.</p>
+<pre><code class="language-html">&lt;link href=&quot;index.css&quot; rel=&quot;stylesheet&quot;&gt;
+</code></pre>
+<h2 id="the-key-to-css-selector"><a class="header" href="#the-key-to-css-selector">The key to CSS: selector</a></h2>
+<blockquote>
+<p>CSS selectors define the elements to which a set of CSS rules apply.</p>
+</blockquote>
+<p>When learning CSS, people often have to understand how to use a <strong>selector</strong> as well as the supported properties and values given a <em>selector</em>. Generally speaking, a <em>selector</em> is used to select the element(s) you want to style. Here is a complete <a href="https://www.w3schools.com/cssref/trysel.asp">selector sheet</a>. In our example, the selector <code>h1</code> is to select all <code>&lt;h1&gt;</code> elements.</p>
+<p>Each CSS rule starts with a selector — or a list of selectors — in order to tell the browser which element or elements the rules should apply to. All the examples below are valid selectors or lists of selectors.</p>
+<pre><code class="language-css">h1
+a:link
+.manythings
+#onething
+.box p
+.box p:first-child
+h1, h2, .intro
+</code></pre>
+<p>It seems a bit obscure. Calm down. As for basic selectors, there are only three forms:</p>
+<ul>
+<li><strong>Type selector</strong>. Selects all elements that have the given node name. For example, <code>h1</code> will match any <code>&lt;h1&gt;</code> element. </li>
+<li><strong>Class selector</strong>. Selects all elements that have the given class attribute. For example, <code>.index</code> will match any element that has a class of &quot;index&quot;.</li>
+<li><strong>ID selector</strong>. Selects an element based on the value of its id attribute. There should be only one element with a given ID in a document. For example, <code>#toc</code> will match the element that has the ID &quot;toc&quot;.</li>
+</ul>
+<p>In <code>index3.html</code>, we define two classes, <code>foo</code> and <code>bar</code>, respectively.</p>
+<pre><code class="language-html">&lt;h2 class=&quot;foo&quot;&gt;Class foo is #568900&lt;/h2&gt;
+&lt;h2 class=&quot;bar&quot;&gt;Class bar is rgb(10, 20, 100)&lt;/h2&gt;
+</code></pre>
+<p>The following is CSS with <em>class selector</em>:</p>
+<pre><code class="language-css">.foo {
+    color: #568900;
+}
+
+.bar {
+    color: rgb(10, 20, 100);
+}
+</code></pre>
+<p>Recall the <code>&lt;select&gt;</code>'s id attribute is <code>books</code>, and the following is CSS with <em>ID selector</em>:</p>
+<pre><code class="language-css">#books {
+    background-color: cadetblue;
+}
+</code></pre>
+<p>As a final exercise, we firstly add <code>class=&quot;button&quot;</code> for the submit button, then in <code>index.css</code>. Preview <code>index3.html</code>, and try to understand how it works.</p>
+<pre><code class="language-css">.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+</code></pre>
+<h2 id="ui-framework-bootstrap"><a class="header" href="#ui-framework-bootstrap">UI framework: Bootstrap</a></h2>
+<p>Mastering CSS and JS is important if you would like to have a deep understanding about the front-end. However, due to the time limit of a one-semester course, we won't focus on them. In addition, the main aim of this book is to train yourself as a qualified back-end Java web developer. So, how can you write a modern web page with very limited front-end skills? Well, it is possible as there are many awesome UI frameworks (e.g., <a href="https://getbootstrap.com/">Bootstrap</a>) available that help you build elegant web pages like playing lego games.</p>
+<p>Bootstrap, the world’s most popular front-end open source toolkit, is directed at responsive, mobile-first web development. What does Bootstrap do for you exactly? Well, it has extensive prebuilt CSS rules for commonly used UI components, including <em>buttons</em>, <em>forms</em>, <em>navbar</em>, so you can apply those rules without writing them manually. Recall the stylish button above. Bootstrap also includes several predefined button styles (such as <code>btn-primary</code>), each serving its own semantic purpose.</p>
+<pre><code class="language-html">&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Primary&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot;&gt;Secondary&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-success&quot;&gt;Success&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-danger&quot;&gt;Danger&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-warning&quot;&gt;Warning&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-info&quot;&gt;Info&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-light&quot;&gt;Light&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-dark&quot;&gt;Dark&lt;/button&gt;
+
+&lt;button type=&quot;button&quot; class=&quot;btn btn-link&quot;&gt;Link&lt;/button&gt;
+</code></pre>
+<p>And the following is what will display:</p>
+<p><img src="image/ch2-buttons.png" alt="Figure 2.23 Buttons in Bootstrap." title=":size=70%" /></p>
+<p>As long as you get used to those built-in CSS classes, you are able to create modern web pages as you wish. For example, you can use the <a href="https://getbootstrap.com/docs/5.1/components/card/">card</a> to introduce cats in HTML. And we also adapt an album example based on <em>card</em> component. The complete code can be found at <code>card.html</code> and <code>animals.html</code>, respectively, under <code>mini-mvc | src | main | webapp</code>. </p>
+<pre><code class="language-html">&lt;div class=&quot;card text-white bg-secondary mb-3&quot; style=&quot;width: 18rem;&quot;&gt;
+  &lt;img src=&quot;cat.png&quot; class=&quot;card-img-top&quot; alt=&quot;cat&quot;&gt;
+  &lt;div class=&quot;card-body&quot;&gt;
+    &lt;h5 class=&quot;card-title&quot;&gt;Cat&lt;/h5&gt;
+    &lt;p class=&quot;card-text&quot;&gt;The cat is a domestic species of small carnivorous mammal.&lt;/p&gt;
+    &lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot;&gt;Find more&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>With the help of Bootstrap, you are able to build a non-trivial web page like this easily:</p>
+<p><img src="image/ch2-cats.png" alt="Figure 2.23 Cats example in Bootstrap." title=":size=70%" /></p>
+<h2 id="client-side-frameworks"><a class="header" href="#client-side-frameworks">Client-side frameworks</a></h2>
+<p>Now, JavaScript is an essential part of the web, used on 95% of all websites[5], and the web is an essential part of modern life. The advent of modern JavaScript frameworks has made it much easier to build highly dynamic, interactive applications. A framework is a library that offers opinions about how software gets built. </p>
+<p>There are many frameworks out there, but currently the &quot;big three&quot; are considered to be the following.</p>
+<ul>
+<li><strong>Angular</strong>: <a href="https://angular.io/">Angular</a> is an open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations.</li>
+<li><strong>Vue</strong>: <a href="https://vuejs.org/">Vue</a> is an open-source model–view–viewmodel front end JavaScript framework for building user interfaces and single-page applications.</li>
+<li><strong>React</strong>: <a href="https://reactjs.org/">React</a> itself is not technically a framework; it's a library for rendering UI components. React is used in combination with other libraries to make applications.</li>
+</ul>
+<p>Those frameworks are beyond the scope of this book. People who are interested in front-end skills can explore any of them through self-learning.</p>
+<hr />
+<p>[1] Input-output ratio is mainly used in material control, which indicates the relation between the quantity of material used in the production and the quantity of final output. In general, the smaller input-output ratio, the bigger benefits in a given time/cost.</p>
+<p>[2] This subsection is adapted from <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS">Learn to style HTML using CSS</a>.</p>
+<p>[3] Since JSP will finally output an HTML page, CSS can be also used to style JSP.</p>
+<p>[4] CSS code can also be specified in the <code>style</code> attribute of the targeted element. For example, <code>&lt;h1 style=&quot;color: red; font-size: 5em;&quot;&gt;Find the book you love.&lt;/h1&gt;</code>. But this <strong>inline</strong> style is infrequent, since it would make a chaos for the HTML structure and result in troubles for maintenance. Anyway, avoid using CSS in this way, when possible.</p>
+<p>[5] https://w3techs.com/technologies/details/cp-javascript</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../ch2/2.4.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../ch2/exercise.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../ch2/2.4.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../ch2/exercise.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+        <script type="text/javascript">
+            window.playground_line_numbers = true;
+        </script>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

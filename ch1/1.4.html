@@ -1,0 +1,313 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js rust">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>A Brief Introduction To HTTP - Head First Java Web</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../preface.html">Preface</a></li><li class="chapter-item expanded "><a href="../ch1/index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch1/1.1.html"><strong aria-hidden="true">1.1.</strong> Jakarta EE Overview</a></li><li class="chapter-item expanded "><a href="../ch1/1.2.html"><strong aria-hidden="true">1.2.</strong> Your First Java Web Project</a></li><li class="chapter-item expanded "><a href="../ch1/1.3.html"><strong aria-hidden="true">1.3.</strong> A Brief Introduction To HTML</a></li><li class="chapter-item expanded "><a href="../ch1/1.4.html" class="active"><strong aria-hidden="true">1.4.</strong> A Brief Introduction To HTTP</a></li><li class="chapter-item expanded "><a href="../ch1/1.5.html"><strong aria-hidden="true">1.5.</strong> Revisit The First Java Web Project</a></li><li class="chapter-item expanded "><a href="../ch1/exercise.html"><strong aria-hidden="true">1.6.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch2/index.html"><strong aria-hidden="true">2.</strong> Web App Architecture And Mini MVC</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch2/2.1.html"><strong aria-hidden="true">2.1.</strong> Servlet And Container</a></li><li class="chapter-item expanded "><a href="../ch2/2.2.html"><strong aria-hidden="true">2.2.</strong> Search: The Way To Self-learning</a></li><li class="chapter-item expanded "><a href="../ch2/2.3.html"><strong aria-hidden="true">2.3.</strong> A Brief Introduction To MVC</a></li><li class="chapter-item expanded "><a href="../ch2/2.4.html"><strong aria-hidden="true">2.4.</strong> Hands On MVC (1)</a></li><li class="chapter-item expanded "><a href="../ch2/2.5.html"><strong aria-hidden="true">2.5.</strong> Hands on MVC (2)</a></li><li class="chapter-item expanded "><a href="../ch2/exercise.html"><strong aria-hidden="true">2.6.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch3/index.html"><strong aria-hidden="true">3.</strong> In-depth Servlet</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch3/3.1.html"><strong aria-hidden="true">3.1.</strong> Servlet: From Birth To Death</a></li><li class="chapter-item expanded "><a href="../ch3/3.2.html"><strong aria-hidden="true">3.2.</strong> Request And Response</a></li><li class="chapter-item expanded "><a href="../ch3/3.3.html"><strong aria-hidden="true">3.3.</strong> More About Request</a></li><li class="chapter-item expanded "><a href="../ch3/3.4.html"><strong aria-hidden="true">3.4.</strong> Upload Files In Servlets</a></li><li class="chapter-item expanded "><a href="../ch3/3.5.html"><strong aria-hidden="true">3.5.</strong> More About Response (1)</a></li><li class="chapter-item expanded "><a href="../ch3/3.6.html"><strong aria-hidden="true">3.6.</strong> More About Response (2)</a></li><li class="chapter-item expanded "><a href="../ch3/exercise.html"><strong aria-hidden="true">3.7.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch4/index.html"><strong aria-hidden="true">4.</strong> In-depth Web</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch4/4.1.html"><strong aria-hidden="true">4.1.</strong> Init parameters</a></li><li class="chapter-item expanded "><a href="../ch4/4.2.html"><strong aria-hidden="true">4.2.</strong> Attributes</a></li><li class="chapter-item expanded "><a href="../ch4/4.3.html"><strong aria-hidden="true">4.3.</strong> Session Management (1)</a></li><li class="chapter-item expanded "><a href="../ch4/4.4.html"><strong aria-hidden="true">4.4.</strong> Session Management (2)</a></li><li class="chapter-item expanded "><a href="../ch4/exercise.html"><strong aria-hidden="true">4.5.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch5/index.html"><strong aria-hidden="true">5.</strong> JSP And Scriptless JSP</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch5/5.1.html"><strong aria-hidden="true">5.1.</strong> Facts About JSP</a></li><li class="chapter-item expanded "><a href="../ch5/5.2.html"><strong aria-hidden="true">5.2.</strong> Expression Language</a></li><li class="chapter-item expanded "><a href="../ch5/5.3.html"><strong aria-hidden="true">5.3.</strong> JSTL</a></li><li class="chapter-item expanded "><a href="../ch5/exercise.html"><strong aria-hidden="true">5.4.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch6/index.html"><strong aria-hidden="true">6.</strong> Database</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch6/6.1.html"><strong aria-hidden="true">6.1.</strong> Introduction To Database</a></li><li class="chapter-item expanded "><a href="../ch6/6.2.html"><strong aria-hidden="true">6.2.</strong> SQL (1)</a></li><li class="chapter-item expanded "><a href="../ch6/6.3.html"><strong aria-hidden="true">6.3.</strong> SQL (2)</a></li><li class="chapter-item expanded "><a href="../ch6/6.4.html"><strong aria-hidden="true">6.4.</strong> Accessing Databases From Java (1)</a></li><li class="chapter-item expanded "><a href="../ch6/6.5.html"><strong aria-hidden="true">6.5.</strong> Accessing Databases From Java (2)</a></li><li class="chapter-item expanded "><a href="../ch6/exercise.html"><strong aria-hidden="true">6.6.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch7/index.html"><strong aria-hidden="true">7.</strong> Thymeleaf</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch7/7.1.html"><strong aria-hidden="true">7.1.</strong> Get Started With Thymeleaf</a></li><li class="chapter-item expanded "><a href="../ch7/7.2.html"><strong aria-hidden="true">7.2.</strong> Standard Expression Syntax</a></li><li class="chapter-item expanded "><a href="../ch7/exercise.html"><strong aria-hidden="true">7.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch9/index.html"><strong aria-hidden="true">8.</strong> Get Started With Spring</a></li><li class="chapter-item expanded "><a href="../appendix/index.html"><strong aria-hidden="true">9.</strong> Appendix</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../appendix/tomcat.html"><strong aria-hidden="true">9.1.</strong> A.1 Tomcat</a></li><li class="chapter-item expanded "><a href="../appendix/idea.html"><strong aria-hidden="true">9.2.</strong> A.2 IntelliJ IDEA</a></li><li class="chapter-item expanded "><a href="../appendix/jdk.html"><strong aria-hidden="true">9.3.</strong> A.3 JDK</a></li><li class="chapter-item expanded "><a href="../appendix/gradle.html"><strong aria-hidden="true">9.4.</strong> A.4 Gradle</a></li><li class="chapter-item expanded "><a href="../appendix/sqlite.html"><strong aria-hidden="true">9.5.</strong> A.5 SQLite</a></li><li class="chapter-item expanded "><a href="../appendix/cloud.html"><strong aria-hidden="true">9.6.</strong> A.6 Cloud (1)</a></li><li class="chapter-item expanded "><a href="../appendix/cloud2.html"><strong aria-hidden="true">9.7.</strong> A.7 Cloud (2)</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Head First Java Web</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="14-a-brief-introduction-to-http"><a class="header" href="#14-a-brief-introduction-to-http">1.4 A Brief Introduction To HTTP</a></h1>
+<p>The server of <code>taobao.com</code> may be located in Hangzhou, so how does it <em>deliver</em> the web pages to your web browser by travelling thousands of miles? Figure 1.12 illustrates the whole process when you input an address or click a link in the web browser.</p>
+<blockquote>
+<p>[!NOTE]
+To see what are delivered, you can select <code>Show Page Source</code> or <code>View Page Source</code> to inspect the HTML source code of any website just like what we did in <a href="1.3.html">Section 1.3</a>.</p>
+</blockquote>
+<p><img src="image/request-response.png" alt="Figure 1.12 Request-response model." title=":size=60%" /></p>
+<p>In a nutshell, it can be described as a <em>request-response</em> model between the client[1] and server[2].</p>
+<ul>
+<li>The client sends a request containing the name and address of the thing (e.g., web pages) the client is looking for.</li>
+<li>The server usually has lots of &quot;content&quot;, so it has to locate the desired one according to the request.</li>
+<li>The server's response contains the actual document that the client requested.</li>
+<li>The client receives the response for processing (e.g., rendering)[3].</li>
+</ul>
+<h2 id="http-overview"><a class="header" href="#http-overview">HTTP: overview</a></h2>
+<p>In the previous section, we know that HTML tells the browser how to display the content to the user. Clearly, we also need a set of &quot;rules&quot; for the communication between the client and server, and such rule is called <em>HTTP</em>.</p>
+<blockquote>
+<p>Hypertext Transfer Protocol (HTTP) is an application-layer protocol for transmitting hypermedia documents, such as HTML.</p>
+</blockquote>
+<p>HTTP is an application layer protocol that is sent over TCP (<code>http</code>), or over a TLS-encrypted TCP connection (<code>https</code>), though any reliable transport protocol could theoretically be used[4]. If you are not familiar with this networking protocol, here is the crash course: TCP is responsible for making sure that a file sent from one network node to another ends up as a complete file at the destination, even if the file is split into chunks when it is sent. </p>
+<blockquote>
+<p>[!NOTE]
+<em>Computer Networking</em> is one of the core courses of Computer Science, but only a handful of knowledge is used in this book. You can refer to [5] (for general networking) and [6] (for HTTP) to gain an in-depth understanding.</p>
+</blockquote>
+<p>The structure of an HTTP conversation is a simple <strong>Request/Response</strong> sequence; a client <em>requests</em>, and a server <em>responds</em>. Figure 1.13 shows the key components of <em>request</em> and <em>response</em>.</p>
+<p><img src="image/request-response2.png" alt="Figure 1.13 Key elements of the request and response stream." title=":size=50%" /></p>
+<blockquote>
+<p>[!TIP]
+We will revisit <em>request</em> and <em>response</em> in <a href="ch3/3.2.html">Section 3.2</a>.</p>
+</blockquote>
+<h3 id="response"><a class="header" href="#response">Response</a></h3>
+<p>When it comes to response, it includes a <code>status code</code> indicating whether the request has been successfully completed. For example, <code>200</code> means <em>OK</em>, and <code>404</code> means <em>Not Found</em>. A complete list can be found in <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">HTTP response status codes</a>.</p>
+<p>The response also include a <code>content-type</code> field, a.k.a. a MIME type. The MIME type tells the browser what kind of data the client is about to receive so that the client will know to process it[7]. The simplest MIME type consists of a type (the general category into which the data type falls, such as <code>video</code> or <code>text</code>) and a subtype (he exact kind of data of the specified type the MIME type represents); these are each strings which, when concatenated with a slash (/) between them, comprise a MIME type. </p>
+<pre><code>type/subtype
+</code></pre>
+<p>For example, <code>text/html</code> is the MIME type for HTML files, and <code>image/png</code> is the MIME type for PNG files. A list of common MIME types can be found at <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types">Common MIME types</a>.</p>
+<p>The third key element is the data itself (e.g., the HTML document).</p>
+<p>Notice that the three key elements mentioned above are only parts of an HTTP response. An HTTP response has both a header and a body. The header info tells the browser about the protocol being used, whether the request was successful, and what kind of content is included in the body. The body is identical to the third key element. The following shows the response header of our <code>HelloWorld</code> web application, and we can find that HTTP is human-readable, providing easier testing for developers, and reduced complexity for newcomers.</p>
+<pre><code>HTTP/1.1 200 OK
+Server: Eclipse GlassFish  6.2.2 
+X-Powered-By: JSP/2.3
+Content-Type: text/html;charset=UTF-8
+Content-Length: 169
+</code></pre>
+<blockquote>
+<p>[!TIP]
+You can view both the header and body in the web browser. Right-click to display the pop-up menu, and then select <code>Inspect Element</code> (in Safari) or <code>Inspect</code> (in Edge, Firefox and Chrome), and at last click <code>Network</code> tab.</p>
+</blockquote>
+<p><img src="image/network.png" alt="Figure 1.14 Network tab in Edge." title=":size=50%" /></p>
+<h3 id="request"><a class="header" href="#request">Request</a></h3>
+<p>The first thing you need to know about HTTP request is the <em>request method</em>, indicating the desired action to be performed for a given resource. The HTTP protocol defines several methods, but the ones most often are <em>GET</em> and <em>POST</em>. And you can find a complete list at <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods">HTTP request methods</a>.</p>
+<ul>
+<li>The <code>GET</code> method requests a representation of the specified resource. Requests using GET should only retrieve data.</li>
+<li>The <code>POST</code> method submits an entity to the specified resource, often causing a change in state or side effects on the server.</li>
+</ul>
+<p>Notice that the core difference between <em>GET</em> and <em>POST</em> is the semantic: <em>GET</em> is used for retrieve data, and <em>POST</em> often changes the state of server. Let's look at some examples: When you input an address and then press <em>Enter</em> in the browser, it is a <em>GET</em> request; When you input the username and password and then click <em>Login in</em>, it is a <em>POST</em> request.</p>
+<p>The seconds key element is the <code>URL</code>, short for Uniform Resource Locator. URL is a text string that specifies where a resource (such as a web page, image, or video) can be found on the Internet. In the context of HTTP, URLs are called &quot;Web address&quot; or &quot;link&quot;. Your browser displays URLs in its address bar, for example: https://www.bing.com. Some browsers display only the part of a URL after the &quot;//&quot;, that is, the <em>domain name</em>. Remember what it is in the address bar of the <code>HelloWorld</code> application? It is http://localhost:8080/demo-1.0-SNAPSHOT/. Here, <code>localhost</code> is a special host name of the computer where the web app is running, and you can also access it by the IP address <code>127.0.0.1</code>[8]. <em>demo-1.0-SNAPSHOT</em> is our application name, and in the URL, it is a <em>resource</em> path.</p>
+<p>What is <em>8080</em> here? It is a <code>port</code>, designated by a number[9]. For a computer connected to a network with an IP address, a port is a communication endpoint, and below 1024 each port is associated by default with a specific protocol. For example, the default port for the HTTP protocol is 80 and the default port for the HTTPS protocol is 443.</p>
+<p>Like the response, there is also a request header. Figure 1.15 shows the content of a request, and you can also view it in <code>Network</code> tab. Notice that the headers in HTTP/2 is slightly different. </p>
+<p><img src="image/get.png" alt="Figure 1.15 Anatomy of an HTTP GET request." title=":size=60%" /></p>
+<p>Let's have a practical experimental. Try to input &quot;Java Web&quot; in Bing, and what can you see in the address bar after pressing <em>Enter</em>? It should be a long string starting with &quot;https://www.bing.com/search?q=Java+Web&amp;&quot;, and surely it is a <em>GET</em> request. Now we are in a position to discuss the next major difference between <em>GET</em> and <em>POST</em> when sending data (parameters) to the server, and this is also the third key element of a request.</p>
+<p>For <em>GET</em>, all the parameters sent to server (if there are any) are appended to the URL starting with a &quot;?&quot;, and parameters are separated with am ampersand &quot;&amp;&quot;. So, it has several limitations:</p>
+<ul>
+<li><code>GET</code> can only send textural parameters. If you need to upload a multimedia file (e.g., an image), you have to use <code>POST</code>.</li>
+<li><code>GET</code> shows what you sent in the address bar. In some cases, you might keep them private (e.g., the password), and again you have to use <code>POST</code>.</li>
+<li>The length of contents in the address bar is limited[10]. If you want to send a very large parameter, even if it is textural, you still have to use <code>POST</code>.</li>
+</ul>
+<p>It seems that <code>POST</code> is an advanced <code>GET</code>. It is true. At the time the HTTP was invented, <code>GET</code> was the only method, and other methods were added later due to the increasingly complicated Internet requirements. So, should we always use <code>POST</code>? The answer is <em>NO</em>. Recall the core difference between them: the semantic. If your intention is simply to retrieve resource, then <em>GET</em> is the right choice.</p>
+<p>We still have one question to be answered. The parameters of <code>POST</code> is <em>NOT</em> found in the URL, then where is it? Unlike <code>GET</code>, there is another part called &quot;message body&quot;, also known as <em>payload</em> in a <code>POST</code> request, and parameters can down here in the body. </p>
+<h2 id="back-to-our-web-application"><a class="header" href="#back-to-our-web-application">Back to our web application</a></h2>
+<p>Create an HTML file named <code>test.html</code> inside <code>webapp</code> folder, and write anything you learned in the last section. Then copy an PNG image, say <code>test.png</code>, into <code>webapp</code> folder. If all goes well, you should access those two resources in the web browser via URL http://localhost:8080/demo-1.0-SNAPSHOT/test.html and http://localhost:8080/demo-1.0-SNAPSHOT/test.png, respectively. Some students may have the following questions:</p>
+<ol>
+<li>Why would http://localhost:8080/demo-1.0-SNAPSHOT go to <code>index.jsp</code>?</li>
+</ol>
+<p>By default, the web application would look for resources named <code>index</code>, such as <em>index.html</em> and <em>index.jsp</em>.</p>
+<ol start="2">
+<li>What is difference between <code>HTML</code> and <code>JSP</code>?</li>
+</ol>
+<p>The answer, by a large extent, serves the purpose why this course exists. Those resources, like an HTML document and an image, are <em>static</em>, while their counterpart are <em>dynamic</em>. Static resources are pre-created documents, and they are the same every time people <em>get</em> them; dynamic are generated by computing on demand. In our example, the web browser, in fact, cannot render a JSP directly, and it is the Tomcat who translates the JSP to HTML code, and wraps it into the response.</p>
+<p>Here are more examples with respect to the <em>dynamic</em>. When you search a book at <code>amazon.com</code>, the specific web page is generated by retrieving the data from database, rather than pre-created. In addition, some contents (e.g., book recommendation) are computed according to the user's profile <em>dynamically</em>. And we could claim that, every enterprise website relies on the dynamic web technologies.</p>
+<p><img src="image/book.png" alt="Figure 1.16 Book web page is dynamic at Amazon." title=":size=50%" /></p>
+<hr />
+<p>[1] The term <em>client</em> is a counterpart of <em>server</em>, referring to the software that knows how to communicate with the server. When we use the term <em>client</em>, we usually won't care whether we're talking about the human user or the specific application (e.g., a web browser, an Android app).</p>
+<p>[2] When we say &quot;server&quot;, we mean <em>either</em> the physical machine (hardware) or the web server application (software). For example, the machine equipped with GlassFish is a server.</p>
+<p>[3] For files like <em>HTMLs</em>, <em>images</em>, <em>pdfs</em>, and even <em>videos</em>, the web browser is able to render for a display, while other files (e.g., <em>zip</em>, <em>exe</em>) often would trigger a <em>download</em>.</p>
+<p>[4] While the HTTP/1.1 and HTTP/2 are mainstream now, HTTP/3 protocol, upcoming major version of the HTTP, uses <a href="https://en.wikipedia.org/wiki/QUIC">QUIC</a> rather than TCP.</p>
+<p>[5] Computer Networking: A Top-Down Approach, by James Kurose, Keith Ross.</p>
+<p>[6] HTTP: The Definitive Guide, by Brian Totty, David Gourley.</p>
+<p>[7] Besides the MIME type, <code>Content-Type</code> also has a <code>charset</code>, indicating the character encoding standard (i.e., UTF-8).</p>
+<p>[8] Every machine that can be accessed is assigned an IP address in the digital form (e.g., 13.107.21.200). But it is hard for people to remember, so domain names (e.g., bing.com) emerge. The Domain Name System (DNS) is able to translate a domain to the IP address. </p>
+<p>[9] The designated port <code>8080</code> is set by IntelliJ IDEA, and you can use a new one above 1024 as long as it is available. </p>
+<p>[10] <code>GET</code> is limited by the URL length (about 2KB), and the maximum POST request body size is configured on the HTTP server and typically ranges from 1MB to 2GB.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../ch1/1.3.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../ch1/1.5.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../ch1/1.3.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../ch1/1.5.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+        <script type="text/javascript">
+            window.playground_line_numbers = true;
+        </script>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

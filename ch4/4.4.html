@@ -1,0 +1,297 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js rust">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Session Management (2) - Head First Java Web</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../preface.html">Preface</a></li><li class="chapter-item expanded "><a href="../ch1/index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch1/1.1.html"><strong aria-hidden="true">1.1.</strong> Jakarta EE Overview</a></li><li class="chapter-item expanded "><a href="../ch1/1.2.html"><strong aria-hidden="true">1.2.</strong> Your First Java Web Project</a></li><li class="chapter-item expanded "><a href="../ch1/1.3.html"><strong aria-hidden="true">1.3.</strong> A Brief Introduction To HTML</a></li><li class="chapter-item expanded "><a href="../ch1/1.4.html"><strong aria-hidden="true">1.4.</strong> A Brief Introduction To HTTP</a></li><li class="chapter-item expanded "><a href="../ch1/1.5.html"><strong aria-hidden="true">1.5.</strong> Revisit The First Java Web Project</a></li><li class="chapter-item expanded "><a href="../ch1/exercise.html"><strong aria-hidden="true">1.6.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch2/index.html"><strong aria-hidden="true">2.</strong> Web App Architecture And Mini MVC</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch2/2.1.html"><strong aria-hidden="true">2.1.</strong> Servlet And Container</a></li><li class="chapter-item expanded "><a href="../ch2/2.2.html"><strong aria-hidden="true">2.2.</strong> Search: The Way To Self-learning</a></li><li class="chapter-item expanded "><a href="../ch2/2.3.html"><strong aria-hidden="true">2.3.</strong> A Brief Introduction To MVC</a></li><li class="chapter-item expanded "><a href="../ch2/2.4.html"><strong aria-hidden="true">2.4.</strong> Hands On MVC (1)</a></li><li class="chapter-item expanded "><a href="../ch2/2.5.html"><strong aria-hidden="true">2.5.</strong> Hands on MVC (2)</a></li><li class="chapter-item expanded "><a href="../ch2/exercise.html"><strong aria-hidden="true">2.6.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch3/index.html"><strong aria-hidden="true">3.</strong> In-depth Servlet</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch3/3.1.html"><strong aria-hidden="true">3.1.</strong> Servlet: From Birth To Death</a></li><li class="chapter-item expanded "><a href="../ch3/3.2.html"><strong aria-hidden="true">3.2.</strong> Request And Response</a></li><li class="chapter-item expanded "><a href="../ch3/3.3.html"><strong aria-hidden="true">3.3.</strong> More About Request</a></li><li class="chapter-item expanded "><a href="../ch3/3.4.html"><strong aria-hidden="true">3.4.</strong> Upload Files In Servlets</a></li><li class="chapter-item expanded "><a href="../ch3/3.5.html"><strong aria-hidden="true">3.5.</strong> More About Response (1)</a></li><li class="chapter-item expanded "><a href="../ch3/3.6.html"><strong aria-hidden="true">3.6.</strong> More About Response (2)</a></li><li class="chapter-item expanded "><a href="../ch3/exercise.html"><strong aria-hidden="true">3.7.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch4/index.html"><strong aria-hidden="true">4.</strong> In-depth Web</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch4/4.1.html"><strong aria-hidden="true">4.1.</strong> Init parameters</a></li><li class="chapter-item expanded "><a href="../ch4/4.2.html"><strong aria-hidden="true">4.2.</strong> Attributes</a></li><li class="chapter-item expanded "><a href="../ch4/4.3.html"><strong aria-hidden="true">4.3.</strong> Session Management (1)</a></li><li class="chapter-item expanded "><a href="../ch4/4.4.html" class="active"><strong aria-hidden="true">4.4.</strong> Session Management (2)</a></li><li class="chapter-item expanded "><a href="../ch4/exercise.html"><strong aria-hidden="true">4.5.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch5/index.html"><strong aria-hidden="true">5.</strong> JSP And Scriptless JSP</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch5/5.1.html"><strong aria-hidden="true">5.1.</strong> Facts About JSP</a></li><li class="chapter-item expanded "><a href="../ch5/5.2.html"><strong aria-hidden="true">5.2.</strong> Expression Language</a></li><li class="chapter-item expanded "><a href="../ch5/5.3.html"><strong aria-hidden="true">5.3.</strong> JSTL</a></li><li class="chapter-item expanded "><a href="../ch5/exercise.html"><strong aria-hidden="true">5.4.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch6/index.html"><strong aria-hidden="true">6.</strong> Database</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch6/6.1.html"><strong aria-hidden="true">6.1.</strong> Introduction To Database</a></li><li class="chapter-item expanded "><a href="../ch6/6.2.html"><strong aria-hidden="true">6.2.</strong> SQL (1)</a></li><li class="chapter-item expanded "><a href="../ch6/6.3.html"><strong aria-hidden="true">6.3.</strong> SQL (2)</a></li><li class="chapter-item expanded "><a href="../ch6/6.4.html"><strong aria-hidden="true">6.4.</strong> Accessing Databases From Java (1)</a></li><li class="chapter-item expanded "><a href="../ch6/6.5.html"><strong aria-hidden="true">6.5.</strong> Accessing Databases From Java (2)</a></li><li class="chapter-item expanded "><a href="../ch6/exercise.html"><strong aria-hidden="true">6.6.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch7/index.html"><strong aria-hidden="true">7.</strong> Thymeleaf</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch7/7.1.html"><strong aria-hidden="true">7.1.</strong> Get Started With Thymeleaf</a></li><li class="chapter-item expanded "><a href="../ch7/7.2.html"><strong aria-hidden="true">7.2.</strong> Standard Expression Syntax</a></li><li class="chapter-item expanded "><a href="../ch7/exercise.html"><strong aria-hidden="true">7.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch9/index.html"><strong aria-hidden="true">8.</strong> Get Started With Spring</a></li><li class="chapter-item expanded "><a href="../appendix/index.html"><strong aria-hidden="true">9.</strong> Appendix</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../appendix/tomcat.html"><strong aria-hidden="true">9.1.</strong> A.1 Tomcat</a></li><li class="chapter-item expanded "><a href="../appendix/idea.html"><strong aria-hidden="true">9.2.</strong> A.2 IntelliJ IDEA</a></li><li class="chapter-item expanded "><a href="../appendix/jdk.html"><strong aria-hidden="true">9.3.</strong> A.3 JDK</a></li><li class="chapter-item expanded "><a href="../appendix/gradle.html"><strong aria-hidden="true">9.4.</strong> A.4 Gradle</a></li><li class="chapter-item expanded "><a href="../appendix/sqlite.html"><strong aria-hidden="true">9.5.</strong> A.5 SQLite</a></li><li class="chapter-item expanded "><a href="../appendix/cloud.html"><strong aria-hidden="true">9.6.</strong> A.6 Cloud (1)</a></li><li class="chapter-item expanded "><a href="../appendix/cloud2.html"><strong aria-hidden="true">9.7.</strong> A.7 Cloud (2)</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Head First Java Web</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="44-session-management-2"><a class="header" href="#44-session-management-2">4.4 Session Management (2)</a></h1>
+<p>In this section, we continue studying session management. It mainly includes how to use custom cookies, and another two listeners with respect to session. </p>
+<h2 id="in-depth-cookie"><a class="header" href="#in-depth-cookie">In-depth cookie</a></h2>
+<p>Although cookies were originally designed to help support session state, we can use custom cookies for other things. Remember, a cookie is nothing more than a little piece of data (name/value String pair) exchanged between the client and the server. The server sends the cookie to the client, and the client returns the cookie when the client makes another request.</p>
+<p>One cool thing about cookies is that the user doesn't have to get involved: the cookie exchange is automatic (as long as cookies are enabled in the client). Of course, programmers are also able to send cookies <em>manually</em> if necessary. Cookie is main tool for tracking (recording and analyzing user behavior) and personalization (user preferences, themes, and other settings) on the Internet. Fig 4.9 shows the cookies of requests of StackOverFlow:</p>
+<p><img src="image/ch4-cookie-so.png" alt="Figure 4.9 Cookies in StackOverFlow." title=":size=60%" /></p>
+<p>By default, a cookie lives only as long as a session; once the client quits the browser, the cookie disappears. That is how <em>JSESSIONID</em> cookie works. <strong>But you can tell a cookie to stay alive even after the browser shuts down</strong> by setting its max-age. First, let's have a look at cookie related APIs.</p>
+<p><img src="image/ch4-cookie-api.png" alt="Figure 4.10 Cookie APIs." title=":size=60%" /></p>
+<p>Readers can refer to <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies">Using HTTP cookies</a> for more details, and in this book we only discuss how to use cookies via a few APIs.</p>
+<p>Creating a new Cookie:</p>
+<pre><code class="language-java">Cookie cookie = new Cookie(&quot;name&quot;, &quot;mary@gmail.com&quot;);
+</code></pre>
+<p>Setting how long a cookie will live on the client. Note that <code>setMaxAge()</code> is defined in seconds:</p>
+<pre><code class="language-java">cookie.setMaxAge(30 * 60);
+</code></pre>
+<p>Sending the cookie to the client:</p>
+<pre><code class="language-java">response.addCookie(cookie);
+</code></pre>
+<p>Getting the cookies from the client:</p>
+<pre><code class="language-java">for (Cookie cookie : request.getCookies()) {
+    if (cookie.getName().equals(&quot;name&quot;)) {
+        // to do
+    }
+}
+</code></pre>
+<p><code>HomeServlet.java</code> in <code>ch4/cookie</code> is similar to the <em>log in</em> example in <a href="ch4/4.3">Section 4.3</a>. Since currently we didn't implement <em>log in</em> yet, it will always display <em>Hello Guest</em>. As we mentioned above, people can send cookies programmatically. Let's try it in the web browser. Open <code>Application</code> at <em>Inspect</em> window, select <code>Cookies</code>, and add new cookie named <code>name</code>.</p>
+<p><img src="image/ch4-add-cookie.png" alt="Figure 4.11 Add a cookie in the browser." title=":size=60%" /></p>
+<p>As a result, the browser will send requests with you newly added cookies, then the <code>home.jsp</code> shall display <em>Hello mary@gmail.com</em> after refreshing.</p>
+<h2 id="url-rewriting"><a class="header" href="#url-rewriting">URL rewriting</a></h2>
+<p>Sometimes the client may disable the cookies, and as a result, <code>Session</code> will be infeasible. Here is a short instruction about how to disable the cookie for your browser temporally. As for Edge, you can add <code>http://localhost</code> into <code>Block</code> of <code>Settings | Cookies and Site | Cookies and data stored</code>.</p>
+<p>When it is disabled, you will always see &quot;This is a new session&quot; for <code>HellServlet</code> of <code>ch4/session</code>. Luckily, you can use <strong>URL rewriting</strong> as a backup. Its core idea is simple: append the <code>jsessionid</code> after the URL.</p>
+<pre><code class="language-java">String url = response.encodeRedirectURL(&quot;home&quot;);
+response.sendRedirect(url);
+</code></pre>
+<p>So, even though the client won't store the cookies, the request can still be sent with the <code>jsessionid</code>. In addition, we also would like to rewrite the hyperlinks on JSP pages:</p>
+<pre><code class="language-jsp">&lt;a href=&quot;&lt;%= response.encodeURL(&quot;login&quot;) %&gt;&quot;&gt;Log in&lt;/a&gt;
+</code></pre>
+<blockquote>
+<p>[!NOTE]
+The URL would remain unchanged if cookies are accepted in the browser.</p>
+</blockquote>
+<h2 id="session-listener"><a class="header" href="#session-listener">Session listener</a></h2>
+<p>In <a href="ch4/4.2">Section 4.2</a>, we introduce <em>listeners</em> which are able to get notified when some event happens, and in this subsection, we are going to study one application of <code>HttpSessionListener</code>: <strong>count how many people are online</strong>.</p>
+<blockquote>
+<p>Implementations of this interface are notified of changes to the list of active sessions in a web application.</p>
+</blockquote>
+<p>Of course, here <em>people</em> are not strictly people in the physical world, because we assume that one session is one people. So if you access this web application using different web browsers, or in <em>Private Window</em>, then the listener would consider them as <em>different</em> people. The complete code is found at <code>ch4/session2</code>.</p>
+<pre><code class="language-java">@WebListener
+public class SessionListener implements HttpSessionListener
+</code></pre>
+<p>We can maintain a static member variable in <code>SessionListener</code>[1], and increase it by one in <code>sessionCreated()</code>, and decrease it by one in <code>sessionDestroyed</code>. So far so good, but it has thread-safety issue. One way to avoid the concurrent problem is to use APIs under <code>java.util.concurrent</code>, and <code>java.util.concurrent.atomic.AtomicInteger</code> is int value that may be updated atomically:</p>
+<pre><code class="language-java">private static final AtomicInteger COUNT = new AtomicInteger(0);
+</code></pre>
+<h2 id="session-bind-listener"><a class="header" href="#session-bind-listener">Session bind listener</a></h2>
+<p>Based on the last subsection, what about counting how many people log in? We can accomplish this task even if there is no listener. To be specific, we maintain a counter, and then increase it by one when one logs in; decrease it by one when one logs out.</p>
+<p>And <code>HttpSessionBindingListener</code> provides another solution to this problem:</p>
+<blockquote>
+<p>Causes an object to be notified when it is bound to or unbound from a session.</p>
+</blockquote>
+<p>This interface has two APIs:</p>
+<ul>
+<li><code>valueBound()</code>: This object is added (bounded) to a session.</li>
+<li><code>valueUnbound()</code>: This object is removed (unbound) from a session.</li>
+</ul>
+<p>For example, <code>ActiveUser</code> is a class containing a logged user's name and age. And then she logs in, we add a <code>ActiveUser</code> object into attributes in session's scope; and when she logs out, we remove the attribute.</p>
+<pre><code class="language-java">class ActiveUser {
+    private String name;
+    private int age;
+}
+</code></pre>
+<p>To let <code>ActiveUser</code> listen to the bounding event, this class shall implement <code>HttpSessionBindingListener</code>. So it can find out when it is put into (or taken out from) a session. It won't tell <code>ActiveUser</code> anything about other session events. </p>
+<pre><code class="language-java">class ActiveUser implements HttpSessionBindingListener 
+</code></pre>
+<p>Then we should override the <code>valueBound()</code> and <code>valueUnbound()</code> method for it. The complete code can be found <code>ch4/session2</code>. With <code>HttpSessionBindingListener</code>, we do not have to concern about the counter changing when the user logs in or logs out, and this simplifies our workload at some extent.</p>
+<hr />
+<p>[1] The key point is to maintain a variable that can be accessed globally. Static variable is a good choice, and attribute in <em>context</em> scope is also fine.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../ch4/4.3.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../ch4/exercise.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../ch4/4.3.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../ch4/exercise.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+        <script type="text/javascript">
+            window.playground_line_numbers = true;
+        </script>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

@@ -1,0 +1,369 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js rust">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Hands On MVC (1) - Head First Java Web</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../preface.html">Preface</a></li><li class="chapter-item expanded "><a href="../ch1/index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch1/1.1.html"><strong aria-hidden="true">1.1.</strong> Jakarta EE Overview</a></li><li class="chapter-item expanded "><a href="../ch1/1.2.html"><strong aria-hidden="true">1.2.</strong> Your First Java Web Project</a></li><li class="chapter-item expanded "><a href="../ch1/1.3.html"><strong aria-hidden="true">1.3.</strong> A Brief Introduction To HTML</a></li><li class="chapter-item expanded "><a href="../ch1/1.4.html"><strong aria-hidden="true">1.4.</strong> A Brief Introduction To HTTP</a></li><li class="chapter-item expanded "><a href="../ch1/1.5.html"><strong aria-hidden="true">1.5.</strong> Revisit The First Java Web Project</a></li><li class="chapter-item expanded "><a href="../ch1/exercise.html"><strong aria-hidden="true">1.6.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch2/index.html"><strong aria-hidden="true">2.</strong> Web App Architecture And Mini MVC</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch2/2.1.html"><strong aria-hidden="true">2.1.</strong> Servlet And Container</a></li><li class="chapter-item expanded "><a href="../ch2/2.2.html"><strong aria-hidden="true">2.2.</strong> Search: The Way To Self-learning</a></li><li class="chapter-item expanded "><a href="../ch2/2.3.html"><strong aria-hidden="true">2.3.</strong> A Brief Introduction To MVC</a></li><li class="chapter-item expanded "><a href="../ch2/2.4.html" class="active"><strong aria-hidden="true">2.4.</strong> Hands On MVC (1)</a></li><li class="chapter-item expanded "><a href="../ch2/2.5.html"><strong aria-hidden="true">2.5.</strong> Hands on MVC (2)</a></li><li class="chapter-item expanded "><a href="../ch2/exercise.html"><strong aria-hidden="true">2.6.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch3/index.html"><strong aria-hidden="true">3.</strong> In-depth Servlet</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch3/3.1.html"><strong aria-hidden="true">3.1.</strong> Servlet: From Birth To Death</a></li><li class="chapter-item expanded "><a href="../ch3/3.2.html"><strong aria-hidden="true">3.2.</strong> Request And Response</a></li><li class="chapter-item expanded "><a href="../ch3/3.3.html"><strong aria-hidden="true">3.3.</strong> More About Request</a></li><li class="chapter-item expanded "><a href="../ch3/3.4.html"><strong aria-hidden="true">3.4.</strong> Upload Files In Servlets</a></li><li class="chapter-item expanded "><a href="../ch3/3.5.html"><strong aria-hidden="true">3.5.</strong> More About Response (1)</a></li><li class="chapter-item expanded "><a href="../ch3/3.6.html"><strong aria-hidden="true">3.6.</strong> More About Response (2)</a></li><li class="chapter-item expanded "><a href="../ch3/exercise.html"><strong aria-hidden="true">3.7.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch4/index.html"><strong aria-hidden="true">4.</strong> In-depth Web</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch4/4.1.html"><strong aria-hidden="true">4.1.</strong> Init parameters</a></li><li class="chapter-item expanded "><a href="../ch4/4.2.html"><strong aria-hidden="true">4.2.</strong> Attributes</a></li><li class="chapter-item expanded "><a href="../ch4/4.3.html"><strong aria-hidden="true">4.3.</strong> Session Management (1)</a></li><li class="chapter-item expanded "><a href="../ch4/4.4.html"><strong aria-hidden="true">4.4.</strong> Session Management (2)</a></li><li class="chapter-item expanded "><a href="../ch4/exercise.html"><strong aria-hidden="true">4.5.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch5/index.html"><strong aria-hidden="true">5.</strong> JSP And Scriptless JSP</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch5/5.1.html"><strong aria-hidden="true">5.1.</strong> Facts About JSP</a></li><li class="chapter-item expanded "><a href="../ch5/5.2.html"><strong aria-hidden="true">5.2.</strong> Expression Language</a></li><li class="chapter-item expanded "><a href="../ch5/5.3.html"><strong aria-hidden="true">5.3.</strong> JSTL</a></li><li class="chapter-item expanded "><a href="../ch5/exercise.html"><strong aria-hidden="true">5.4.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch6/index.html"><strong aria-hidden="true">6.</strong> Database</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch6/6.1.html"><strong aria-hidden="true">6.1.</strong> Introduction To Database</a></li><li class="chapter-item expanded "><a href="../ch6/6.2.html"><strong aria-hidden="true">6.2.</strong> SQL (1)</a></li><li class="chapter-item expanded "><a href="../ch6/6.3.html"><strong aria-hidden="true">6.3.</strong> SQL (2)</a></li><li class="chapter-item expanded "><a href="../ch6/6.4.html"><strong aria-hidden="true">6.4.</strong> Accessing Databases From Java (1)</a></li><li class="chapter-item expanded "><a href="../ch6/6.5.html"><strong aria-hidden="true">6.5.</strong> Accessing Databases From Java (2)</a></li><li class="chapter-item expanded "><a href="../ch6/exercise.html"><strong aria-hidden="true">6.6.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch7/index.html"><strong aria-hidden="true">7.</strong> Thymeleaf</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch7/7.1.html"><strong aria-hidden="true">7.1.</strong> Get Started With Thymeleaf</a></li><li class="chapter-item expanded "><a href="../ch7/7.2.html"><strong aria-hidden="true">7.2.</strong> Standard Expression Syntax</a></li><li class="chapter-item expanded "><a href="../ch7/exercise.html"><strong aria-hidden="true">7.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch9/index.html"><strong aria-hidden="true">8.</strong> Get Started With Spring</a></li><li class="chapter-item expanded "><a href="../appendix/index.html"><strong aria-hidden="true">9.</strong> Appendix</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../appendix/tomcat.html"><strong aria-hidden="true">9.1.</strong> A.1 Tomcat</a></li><li class="chapter-item expanded "><a href="../appendix/idea.html"><strong aria-hidden="true">9.2.</strong> A.2 IntelliJ IDEA</a></li><li class="chapter-item expanded "><a href="../appendix/jdk.html"><strong aria-hidden="true">9.3.</strong> A.3 JDK</a></li><li class="chapter-item expanded "><a href="../appendix/gradle.html"><strong aria-hidden="true">9.4.</strong> A.4 Gradle</a></li><li class="chapter-item expanded "><a href="../appendix/sqlite.html"><strong aria-hidden="true">9.5.</strong> A.5 SQLite</a></li><li class="chapter-item expanded "><a href="../appendix/cloud.html"><strong aria-hidden="true">9.6.</strong> A.6 Cloud (1)</a></li><li class="chapter-item expanded "><a href="../appendix/cloud2.html"><strong aria-hidden="true">9.7.</strong> A.7 Cloud (2)</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Head First Java Web</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="24-hands-on-mvc-1"><a class="header" href="#24-hands-on-mvc-1">2.4 Hands On MVC (1)</a></h1>
+<p>In the last section, we have studied the basic principles about MVC, and it is time to get your hands dirty to write a practical web application with MVC design. Particularly, you will learn a large number of modern web developing knowledge. Although this app is very small, the main principle remains the same even if you are going to build something huge. By the way, today's small app is tomorrow's dot-com success. Keep going!</p>
+<p>We will use the book-selling website as our running example. Firstly, let's summarize the requirements. User can select the genre of books in the web page, and send an HTTP request to the server. Then the destination servlet would retrieve book recommendation from a model, and then send back the result to a JSP for display. All code in this section can be found in <code>mini-mvc</code>.</p>
+<h2 id="front-end-design"><a class="header" href="#front-end-design">Front-end design</a></h2>
+<p>Although it is possible to put HTML elements into both JSP and HTML, a plain HTML is always preferable if no dynamic content is required. So let's get started with the front-end design with a plain HTML. First of all, let's try to figure out why <code>index.jsp</code> is launched automatically when you start the web app. This is because the default start page of most web servers and containers is <em>index</em>, including <code>index.html</code>, <code>index.htm</code>, and <code>index.jsp</code>. </p>
+<blockquote>
+<p>[!NOTE]
+By default, Tomcat would locate and display the <em>index</em> page (e.g., <code>index.html</code>, <code>index.jsp</code>). If it is not found, there will be a 404 error. Suppose your entry page is another file, say <code>form.html</code>, and <strong>you can still visit it by its URL explicitly</strong>. For example, http://localhost:8080/myapp/form.html.</p>
+</blockquote>
+<p>In order to build a website from scratch, we delete the auto-generated <code>HelloServlet.java</code> and <code>index.jsp</code>, and create an empty <code>index.html</code> under <code>webapp</code> folder as the entry point of our web app.</p>
+<p>The UI interface of our book-selling website only contains:</p>
+<ul>
+<li>A descriptive title (clearly it is <code>&lt;h1&gt;</code> element)</li>
+<li>A select box</li>
+<li>A button</li>
+</ul>
+<p><img src="image/ch2-select.png" alt="Figure 2.17 Book-selling web UI." title=":size=40%" /></p>
+<p>Let's recall the expected behavior in this web page: a user selects a genre of books and sends an HTTP request by clicking the <code>submit</code> button. </p>
+<blockquote>
+<p>[!NOTE]
+In HTML, we shall use the <code>&lt;form&gt;</code> tag to send an HTTP request.</p>
+</blockquote>
+<p>Those elements which are capable of shipping with <em>input data</em> can be used inside <code>&lt;form&gt;</code>, and they are usually called <em>form element</em>. <code>&lt;select&gt;</code> is the one that is able to create a drop-down list with several options. The full HTML code is as what follows:</p>
+<pre><code class="language-html">&lt;form&gt;
+    &lt;label for=&quot;books&quot;&gt;Choose a genre:&lt;/label&gt;
+    &lt;select name=&quot;books&quot; id=&quot;books&quot;&gt;
+        &lt;option value=&quot;novel&quot;&gt;novel&lt;/option&gt;
+        &lt;option value=&quot;history&quot;&gt;history&lt;/option&gt;
+        &lt;option value=&quot;math&quot;&gt;math&lt;/option&gt;
+        &lt;option value=&quot;programming&quot;&gt;programming&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;br&gt;&lt;br&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;
+</code></pre>
+<blockquote>
+<p>[!TIP]
+If you have some troubles in understanding various HTML tags, please visit <a href="https://www.w3schools.com/html/default.asp">HTML Tutorial</a>.</p>
+</blockquote>
+<p>The <code>&lt;label&gt;</code> here is optional, and is used to represent a caption for an item in a user interface. Otherwise, users may have no idea of what <code>&lt;select&gt;</code> is going to do. The attribute <code>for</code> is to specify the <code>id</code> of the form element the label should be bound to.</p>
+<p><img src="image/ch2-label.png" alt="Figure 2.17 &lt;label&gt; element." title=":size=60%" /></p>
+<p>Let's take a closer look at <code>&lt;select&gt;</code>. Its <code>id</code> attribute serves a unique identifier, as all HTML tags do, and <code>id</code> here also used to bind to the <code>&lt;label&gt;</code> element as we have discussed. What is <code>name</code> attribute used for? We will leave this problem to the latter. </p>
+<p>We can notice that four <code>&lt;option&gt;</code> elements are nested inside <code>&lt;select&gt;</code>, and this is used to define an option in a select list. The <code>&lt;option&gt;</code> tag can be used without any attributes, but you usually need the <code>value</code> attribute, which indicates what is sent to the server on form submission. Some beginners might find it difficult to distinguish between the <code>value</code> and the element content. In fact, they have nothing to do with each other, and Fig 2.18 illustrates the differences.</p>
+<p><img src="image/ch2-option.png" alt="Figure 2.18 &lt;option&gt; element." title=":size=50%" /></p>
+<p>You can either open <code>index.html</code> via a web browser directly in the file manager (such as <code>Finder</code> on MacOS, <code>Explorer</code> on Windows, <code>Nautilus</code> on Ubuntu), or open it via built-in preview in IntelliJ IDEA. Now we have finished the front-end design, but an important question emerges: <strong>how can HTML, or more specific, <code>&lt;form&gt;</code> send data to the server</strong>? Not surprisingly, it is specified by a <code>&lt;form&gt;</code> attribute.</p>
+<pre><code class="language-html">&lt;form action=&quot;some_servlet&quot;&gt;
+    ...
+&lt;/form&gt;
+</code></pre>
+<p>As the code shows, the value of <code>action</code> is the destination servlet's URL name. In other words, a servlet whose URL name is <code>some_servlet</code> is going to handle this HTTP request. By the way, HTTP also defines a set of request methods to indicate the desired action to be performed for a given resource, and the default method in <code>&lt;form&gt;</code> is <code>GET</code>. You can also specify the HTTP method using <code>method</code> attribute explicitly.</p>
+<p><code>&lt;input&gt;</code> can be in various forms given different <code>type</code> attribute. For example, <code>submit</code> would render it as a button, and it shall send an HTTP request (i.e., <code>submit</code> a form) after clicking. It can also be replaced with a <code>&lt;button&gt;</code> tag:</p>
+<pre><code class="language-html">&lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;
+</code></pre>
+<p>And two ways are equivalent. You can try out <a href="https://www.w3schools.com/html/html_form_input_types.asp">different input types</a> if you are interested, such as:</p>
+<ul>
+<li><code>&lt;input type=&quot;text&quot;&gt;</code></li>
+<li><code>&lt;input type=&quot;color&quot;&gt;</code></li>
+<li><code>&lt;input type=&quot;date&quot;&gt;</code></li>
+<li><code>&lt;input type=&quot;password&quot;&gt;</code></li>
+<li>...</li>
+</ul>
+<h2 id="back-end-design"><a class="header" href="#back-end-design">Back-end design</a></h2>
+<p>Let's create a servlet <code>BookServlet.java</code>, with the URL name <code>/book</code>, to receive the data from the front-end. First of all, make sure the <code>action</code> attribute of <code>&lt;form&gt;</code> is set to <code>book</code>.</p>
+<p><img src="image/ch2-action.png" alt="Figure 2.19 The action attribute and URL name." title=":size=50%" /></p>
+<blockquote>
+<p>[!TIP]
+You will encounter some new APIs. Don't panic, and be brave to look up them using the skills in <a href="ch2/2.2.html">Section 2.2</a>.</p>
+</blockquote>
+<p>Based on the introduction to HTTP in <a href="ch1/1.4.html">Section 1.4</a>, the data is wrapped in the HTTP request, and they are usually called <em>parameters</em>*. Then how to extract parameters from the request? Luckily, <code>HttpServletRequest</code> has an API called <code>getParameter()</code>.</p>
+<blockquote>
+<p>String	getParameter(String name)	
+Returns the value of a request parameter as a String, or null if the parameter does not exist.</p>
+</blockquote>
+<p>Remember the <code>name</code> attribute of <code>&lt;select&gt;</code>? It is actually the <em>name</em> of a parameter. </p>
+<p><img src="image/ch2-form-name.png" alt="Figure 2.20 name attribute and getParameter()." title=":size=50%" /></p>
+<p>And the following is our first version of <code>doGet()</code>:</p>
+<pre><code class="language-java">PrintWriter out = response.getWriter();
+response.setContentType(&quot;text/html&quot;);
+String book = request.getParameter(&quot;books&quot;);
+out.println(&quot;Book Selection:&quot;);
+out.println(book);
+</code></pre>
+<p>(Note that we don't output HTML tags, but output the content directly. It still works because the web browser is smart enough to detect out intention.)</p>
+<p>Stop here and try to start this web app, and observe what you see when you click the button in <code>index.html</code>. Note that such iterative <em>test-driven</em> approach is very common in software developing. Write some code and then test if it works well. If so, keep going and write more code. Otherwise, go back to fix the bug.</p>
+<p>Now it is time to write code for models. In this web app, the <em>Model</em> is to make books recommendations, and it is plain old Java code. We firstly create a <code>model</code> package, and then create a <code>Recommendation</code> class:</p>
+<pre><code class="language-java">public class Recommendation {
+    public List&lt;String&gt; getBooks(String genre) {
+        List&lt;String&gt; result = new ArrayList&lt;&gt;();
+        if (genre.equals(&quot;novel&quot;)) {
+            result.add(&quot;The Great Gatsby&quot;);
+            result.add(&quot;Gone with the Wind&quot;);
+        } else if (genre.equals(&quot;history&quot;)) {
+            result.add(&quot;1587, a Year of No Significance&quot;);
+        } else if (genre.equals(&quot;math&quot;)) {
+            result.add(&quot;The Linear Algebra Survival Guide&quot;);
+        } else if (genre.equals(&quot;programming&quot;)) {
+            result.add(&quot;Head First Java Web&quot;);
+            result.add(&quot;Effective Java&quot;);
+        }
+        return result;
+    }
+}
+</code></pre>
+<p>Then <code>BookServlet</code>, as the <em>Controller</em>, obtains the model from <code>Recommendation</code>. Here is our second version of <code>doGet()</code> (repeating code is omitted).</p>
+<pre><code class="language-java">List&lt;String&gt; books = new Recommendation().getBooks(book);
+for (String b : books) {
+    out.println(b);
+}
+</code></pre>
+<p>(Again, keep the <code>design-code-test</code> cycle in mind.)</p>
+<p>Lastly, we need a <em>View</em> for this web app, and take the presentation role out of <code>BookServlet</code>. So, let's create a <code>result.jsp</code>. In the last section, we have learned how to forward a request to JSP using <code>RequestDispatcher</code>, and there is still unsolved issue: <strong>how to send data back to JSP</strong>? Understanding such data share mechanism is an essential part in web developing, and we will cover in detail in the later of the book. Now we only introduce one of the methods. </p>
+<p>Recall that when forwarding, both the servlet and JSP share the same <em>request</em> object, so <strong>any changes to the request by the servlet shall also be observed by the JSP</strong>. Intuitively, the main idea is to <code>request.setXXX()</code> in <code>BookServlet.java</code>, and then <code>request.getXXX()</code> in <code>result.jsp</code>[1]. And this is exactly how the servlet's API is designed. The following is our third (and final) version of this web application.</p>
+<pre><code class="language-java">String book = request.getParameter(&quot;books&quot;);
+List&lt;String&gt; books = new Recommendation().getBooks(book);
+request.setAttribute(&quot;books&quot;, books);
+RequestDispatcher dispatcher = request.getRequestDispatcher(&quot;result.jsp&quot;);
+dispatcher.forward(request, response);
+</code></pre>
+<p>As we can see, the <code>setAttribute()</code> method does what we really want! Its second parameter is the object we store, and its first parameter is the <em>name</em> of the object. Note that the exact name is not important, as long as we can keep it consistent when retrieving this object.</p>
+<blockquote>
+<p>void	setAttribute(String name, Object o)	
+Stores an attribute in this request.</p>
+</blockquote>
+<p>And then we can use <code>getAttribute()</code> in <code>result.jsp</code> expectedly. Note that this method would return an <code>Object</code>, so we shall convert it back to <code>List&lt;String&gt;</code> first.</p>
+<pre><code class="language-jsp">&lt;%
+    List&lt;String&gt; books = (List&lt;String&gt;) request.getAttribute(&quot;books&quot;);
+    for (String b : books) {
+%&gt;
+&lt;%= b %&gt;
+&lt;% } %&gt;
+</code></pre>
+<p>Standard Java code in JSP is put inside <code>&lt;% %&gt;</code> tags, and this is known as <em>scriptlet code</em>.
+The <code>&lt;%= %&gt;</code> is <em>JSP expression tag</em>, which was introduced in <a href="ch1/1.5.html">Section 1.5</a>.</p>
+<p><img src="image/ch2-request.png" alt="Figure 2.21 request's getAttribute()." title=":size=50%" /></p>
+<p>Some beginners may ask, where does the variable <code>request</code> come from? Good question. It is one of implicit objects in JSP, and we will introduce more implicit objects in the latter of this book. For example, <code>request</code> is an instance of <code>HttpServletRequest</code>, <code>out</code> is another implicit object (an instance of <code>PrintWriter</code>) for the ease of output. So the code above can be rewritten as:</p>
+<pre><code class="language-jsp">&lt;%
+    List&lt;String&gt; books = (List&lt;String&gt;) request.getAttribute(&quot;books&quot;);
+    for (String b : books) {
+        out.println(b);
+    }
+%&gt;
+</code></pre>
+<p>Congratulations! You have built your first mini MVC web application! Although there are still some pitfalls in its design and code, it can be a good prototype for any complex projects based on serlvets. </p>
+<h2 id="a-caution-before-moving-on"><a class="header" href="#a-caution-before-moving-on">A caution before moving on</a></h2>
+<p>Understanding this mini MVC project is very important for later more advanced topics, So please be patient, slow down and learn it by doing again and again. In particular, some beginners may be confused about the repeated names, such as <code>&quot;books&quot;</code> and <code>&quot;book&quot;</code>, because those names have different meanings in different contexts. If you have the similar doubt, please refer to Fig 2.17-2.21.</p>
+<p>In addition, although it is possible to sent HTTP requests to JSPs directly, please avoid do this if possible, because it would break the MVC design.</p>
+<hr />
+<p>[1] Such code paradigm is called <em>setter/getter</em>, and it is widely used in many object-oriented programmings, such as Java, C#.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../ch2/2.3.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../ch2/2.5.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../ch2/2.3.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../ch2/2.5.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+        <script type="text/javascript">
+            window.playground_line_numbers = true;
+        </script>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

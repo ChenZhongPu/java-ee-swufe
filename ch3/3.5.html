@@ -1,0 +1,305 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js rust">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>More About Response (1) - Head First Java Web</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../preface.html">Preface</a></li><li class="chapter-item expanded "><a href="../ch1/index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch1/1.1.html"><strong aria-hidden="true">1.1.</strong> Jakarta EE Overview</a></li><li class="chapter-item expanded "><a href="../ch1/1.2.html"><strong aria-hidden="true">1.2.</strong> Your First Java Web Project</a></li><li class="chapter-item expanded "><a href="../ch1/1.3.html"><strong aria-hidden="true">1.3.</strong> A Brief Introduction To HTML</a></li><li class="chapter-item expanded "><a href="../ch1/1.4.html"><strong aria-hidden="true">1.4.</strong> A Brief Introduction To HTTP</a></li><li class="chapter-item expanded "><a href="../ch1/1.5.html"><strong aria-hidden="true">1.5.</strong> Revisit The First Java Web Project</a></li><li class="chapter-item expanded "><a href="../ch1/exercise.html"><strong aria-hidden="true">1.6.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch2/index.html"><strong aria-hidden="true">2.</strong> Web App Architecture And Mini MVC</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch2/2.1.html"><strong aria-hidden="true">2.1.</strong> Servlet And Container</a></li><li class="chapter-item expanded "><a href="../ch2/2.2.html"><strong aria-hidden="true">2.2.</strong> Search: The Way To Self-learning</a></li><li class="chapter-item expanded "><a href="../ch2/2.3.html"><strong aria-hidden="true">2.3.</strong> A Brief Introduction To MVC</a></li><li class="chapter-item expanded "><a href="../ch2/2.4.html"><strong aria-hidden="true">2.4.</strong> Hands On MVC (1)</a></li><li class="chapter-item expanded "><a href="../ch2/2.5.html"><strong aria-hidden="true">2.5.</strong> Hands on MVC (2)</a></li><li class="chapter-item expanded "><a href="../ch2/exercise.html"><strong aria-hidden="true">2.6.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch3/index.html"><strong aria-hidden="true">3.</strong> In-depth Servlet</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch3/3.1.html"><strong aria-hidden="true">3.1.</strong> Servlet: From Birth To Death</a></li><li class="chapter-item expanded "><a href="../ch3/3.2.html"><strong aria-hidden="true">3.2.</strong> Request And Response</a></li><li class="chapter-item expanded "><a href="../ch3/3.3.html"><strong aria-hidden="true">3.3.</strong> More About Request</a></li><li class="chapter-item expanded "><a href="../ch3/3.4.html"><strong aria-hidden="true">3.4.</strong> Upload Files In Servlets</a></li><li class="chapter-item expanded "><a href="../ch3/3.5.html" class="active"><strong aria-hidden="true">3.5.</strong> More About Response (1)</a></li><li class="chapter-item expanded "><a href="../ch3/3.6.html"><strong aria-hidden="true">3.6.</strong> More About Response (2)</a></li><li class="chapter-item expanded "><a href="../ch3/exercise.html"><strong aria-hidden="true">3.7.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch4/index.html"><strong aria-hidden="true">4.</strong> In-depth Web</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch4/4.1.html"><strong aria-hidden="true">4.1.</strong> Init parameters</a></li><li class="chapter-item expanded "><a href="../ch4/4.2.html"><strong aria-hidden="true">4.2.</strong> Attributes</a></li><li class="chapter-item expanded "><a href="../ch4/4.3.html"><strong aria-hidden="true">4.3.</strong> Session Management (1)</a></li><li class="chapter-item expanded "><a href="../ch4/4.4.html"><strong aria-hidden="true">4.4.</strong> Session Management (2)</a></li><li class="chapter-item expanded "><a href="../ch4/exercise.html"><strong aria-hidden="true">4.5.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch5/index.html"><strong aria-hidden="true">5.</strong> JSP And Scriptless JSP</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch5/5.1.html"><strong aria-hidden="true">5.1.</strong> Facts About JSP</a></li><li class="chapter-item expanded "><a href="../ch5/5.2.html"><strong aria-hidden="true">5.2.</strong> Expression Language</a></li><li class="chapter-item expanded "><a href="../ch5/5.3.html"><strong aria-hidden="true">5.3.</strong> JSTL</a></li><li class="chapter-item expanded "><a href="../ch5/exercise.html"><strong aria-hidden="true">5.4.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch6/index.html"><strong aria-hidden="true">6.</strong> Database</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch6/6.1.html"><strong aria-hidden="true">6.1.</strong> Introduction To Database</a></li><li class="chapter-item expanded "><a href="../ch6/6.2.html"><strong aria-hidden="true">6.2.</strong> SQL (1)</a></li><li class="chapter-item expanded "><a href="../ch6/6.3.html"><strong aria-hidden="true">6.3.</strong> SQL (2)</a></li><li class="chapter-item expanded "><a href="../ch6/6.4.html"><strong aria-hidden="true">6.4.</strong> Accessing Databases From Java (1)</a></li><li class="chapter-item expanded "><a href="../ch6/6.5.html"><strong aria-hidden="true">6.5.</strong> Accessing Databases From Java (2)</a></li><li class="chapter-item expanded "><a href="../ch6/exercise.html"><strong aria-hidden="true">6.6.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch7/index.html"><strong aria-hidden="true">7.</strong> Thymeleaf</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch7/7.1.html"><strong aria-hidden="true">7.1.</strong> Get Started With Thymeleaf</a></li><li class="chapter-item expanded "><a href="../ch7/7.2.html"><strong aria-hidden="true">7.2.</strong> Standard Expression Syntax</a></li><li class="chapter-item expanded "><a href="../ch7/exercise.html"><strong aria-hidden="true">7.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch9/index.html"><strong aria-hidden="true">8.</strong> Get Started With Spring</a></li><li class="chapter-item expanded "><a href="../appendix/index.html"><strong aria-hidden="true">9.</strong> Appendix</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../appendix/tomcat.html"><strong aria-hidden="true">9.1.</strong> A.1 Tomcat</a></li><li class="chapter-item expanded "><a href="../appendix/idea.html"><strong aria-hidden="true">9.2.</strong> A.2 IntelliJ IDEA</a></li><li class="chapter-item expanded "><a href="../appendix/jdk.html"><strong aria-hidden="true">9.3.</strong> A.3 JDK</a></li><li class="chapter-item expanded "><a href="../appendix/gradle.html"><strong aria-hidden="true">9.4.</strong> A.4 Gradle</a></li><li class="chapter-item expanded "><a href="../appendix/sqlite.html"><strong aria-hidden="true">9.5.</strong> A.5 SQLite</a></li><li class="chapter-item expanded "><a href="../appendix/cloud.html"><strong aria-hidden="true">9.6.</strong> A.6 Cloud (1)</a></li><li class="chapter-item expanded "><a href="../appendix/cloud2.html"><strong aria-hidden="true">9.7.</strong> A.7 Cloud (2)</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Head First Java Web</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="35-more-about-response-1"><a class="header" href="#35-more-about-response-1">3.5 More About Response (1)</a></h1>
+<p>Previously, we either make a <code>text/html</code> response or forward the request to another resource. In this section, we will focus on <em>response</em>, and try to return something different.</p>
+<h2 id="json-as-response"><a class="header" href="#json-as-response">JSON as response</a></h2>
+<p>JSON, short for JavaScript Object Notation, is a lightweight data-interchange format, and it is &quot;self-describing&quot; and easy to understand. For example, the JSON String <code>{&quot;name&quot;:&quot;John&quot;, &quot;age&quot;:30}</code> defines an object with 2 properties, and each property has a value. JSON is widely used in the Internet, and a large number of web APIs returns JSON as their response.</p>
+<p>The complete code can be found at <code>JsonServlet.java</code> in <code>ch3/response</code>. Similar to <code>text/html</code>, <code>application/json</code> is another MIME type to indicate it is JSON. The <em>content type</em> is to tell the client (e.g., browser) what you are sending back, so the browser can <strong>do the right thing</strong>. Note that we have to escape <em>&quot;</em> within a string.</p>
+<pre><code class="language-java">response.setContentType(&quot;application/json&quot;);
+PrintWriter out = response.getWriter();
+String json = &quot;{\&quot;name\&quot;:\&quot;John\&quot;, \&quot;age\&quot;:30}&quot;;
+out.println(json);
+</code></pre>
+<p>Outputting JSON string directly is infrequent. Rather, in real word, we mainly need to convert an object to JSON. For example, in the mini MVC project, there is a model for books recommendation, and it would be better to design a class to represent a book.</p>
+<pre><code class="language-java">public class Book {
+    private String title;
+    private float price;
+    private String author;
+
+    public Book(String title, float price, String author) {
+        this.title = title;
+        this.price = price;
+        this.author = author;
+    }
+    // getter/setter are omitted.
+}
+</code></pre>
+<p>How can we convert a <code>Book</code> object to JSON? We often call the converting encoding/decoding. Unfortunately, neither Java SE nor Java EE provide built-in support for JSON processing. Should we write the encoding/decoding code on our own? No. Don't try to reinvent wheels. There are several awesome JSON libraries (e.g., <em>Gson</em>, <em>Jackson</em>) in the community. In this book, we use <code>Gson</code> to serialize and deserialize Java objects to JSON[1].</p>
+<pre><code class="language-groovy">implementation 'com.google.code.gson:gson:2.8.9'
+</code></pre>
+<p>The complete code for serialization a <code>Book</code> can be found in <code>Json2Servlet.java</code> of <code>ch3/response</code>:</p>
+<pre><code class="language-java">Book book = new Book(&quot;Gone with the wind&quot;, 29.0f, &quot;Margaret Mitchell&quot;);
+Gson gson = new Gson();
+String json = gson.toJson(book);
+</code></pre>
+<h2 id="tools-for-testing-apis"><a class="header" href="#tools-for-testing-apis">Tools for testing APIs</a></h2>
+<p>The the last subsection, we enable the Java EE application to return JSON, instead of HTML, as responses. As we mentioned, JSON is the main data type transmitting between the client (e.g., Android) and the server used in API design. Recall the <em>design-code-test cycle</em> in <a href="ch2/2.4">Section 2.4</a>. For those APIs, web browser is no longer the first choice for testing, because the rendering effect is not our concern. Instead, we would like a lightweight yet powerful tool concentrating on <em>request</em> and <em>response</em>. </p>
+<p>For a long time, <a href="https://www.postman.com/">Postman</a> is recognized and popular tool to  simplify each step of the API lifecycle. And in the book, we will use <em>Thunder Client</em>, a lightweight Rest API Client Extension for <a href="https://code.visualstudio.com/">Visual Studio Code</a>.</p>
+<p><img src="image/ch3-thunder.png" alt="Figure 3.10 Thunder Client extension." title=":size=50%" /></p>
+<p>And we can even write tests in its <em>New Request</em> window. In Fig 3.11, we added two tests: 1) <code>Content-type</code> contains <em>application-json</em>; 2) the returned JSON string's <code>title</code> is <em>Gone with the wind</em>:</p>
+<p><img src="image/ch3-json-test.png" alt="Figure 3.11 API Tests." title=":size=60%" /></p>
+<p>Curious readers can further investigate how to harness this tool to help you developing design APIs. Good luck!</p>
+<h2 id="binary-as-response"><a class="header" href="#binary-as-response">Binary as response</a></h2>
+<p><em>Binary</em> here means a non-text resource, such as an image, an <em>.exe</em> file. Of course, in some cases, such static resources (e.g., <code>.js</code> and <code>.css</code>) can be accessed directly if they are parts of <code>webapp</code> or they are served by a dedicated web server.</p>
+<p>But in rare situations, returning a binary resource as response is necessary. For example, we would like add some authentications to restrict the access; the returned binary resource is generated by code in real time; the returned binary resource is not governed by the web applications. Anyway, let's learn how to return a binary resource through servlets.</p>
+<p>In what follows, we are going to return an image <em>cat.png</em> as the response. Code can be found at <code>ch3/response</code>. But it raises another question: <em>where should we put this image in</em>? Well, it can be many places.</p>
+<ul>
+<li><strong>Case 1</strong>: <em>cat.png</em> is put under <code>webapp</code> (a.k.a., <em>webcontent</em>, not in its subfolder <code>WEB-INF</code>).</li>
+</ul>
+<p>Then this image can be accessed as a static resource via <code>http://localhost:8080/response/cat.png</code> directly. In order to output an image in servlets, again, we should use the <strong>stream</strong>.</p>
+<pre><code class="language-java">response.setContentType(&quot;image/png&quot;);
+ServletOutputStream os = response.getOutputStream();
+</code></pre>
+<p>The first line is to specify the content to <code>image/png</code>, and the second line is to get an output stream from <em>response</em> via <code>getOutputStream()</code>. Recall that for text output, we use its <code>getWriter()</code> method.</p>
+<p>So the real difficulty is how to read <code>cat.png</code> as an input stream.</p>
+<pre><code class="language-java">InputStream is = getServletContext().getResourceAsStream(&quot;cat.png&quot;);
+</code></pre>
+<p><code>getServletContext</code> returns a reference to the <code>ServletContext</code> in which this servlet is running. So what is the <code>ServletContext</code>? You can regard it as the <em>application</em> context, an we will . And its <code>getResourceAsStream()</code> method is to read files under <code>webapp</code> as a stream. It does what exactly we want! </p>
+<p>The next step is to enable the <em>output stream</em> output <code>is</code> to the client. As for <code>PrintWriter</code>, its <code>println()</code> method takes this responsibility, while as for <code>ServletOutputStream</code>, we should use <code>write()</code>[2]:</p>
+<blockquote>
+<p>void	write​(byte[] b)	
+Writes b.length bytes from the specified byte array to this output stream.</p>
+</blockquote>
+<p>Therefore, if we can convert <code>is</code> into a byte array, the mission can be accomplished. And luckily, <code>readAllBytes()</code> is on call[3]. The complete code can found in <code>ImageServlet.java</code> of <code>ch3/response</code></p>
+<pre><code class="language-java">byte[] data = is.readAllBytes();
+</code></pre>
+<ul>
+<li><strong>Case 2</strong>: <em>cat.png</em> is put under <code>src/main</code> (a.k.a, <em>resource</em>). And to avoid confusion, we use another image <code>cat2.png</code>.</li>
+</ul>
+<p>Maven project would has a template <code>resources</code> folder under <code>src/main</code> by default, and we need to create it manually in Gradle. It is the place where we put some resources for Java source code by convention.</p>
+<p><img src="image/ch3-resources.png" alt="Figure 3.12 File structure of resources." title=":size=40%" /></p>
+<p>After compiling, those resources would in the <em>classpath</em>. Similar to <em>case 1</em>, the main task is to get the <em>input stream</em> from this image:</p>
+<pre><code class="language-java">InputStream is = getClass().getClassLoader().getResourceAsStream(&quot;cat2.png&quot;);
+</code></pre>
+<p>Strictly speaking, understanding <code>getClass().getClassLoader()</code> would require some background knowledge about how JVM loads classes. Here, you can simply interpret it as getting a root of <em>classpath</em>.</p>
+<p>In fact, in order to enable the <em>output stream</em> output <code>is</code> to the client, another solution can make it without introducing the byte array. Take the case 1 for example,</p>
+<pre><code class="language-java">Path source = Path.of(getServletContext().getResource(&quot;cat.png&quot;).toURI());
+Files.copy(source, os);
+</code></pre>
+<p>The first line is to get the <em>path</em> of the resource, and the second line is to <em>copy</em> the resource to the <em>output stream</em>[4]. Readers can try the new solution for the case 2.</p>
+<h2 id="a-final-note-for-response"><a class="header" href="#a-final-note-for-response">A final note for response</a></h2>
+<p>As for <em>response</em>, we have got two choices for output: <code>ServletOutputStream</code> for bytes, or a <code>PrintWriter</code> for character data. Essentially, the <code>PrintWriter</code> wraps the <code>ServletOutputStream</code>. In other words, the <code>PrintWriter</code> has a reference to the <code>ServletOutputStream</code> and delegates calls to it. It makes sense because any character will be interpreted as bytes in the runtime. Such design, which adds higher-level method by hiding low-level operations is very common in programming. For example, <code>Files.copy()</code> is another higher-level method to hide bytes.</p>
+<hr />
+<p>[1] Converting an object to JSON string is called <em>serialize</em>, and converting JSON string to an object is called <em>deserialize</em>.</p>
+<p>[2] <code>ServletOutputStream</code> also provides <code>println()/print()</code>, but they cannot deal with <em>stream</em> directly.</p>
+<p>[3] The language should be set to at least <em>9</em>.</p>
+<p>[4] The language should be set to at least <em>11</em>.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../ch3/3.4.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../ch3/3.6.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../ch3/3.4.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../ch3/3.6.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+        <script type="text/javascript">
+            window.playground_line_numbers = true;
+        </script>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

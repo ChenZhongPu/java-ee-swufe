@@ -1,0 +1,350 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js rust">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Accessing Databases From Java (2) - Head First Java Web</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../preface.html">Preface</a></li><li class="chapter-item expanded "><a href="../ch1/index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch1/1.1.html"><strong aria-hidden="true">1.1.</strong> Jakarta EE Overview</a></li><li class="chapter-item expanded "><a href="../ch1/1.2.html"><strong aria-hidden="true">1.2.</strong> Your First Java Web Project</a></li><li class="chapter-item expanded "><a href="../ch1/1.3.html"><strong aria-hidden="true">1.3.</strong> A Brief Introduction To HTML</a></li><li class="chapter-item expanded "><a href="../ch1/1.4.html"><strong aria-hidden="true">1.4.</strong> A Brief Introduction To HTTP</a></li><li class="chapter-item expanded "><a href="../ch1/1.5.html"><strong aria-hidden="true">1.5.</strong> Revisit The First Java Web Project</a></li><li class="chapter-item expanded "><a href="../ch1/exercise.html"><strong aria-hidden="true">1.6.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch2/index.html"><strong aria-hidden="true">2.</strong> Web App Architecture And Mini MVC</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch2/2.1.html"><strong aria-hidden="true">2.1.</strong> Servlet And Container</a></li><li class="chapter-item expanded "><a href="../ch2/2.2.html"><strong aria-hidden="true">2.2.</strong> Search: The Way To Self-learning</a></li><li class="chapter-item expanded "><a href="../ch2/2.3.html"><strong aria-hidden="true">2.3.</strong> A Brief Introduction To MVC</a></li><li class="chapter-item expanded "><a href="../ch2/2.4.html"><strong aria-hidden="true">2.4.</strong> Hands On MVC (1)</a></li><li class="chapter-item expanded "><a href="../ch2/2.5.html"><strong aria-hidden="true">2.5.</strong> Hands on MVC (2)</a></li><li class="chapter-item expanded "><a href="../ch2/exercise.html"><strong aria-hidden="true">2.6.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch3/index.html"><strong aria-hidden="true">3.</strong> In-depth Servlet</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch3/3.1.html"><strong aria-hidden="true">3.1.</strong> Servlet: From Birth To Death</a></li><li class="chapter-item expanded "><a href="../ch3/3.2.html"><strong aria-hidden="true">3.2.</strong> Request And Response</a></li><li class="chapter-item expanded "><a href="../ch3/3.3.html"><strong aria-hidden="true">3.3.</strong> More About Request</a></li><li class="chapter-item expanded "><a href="../ch3/3.4.html"><strong aria-hidden="true">3.4.</strong> Upload Files In Servlets</a></li><li class="chapter-item expanded "><a href="../ch3/3.5.html"><strong aria-hidden="true">3.5.</strong> More About Response (1)</a></li><li class="chapter-item expanded "><a href="../ch3/3.6.html"><strong aria-hidden="true">3.6.</strong> More About Response (2)</a></li><li class="chapter-item expanded "><a href="../ch3/exercise.html"><strong aria-hidden="true">3.7.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch4/index.html"><strong aria-hidden="true">4.</strong> In-depth Web</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch4/4.1.html"><strong aria-hidden="true">4.1.</strong> Init parameters</a></li><li class="chapter-item expanded "><a href="../ch4/4.2.html"><strong aria-hidden="true">4.2.</strong> Attributes</a></li><li class="chapter-item expanded "><a href="../ch4/4.3.html"><strong aria-hidden="true">4.3.</strong> Session Management (1)</a></li><li class="chapter-item expanded "><a href="../ch4/4.4.html"><strong aria-hidden="true">4.4.</strong> Session Management (2)</a></li><li class="chapter-item expanded "><a href="../ch4/exercise.html"><strong aria-hidden="true">4.5.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch5/index.html"><strong aria-hidden="true">5.</strong> JSP And Scriptless JSP</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch5/5.1.html"><strong aria-hidden="true">5.1.</strong> Facts About JSP</a></li><li class="chapter-item expanded "><a href="../ch5/5.2.html"><strong aria-hidden="true">5.2.</strong> Expression Language</a></li><li class="chapter-item expanded "><a href="../ch5/5.3.html"><strong aria-hidden="true">5.3.</strong> JSTL</a></li><li class="chapter-item expanded "><a href="../ch5/exercise.html"><strong aria-hidden="true">5.4.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch6/index.html"><strong aria-hidden="true">6.</strong> Database</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch6/6.1.html"><strong aria-hidden="true">6.1.</strong> Introduction To Database</a></li><li class="chapter-item expanded "><a href="../ch6/6.2.html"><strong aria-hidden="true">6.2.</strong> SQL (1)</a></li><li class="chapter-item expanded "><a href="../ch6/6.3.html"><strong aria-hidden="true">6.3.</strong> SQL (2)</a></li><li class="chapter-item expanded "><a href="../ch6/6.4.html"><strong aria-hidden="true">6.4.</strong> Accessing Databases From Java (1)</a></li><li class="chapter-item expanded "><a href="../ch6/6.5.html" class="active"><strong aria-hidden="true">6.5.</strong> Accessing Databases From Java (2)</a></li><li class="chapter-item expanded "><a href="../ch6/exercise.html"><strong aria-hidden="true">6.6.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch7/index.html"><strong aria-hidden="true">7.</strong> Thymeleaf</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch7/7.1.html"><strong aria-hidden="true">7.1.</strong> Get Started With Thymeleaf</a></li><li class="chapter-item expanded "><a href="../ch7/7.2.html"><strong aria-hidden="true">7.2.</strong> Standard Expression Syntax</a></li><li class="chapter-item expanded "><a href="../ch7/exercise.html"><strong aria-hidden="true">7.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch9/index.html"><strong aria-hidden="true">8.</strong> Get Started With Spring</a></li><li class="chapter-item expanded "><a href="../appendix/index.html"><strong aria-hidden="true">9.</strong> Appendix</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../appendix/tomcat.html"><strong aria-hidden="true">9.1.</strong> A.1 Tomcat</a></li><li class="chapter-item expanded "><a href="../appendix/idea.html"><strong aria-hidden="true">9.2.</strong> A.2 IntelliJ IDEA</a></li><li class="chapter-item expanded "><a href="../appendix/jdk.html"><strong aria-hidden="true">9.3.</strong> A.3 JDK</a></li><li class="chapter-item expanded "><a href="../appendix/gradle.html"><strong aria-hidden="true">9.4.</strong> A.4 Gradle</a></li><li class="chapter-item expanded "><a href="../appendix/sqlite.html"><strong aria-hidden="true">9.5.</strong> A.5 SQLite</a></li><li class="chapter-item expanded "><a href="../appendix/cloud.html"><strong aria-hidden="true">9.6.</strong> A.6 Cloud (1)</a></li><li class="chapter-item expanded "><a href="../appendix/cloud2.html"><strong aria-hidden="true">9.7.</strong> A.7 Cloud (2)</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Head First Java Web</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="65-accessing-databases-from-java-2"><a class="header" href="#65-accessing-databases-from-java-2">6.5 Accessing Databases From Java (2)</a></h1>
+<p>In this section, we will continue studying how to use database in Java web projects in an idiomatic way. In other words, we will study the best practices used in today's software engineering.</p>
+<h2 id="a-real-mvc"><a class="header" href="#a-real-mvc">A real MVC</a></h2>
+<p>Does <code>ch6/web-database</code> follow MVC design? The answer is no, because the servlet also takes the responsibility of a <em>model</em>.</p>
+<h3 id="version-1"><a class="header" href="#version-1">Version 1</a></h3>
+<p>First, let's try to separate the <em>model</em> from the servlet. The idea is straightforward, and it mostly follows the structure in <a href="ch2/2.4">Section 2.4</a>. The complete code can be found at <code>ch6/mvc1</code>.</p>
+<p><code>Recommendation</code> class is the model that accesses the database, and servlet calls it to fetch data from the database:</p>
+<pre><code class="language-java">try {
+    Recommendation recommendation = new Recommendation();
+    double price = 15.0;
+    List&lt;Book&gt; books = recommendation.getBooksGEPrice(price);
+    request.setAttribute(&quot;books&quot;, books);
+    request.getRequestDispatcher(&quot;/WEB-INF/books.jsp&quot;).forward(request, response);
+} catch (ClassNotFoundException | SQLException e) {
+    e.printStackTrace();
+}
+</code></pre>
+<p>Note that to simplify the code, we don't maintain the <code>Connection</code> in an attribute for reuse, and create a new <em>connection</em> for each request in <code>DBUtil</code> class instead. In production code, we can use <code>DataSource</code> to avoid the performance issue.</p>
+<h3 id="version-2"><a class="header" href="#version-2">Version 2</a></h3>
+<p>As a matter of fact, there are debates about what the <em>Model</em> is exactly[1].</p>
+<blockquote>
+<p>[!NOTE]
+There is a difference between classical MVC and what we use in web development.</p>
+</blockquote>
+<p>Recall Fig 2.16, and compare it with the one from the introduction to <a href="https://developer.mozilla.org/en-US/docs/Glossary/MVC">MVC</a> by Mozilla. To implement a classic MVC, <em>Model</em> should inform <em>View</em> about the changes. But it is impossible in a Java web application.</p>
+<p><img src="https://developer.mozilla.org/en-US/docs/Glossary/MVC/model-view-controller-light-blue.png" alt="Figure 6.4 MVC by Mozilla." title=":size=50%" /></p>
+<p>In many tutorials, <em>Model</em> is considered an entity (POJO) or a Java bean. It is a very common mistake to make. Remember, <strong>the model is not a class or any single object</strong>. In a proper MVC adaptation, <em>Model</em> can include everything in business logic:</p>
+<ul>
+<li><strong>Domain objects</strong>: They usually represent logical entities (e.g., Java beans), and it is completely unaware of storage.</li>
+<li><strong>Data mappers</strong>: These objects are only responsible for the storage. If you store information in a database, this would be where the SQL lives. And they are also known as <strong>DAOs</strong>[2].</li>
+<li><strong>Services</strong>: They are responsible for interaction between <em>domain objects</em> and <em>mappers</em> by calling <em>DAO</em>. You can avoid them, but at the penalty of leaking some domain logic into <em>Controllers</em>[3].</li>
+</ul>
+<p>Nowadays, a typical MVC project of Java web tends to separate <em>Model</em> into three parts above. So <code>Recommendation.java</code> of <code>chp6/mvc1</code> belongs to the <em>DAO</em> layer. By the way, because the domain logic is this example is very simple, <em>service</em> layer is unnecessary. </p>
+<p><img src="image/mvc.png" alt="Figure 6.4 MVC in Java web." title=":size=70%" /></p>
+<p>In what follows, we will consider a case that the business logic is more complex than the data logic[4]. For example, suppose the book-selling website offers a 10% discount for books whose price is greater than 20.0 on New Year's Eve. It is true that it can be achieved in <em>DAO</em>, but it would be better to move these logics into <em>service</em>. The complete code can be found at <code>ch6/mvc2</code>, and readers pay attention to code organization and the structure of this project.</p>
+<p><img src="image/code.png" alt="Figure 6.5 Code organization." title=":size=30%" /></p>
+<h2 id="orm"><a class="header" href="#orm">ORM</a></h2>
+<p>In <em>DAO</em> layer, programmers has to write code for creating objects by fetching data from the database and for storing updated objects back in the database using *SQL. However, such manual conversion between data models is cumbersome and error-prone. For example, if the programmer has a typo in <code>while</code> of <code>BookDao.java</code>, this error won't be detected in the compile time. We shall <em>&quot;title&quot;</em>, rather <em>&quot;name&quot;</em>:</p>
+<pre><code class="language-java">while (rs.next()) {
+    books.add(new Book(rs.getString(&quot;name&quot;),
+            rs.getDouble(&quot;price&quot;)));
+}
+</code></pre>
+<p>One approach to handling this problem is to develop a database that natively stores objects, and allows objects in the database to be accessed in exactly the same way as in-memory objects. However, the pure <em>object-oriented databases</em> did not achieve commercial success.</p>
+<p>An alternative approach, called <strong>object-relational mapping</strong> (ORM), is to automate the mapping of data in relation to in-memory objects. In other words, we can access databases in object-oriented programming way. In this book, we use <a href="https://hibernate.org">Hibernate</a>, a widely used system for mapping Java objects to relations[5]. In Hibernate, the mapping from each Java class (i.e., <em>entity</em>) to one or more relations is specified either in a mapping file or by annotations. </p>
+<p>Hibernate is able to convert the Java code into SQL dialect, but it does not ship with <a href="https://docs.jboss.org/hibernate/orm/5.6/javadocs/org/hibernate/dialect/Dialect.html">Dialect</a> for SQLite[6]. To illustrate how to use Hibernate, we use another embedded Java SQL database, called <a href="https://www.h2database.com/html/main.html">H2</a>[7]. Again, you can easily switch to other relational databases.</p>
+<p>To use <em>Hibernate</em>, we can either select its implementation when creating a new project or add the dependency directly. The complete code can be at <code>ch6/orm</code>.</p>
+<p><img src="image/hibernate.png" alt="Figure 6.6 Code organization." title=":size=50%" /></p>
+<pre><code class="language-groovy">implementation('org.hibernate:hibernate-core:5.6.0.Final')
+implementation group: 'com.h2database', name: 'h2', version: '2.1.210'
+</code></pre>
+<ul>
+<li><strong>Step 1</strong>: Create an entity class, <code>Book.java</code>. It maps to a relation called <code>book</code>. Note that one attribute (<em>primary key</em>) must be annotated with <code>@Id</code>[8]. Note a non-arg constructor is required.</li>
+</ul>
+<pre><code class="language-java">@Entity
+@Table(name = &quot;book&quot;)
+public class Book {
+    private String isbn;
+    private String title;
+    private double price;
+
+    public Book() {
+
+    }
+
+    public Book(String isbn, String title, double price) {
+        this.isbn = isbn;
+        this.title = title;
+        this.price = price;
+    }
+
+    @Id
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
+    // other getters/setters
+}
+</code></pre>
+<ul>
+<li><strong>Step 2</strong>: Create a <code>hibernate.cfg.xml</code> under <code>src/main/resources</code>. Of course, you can use other names you like, but we prefer the default one as we can write less code. By the way, since <em>Hibernate</em> is also JPA-compliance, we can also config the ORM with <code>persistence.xml</code>.</li>
+</ul>
+<pre><code class="language-xml">&lt;hibernate-configuration&gt;
+
+    &lt;session-factory&gt;
+        &lt;!-- Database connection settings --&gt;
+        &lt;property name=&quot;connection.driver_class&quot;&gt;org.h2.Driver&lt;/property&gt;
+        &lt;property name=&quot;connection.url&quot;&gt;jdbc:h2:mem:db1&lt;/property&gt;
+
+        &lt;!-- JDBC connection pool (use the built-in) --&gt;
+        &lt;property name=&quot;connection.pool_size&quot;&gt;1&lt;/property&gt;
+        &lt;!-- SQL dialect --&gt;
+        &lt;property name=&quot;dialect&quot;&gt;org.hibernate.dialect.H2Dialect&lt;/property&gt;
+        &lt;!-- Echo all executed SQL to stdout --&gt;
+        &lt;property name=&quot;show_sql&quot;&gt;true&lt;/property&gt;
+
+        &lt;!-- Drop and re-create the database schema on startup --&gt;
+        &lt;property name=&quot;hbm2ddl.auto&quot;&gt;create&lt;/property&gt;
+        &lt;!-- Names the annotated entity class --&gt;
+        &lt;mapping class=&quot;com.swufe.javaee.orm.entity.Book&quot;/&gt;
+    &lt;/session-factory&gt;
+
+&lt;/hibernate-configuration&gt;
+</code></pre>
+<ul>
+<li><strong>Step 3</strong>: Create a helper class <code>DBUtil.java</code> to generate the <code>SessionFactory</code>.</li>
+</ul>
+<p>The following is the sample code to add a book to the database:</p>
+<pre><code class="language-java">public void addBook(Book book) {
+    try (Session session = DBUtil.getSessionFactory().openSession()) {
+        session.beginTransaction();
+        session.save(book);
+        session.getTransaction().commit();
+    }
+}
+</code></pre>
+<p>As we can see, we can use <code>Session</code> to access databases, which is more friendly for Java programmers.</p>
+<hr />
+<p>[1] https://stackoverflow.com/questions/5863870/</p>
+<p>[2] DAO, short for <em>Data Access Object</em>, are objects that abstract away the data storage mechanism.</p>
+<p>[3] Generally the <em>DAO</em> is as light as possible and exists solely to provide a connection to the DB, sometimes abstracted so different database backends can be used. So it is considered bad to leak domain logic into <em>DAO</em>.</p>
+<p>[4] For the sake of flexibility, some people tend to forgive foreign constraints for databases, and these constraints can be specified in the <em>service</em> layer.</p>
+<p>[5] Hibernate is more than an ORM, and it supports other useful functionalities, such as full-text search.</p>
+<p>[6] We can implement the dialect for SQLite, and some third party libraries (e.g., <a href="https://mvnrepository.com/artifact/com.github.gwenn/sqlite-dialect">SQLite Dialect For Hibernate</a>) has done for us. But it is not recommended doing so.</p>
+<p>[7] H2 is mainly used for test.</p>
+<p>[8] We ignore the case when the primary key contains composite attributes.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../ch6/6.4.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../ch6/exercise.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../ch6/6.4.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../ch6/exercise.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+        <script type="text/javascript">
+            window.playground_line_numbers = true;
+        </script>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

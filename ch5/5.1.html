@@ -1,0 +1,346 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js rust">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Facts About JSP - Head First Java Web</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "rust";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../preface.html">Preface</a></li><li class="chapter-item expanded "><a href="../ch1/index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch1/1.1.html"><strong aria-hidden="true">1.1.</strong> Jakarta EE Overview</a></li><li class="chapter-item expanded "><a href="../ch1/1.2.html"><strong aria-hidden="true">1.2.</strong> Your First Java Web Project</a></li><li class="chapter-item expanded "><a href="../ch1/1.3.html"><strong aria-hidden="true">1.3.</strong> A Brief Introduction To HTML</a></li><li class="chapter-item expanded "><a href="../ch1/1.4.html"><strong aria-hidden="true">1.4.</strong> A Brief Introduction To HTTP</a></li><li class="chapter-item expanded "><a href="../ch1/1.5.html"><strong aria-hidden="true">1.5.</strong> Revisit The First Java Web Project</a></li><li class="chapter-item expanded "><a href="../ch1/exercise.html"><strong aria-hidden="true">1.6.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch2/index.html"><strong aria-hidden="true">2.</strong> Web App Architecture And Mini MVC</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch2/2.1.html"><strong aria-hidden="true">2.1.</strong> Servlet And Container</a></li><li class="chapter-item expanded "><a href="../ch2/2.2.html"><strong aria-hidden="true">2.2.</strong> Search: The Way To Self-learning</a></li><li class="chapter-item expanded "><a href="../ch2/2.3.html"><strong aria-hidden="true">2.3.</strong> A Brief Introduction To MVC</a></li><li class="chapter-item expanded "><a href="../ch2/2.4.html"><strong aria-hidden="true">2.4.</strong> Hands On MVC (1)</a></li><li class="chapter-item expanded "><a href="../ch2/2.5.html"><strong aria-hidden="true">2.5.</strong> Hands on MVC (2)</a></li><li class="chapter-item expanded "><a href="../ch2/exercise.html"><strong aria-hidden="true">2.6.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch3/index.html"><strong aria-hidden="true">3.</strong> In-depth Servlet</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch3/3.1.html"><strong aria-hidden="true">3.1.</strong> Servlet: From Birth To Death</a></li><li class="chapter-item expanded "><a href="../ch3/3.2.html"><strong aria-hidden="true">3.2.</strong> Request And Response</a></li><li class="chapter-item expanded "><a href="../ch3/3.3.html"><strong aria-hidden="true">3.3.</strong> More About Request</a></li><li class="chapter-item expanded "><a href="../ch3/3.4.html"><strong aria-hidden="true">3.4.</strong> Upload Files In Servlets</a></li><li class="chapter-item expanded "><a href="../ch3/3.5.html"><strong aria-hidden="true">3.5.</strong> More About Response (1)</a></li><li class="chapter-item expanded "><a href="../ch3/3.6.html"><strong aria-hidden="true">3.6.</strong> More About Response (2)</a></li><li class="chapter-item expanded "><a href="../ch3/exercise.html"><strong aria-hidden="true">3.7.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch4/index.html"><strong aria-hidden="true">4.</strong> In-depth Web</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch4/4.1.html"><strong aria-hidden="true">4.1.</strong> Init parameters</a></li><li class="chapter-item expanded "><a href="../ch4/4.2.html"><strong aria-hidden="true">4.2.</strong> Attributes</a></li><li class="chapter-item expanded "><a href="../ch4/4.3.html"><strong aria-hidden="true">4.3.</strong> Session Management (1)</a></li><li class="chapter-item expanded "><a href="../ch4/4.4.html"><strong aria-hidden="true">4.4.</strong> Session Management (2)</a></li><li class="chapter-item expanded "><a href="../ch4/exercise.html"><strong aria-hidden="true">4.5.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch5/index.html"><strong aria-hidden="true">5.</strong> JSP And Scriptless JSP</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch5/5.1.html" class="active"><strong aria-hidden="true">5.1.</strong> Facts About JSP</a></li><li class="chapter-item expanded "><a href="../ch5/5.2.html"><strong aria-hidden="true">5.2.</strong> Expression Language</a></li><li class="chapter-item expanded "><a href="../ch5/5.3.html"><strong aria-hidden="true">5.3.</strong> JSTL</a></li><li class="chapter-item expanded "><a href="../ch5/exercise.html"><strong aria-hidden="true">5.4.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch6/index.html"><strong aria-hidden="true">6.</strong> Database</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch6/6.1.html"><strong aria-hidden="true">6.1.</strong> Introduction To Database</a></li><li class="chapter-item expanded "><a href="../ch6/6.2.html"><strong aria-hidden="true">6.2.</strong> SQL (1)</a></li><li class="chapter-item expanded "><a href="../ch6/6.3.html"><strong aria-hidden="true">6.3.</strong> SQL (2)</a></li><li class="chapter-item expanded "><a href="../ch6/6.4.html"><strong aria-hidden="true">6.4.</strong> Accessing Databases From Java (1)</a></li><li class="chapter-item expanded "><a href="../ch6/6.5.html"><strong aria-hidden="true">6.5.</strong> Accessing Databases From Java (2)</a></li><li class="chapter-item expanded "><a href="../ch6/exercise.html"><strong aria-hidden="true">6.6.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch7/index.html"><strong aria-hidden="true">7.</strong> Thymeleaf</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ch7/7.1.html"><strong aria-hidden="true">7.1.</strong> Get Started With Thymeleaf</a></li><li class="chapter-item expanded "><a href="../ch7/7.2.html"><strong aria-hidden="true">7.2.</strong> Standard Expression Syntax</a></li><li class="chapter-item expanded "><a href="../ch7/exercise.html"><strong aria-hidden="true">7.3.</strong> Exercise</a></li></ol></li><li class="chapter-item expanded "><a href="../ch9/index.html"><strong aria-hidden="true">8.</strong> Get Started With Spring</a></li><li class="chapter-item expanded "><a href="../appendix/index.html"><strong aria-hidden="true">9.</strong> Appendix</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../appendix/tomcat.html"><strong aria-hidden="true">9.1.</strong> A.1 Tomcat</a></li><li class="chapter-item expanded "><a href="../appendix/idea.html"><strong aria-hidden="true">9.2.</strong> A.2 IntelliJ IDEA</a></li><li class="chapter-item expanded "><a href="../appendix/jdk.html"><strong aria-hidden="true">9.3.</strong> A.3 JDK</a></li><li class="chapter-item expanded "><a href="../appendix/gradle.html"><strong aria-hidden="true">9.4.</strong> A.4 Gradle</a></li><li class="chapter-item expanded "><a href="../appendix/sqlite.html"><strong aria-hidden="true">9.5.</strong> A.5 SQLite</a></li><li class="chapter-item expanded "><a href="../appendix/cloud.html"><strong aria-hidden="true">9.6.</strong> A.6 Cloud (1)</a></li><li class="chapter-item expanded "><a href="../appendix/cloud2.html"><strong aria-hidden="true">9.7.</strong> A.7 Cloud (2)</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Head First Java Web</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="51-facts-about-jsp"><a class="header" href="#51-facts-about-jsp">5.1 Facts About JSP</a></h1>
+<p>In this section, we will learn the basic facts about JSP. </p>
+<blockquote>
+<p>[!NOTE]
+The JSP eventually becomes a full-fledged servlet running in your web application[1]. </p>
+</blockquote>
+<h2 id="jsp-element-types-1"><a class="header" href="#jsp-element-types-1">JSP element types (1)</a></h2>
+<p>The regular old Java code in JSP is within <code>&lt;%  %&gt;</code> tag is called <strong>scriptlet</strong>. Recall the <code>result.jsp</code>, the importing statement is within <code>&lt;%@  %&gt;</code> tag is called <strong>directive</strong>. The <strong>expression</strong> within <code>&lt;%= &gt;</code> is a shorthand for <code>out.println()</code>. Note that there is no semicolon <em>;</em> in JSP expression. </p>
+<pre><code class="language-jsp">&lt;%@ page import=&quot;java.util.List&quot; %&gt;
+&lt;%@ page contentType=&quot;text/html;charset=UTF-8&quot; language=&quot;java&quot; %&gt;
+&lt;%
+    List&lt;String&gt; books = (List&lt;String&gt;) request.getAttribute(&quot;books&quot;);
+    for (String b : books) {
+%&gt;
+&lt;%= b %&gt;&lt;br&gt;
+&lt;% } %&gt;
+</code></pre>
+<p>What about <code>page</code>? You can simply understand it as the directive's scope. For example, <code>&lt;%@ page import=&quot;java.util.List&quot; %&gt;</code> means importing <code>java.util.List</code> to current JSP <em>page</em>.</p>
+<p>By the way, we can also put comments in the JSP:</p>
+<pre><code class="language-jsp">&lt;!-- This is an HTML comment. --&gt;
+&lt;%-- This is a JSP comment. --%&gt;
+</code></pre>
+<h2 id="implicit-objects"><a class="header" href="#implicit-objects">Implicit objects</a></h2>
+<p>We have used <code>request</code> and <code>out</code> in JSP, and they are indeed <em>implicit</em> objects. For example, the <em>request</em> is a reference to the <code>HttpServletRequest</code> object. The following table summarizes some important mapping from APIs to implicit objects.</p>
+<table><thead><tr><th>API</th><th>Implicit Object</th></tr></thead><tbody>
+<tr><td>JspWriter[2]</td><td>out</td></tr>
+<tr><td>HttpServletRequest</td><td>request</td></tr>
+<tr><td>HttpServletResponse</td><td>response</td></tr>
+<tr><td>HttpSession</td><td>session</td></tr>
+<tr><td>ServletContext</td><td>application</td></tr>
+<tr><td>ServletConfig</td><td>config</td></tr>
+</tbody></table>
+<p>The following JSP is able to get the attribute from a session, and you can try to output it in <code>ch3/session</code>.</p>
+<pre><code class="language-jsp">&lt;% String name = (String) session.getAttribute(&quot;name&quot;); %&gt;
+</code></pre>
+<h2 id="expression-language"><a class="header" href="#expression-language">Expression Language</a></h2>
+<p>Scriptlets are considered <em>bad</em> and <em>ugly</em>. There are two big complaints about putting Java code into a JSP:</p>
+<ul>
+<li><strong>Web page designers and front-end developers should not have to know Java</strong>.</li>
+<li><strong>Java code in a JSP is hard to change and maintain</strong>.</li>
+</ul>
+<p>To solve this problem, <strong>expression language</strong> (EL for short) is designed to get rid of Java code. An EL always looks like this: <code>${something}</code>. In other words, the expression always enclosed in curly braces, and prefixed with a dollar (<em>$</em>) sign. EL is the base of scriptless JSP.</p>
+<p>Let's study how to use EL by an example. First, a <code>Book</code> class contains the title and price:</p>
+<pre><code class="language-java">public class Book {
+    private String title;
+    private float price;
+    ...
+}
+</code></pre>
+<p>And a <code>User</code> has a favorite book:</p>
+<pre><code class="language-java">public class User {
+    private String name;
+    private int age;
+    private Book favourite;
+    ...
+}
+</code></pre>
+<p>Then in <code>HelloServlet.java</code> of <code>ch5/el</code>, we add an attribute into <em>request</em> scope. Finally, we forward this request.</p>
+<pre><code class="language-java">Book book = new Book(&quot;Gone with the wind&quot;, 42.0f);
+User user = new User(&quot;Mary&quot;, 18, book);
+request.setAttribute(&quot;user&quot;, user);
+request.setAttribute(&quot;name&quot;, &quot;Mary&quot;);
+request.getRequestDispatcher(&quot;/WEB-INF/home.jsp&quot;).forward(request, response);
+</code></pre>
+<p>Without EL, in order to get data from request's attribute, we have to use <em>scriptlet</em>:</p>
+<pre><code class="language-jsp">&lt;%
+    String name = (String) request.getAttribute(&quot;name&quot;);
+    User user = (User) request.getAttribute(&quot;user&quot;);
+%&gt;
+&lt;%= name %&gt;
+&lt;%= user.getName() %&gt;
+</code></pre>
+<p>But with EL, it can be simplified dramatically:</p>
+<pre><code class="language-jsp">${name}
+${user.name}
+</code></pre>
+<p>Similarly, we can even get the price of this user's favorite book:</p>
+<pre><code class="language-jsp">${user.favourite.price}
+</code></pre>
+<p>EL makes it easy to print nested properties. Elegant, isn't it? In the next chapter, we will try to deconstruct EL.</p>
+<h2 id="jsp-element-types-2"><a class="header" href="#jsp-element-types-2">JSP element types (2)</a></h2>
+<p>There are five different scripting elements in JSPs, and we have learned four of them in the start of this chapter. Since the <em>declaration</em> element is considered <em>bad</em> and <em>ugly</em>, we won't discuss it.</p>
+<ul>
+<li><strong>Comment</strong>: &lt;%--  --%&gt;</li>
+<li><strong>Directive</strong>: &lt;%@  %&gt;</li>
+<li><strong>Declaration</strong>: &lt;%!  %&gt;</li>
+<li><strong>Scriptlet</strong>: &lt;%  %&gt;</li>
+<li><strong>Expression</strong>: &lt;%=  %&gt;</li>
+</ul>
+<p>In what follows, we will study the <em>directive</em> element in depth. Directives supply directions and messages to a JSP container, and these special instructions are used for translating JSP to servlet code. The syntax of <em>directives</em> looks like:</p>
+<pre><code class="language-java">&lt;%@ directive attribute=&quot;&quot; %&gt;
+</code></pre>
+<p>There are 3 types of directives: <em>page</em> directive, <em>include</em> directive, and <em>taglib</em> directive. </p>
+<p>We have seen the usage of <em>page</em> already. It is used for defining attributes that can be applied to a complete JSP page. In daily programming, <code>import</code> and <code>contentType</code>.</p>
+<p>The <em>include</em> directive is used to include one file in another JSP file at translation time[3]. This includes HTML, JSP, text, and other files. It is used to create templates for common UI components, such as headers, footers, and sidebars. For example, <code>footer.html</code> is a sticky footer adapted from <a href="https://getbootstrap.com/docs/5.1/examples/sticky-footer/">Bootstrap</a>:</p>
+<pre><code class="language-html">&lt;footer class=&quot;footer mt-auto py-3 bg-light&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;span class=&quot;text-muted&quot;&gt;Head First Java Web.&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/footer&gt;
+</code></pre>
+<p>And then we can include it in JSPs:</p>
+<pre><code class="language-jsp">&lt;%@ include file=&quot;foot.html&quot; %&gt;
+</code></pre>
+<p>The JSP <em>taglib</em> directive is implemented to define a tag library with &quot;taglib&quot; as its prefix, and we will learn how to use it in <a href="ch5/5.3">Section 5.3</a>.</p>
+<h2 id="one-more-thing"><a class="header" href="#one-more-thing">One more thing</a></h2>
+<p>As we mentioned above, all JSP code will be translated into Servlet code, and this step is done by the container. So, even if there are some mistakes or errors in JSP, they can only be found in the runtime. In addition, your IDA may not be aware of some APIs belonging to <code>javax.servlet.jsp.*</code> (e.g, the implicit object <code>out</code>). For example, your IDE could complain that </p>
+<blockquote>
+<p>Cannot resolve method println(java.lang.String)</p>
+</blockquote>
+<pre><code class="language-jsp">&lt;%
+out.println(&quot;hello world&quot;);
+%&gt;
+</code></pre>
+<p>But, this <em>error</em> will not cause any bother. If you want to enable the IDE understand those APIs, you can add dependency <code>jsp-api</code>:</p>
+<pre><code class="language-groovy">compileOnly('javax.servlet.jsp:javax.servlet.jsp-api:2.3.3') {
+    exclude group: 'javax.el', module: 'el-api'
+    exclude group: 'javax.servlet', module: 'servlet-api'
+}
+</code></pre>
+<p>Note that this dependency is totally optional. After all, JSP is an obsolete technology, and we will never focus on its details.</p>
+<hr />
+<p>[1] The translated <code>.java</code> and complied <code>.class</code> can be found at <code>work/Catalina</code> folder of Tomcat home under package <code>org.apache.org</code>.</p>
+<p>[2] <code>JspWriter</code> is not <code>PrintWriter</code>, but it has most of the same print methods.</p>
+<p>[3] The <code>include</code> action tag includes the file at runtime, but we will not cover action tags in this book.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../ch5/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../ch5/5.2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../ch5/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../ch5/5.2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+        <script type="text/javascript">
+            window.playground_line_numbers = true;
+        </script>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+        <script src="../ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>
